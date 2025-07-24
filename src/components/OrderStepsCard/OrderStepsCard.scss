@@ -1,0 +1,64 @@
+.order-step-card {
+  position: relative;
+  display: grid;
+  padding: fluid(30, 20);
+  border-radius: var(--border-radius-m);
+  background: var(--color-grey);
+  min-height: fluid(190, 170);
+  height: 100%;
+  overflow: hidden;
+
+  @include hover {
+    .order-step-card__number {
+      opacity: .2;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    row-gap: 47px;
+    max-width: 85%;
+  }
+
+  &__image-wrapper {
+    background-color: var(--color-red-accent);
+    border-radius: 50%;
+
+    @include flex-center;
+    @include square(47px);
+  }
+
+  &__image {
+    width: 60%;
+    object-fit: contain;
+
+    svg,
+    use {
+      width: 28px;
+      height: 28px;
+      fill: var(--color-white);
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    user-select: none;
+  }
+
+  &__number {
+    position: absolute;
+    top: 50%;
+    right: fluid(-37, -34);
+    transform: translateY(-50%);
+    color: #232323;
+    opacity: .1;
+    font-size: fluid(190, 170);
+    font-weight: 600;
+    transition-duration: var(--transition-duration-longer);
+    user-select: none;
+  }
+}

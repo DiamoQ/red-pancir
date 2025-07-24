@@ -1,0 +1,50 @@
+.section {
+  display: grid;
+  row-gap: fluid(40, 30);
+  padding-block: var(--section-padding-y);
+
+  &.noto-font {
+    .section__description {
+      font-family: var(--font-family-third-face);
+      line-height: 125%;
+      color: var(--color-black);
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+
+    @include tablet-above {
+      &:has(.section__description) {
+        align-items: end;
+      }
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: fluid(40, 20);
+  }
+
+  &__description {
+    max-width: 680px;
+  }
+
+  &-page-link {
+    position: relative;
+    color: var(--color-red-accent);
+
+    &:after {
+      position: absolute;
+      content: '';
+      background-color: var(--color-red-accent);
+      width: 100%;
+      height: 1px;
+      bottom: -5px;
+    }
+  }
+}

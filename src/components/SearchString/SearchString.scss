@@ -1,0 +1,67 @@
+.navigation__search {
+  width: 100%;
+  max-width: 434px;
+  position: relative;
+
+  @include tablet {
+    max-width: initial;
+  }
+
+  label {
+    font-size: 0px;
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: var(--color-black-accent);
+    padding: fluid(15, 15) fluid(50, 50) fluid(15, 15) fluid(15, 15);
+    border-radius: var(--border-radius-xs);
+    border: none;
+    background-color: var(--color-white);
+
+    &::placeholder {
+      color: var(--color-black-accent);
+    }
+  }
+
+  button {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-inline: 15px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border-radius: var(--border-radius-xs);
+    border: none;
+    transition: var(--transition-duration-longer);
+
+    @include hover {
+      opacity: 0.8;
+      background-color: var(--color-red-hover);
+
+      svg {
+        fill: var(--color-white);
+      }
+    }
+
+    .button__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg {
+      margin-bottom: 0;
+      fill: var(--color-red-accent);
+
+      @include square(18px);
+    }
+  }
+}

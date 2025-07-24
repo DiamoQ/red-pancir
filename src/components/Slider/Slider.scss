@@ -1,0 +1,33 @@
+.slider {
+  position: relative;
+
+  &--beyond-the-viewport-on-mobile-s {
+    @include mobile-s {
+      width: calc(100vw - var(--container-padding-x));
+    }
+  }
+
+  &__item {
+    width: auto;
+  }
+
+  &__navigation {
+    justify-content: center;
+  }
+
+  &__scrollbar {
+    top: calc(100% + 24px);
+    width: 80px;
+    height: 5px;
+    background-color: var(--color-black-accent);
+    border-radius: 20px;
+
+    @include abs-x;
+
+    &-drag {
+      height: 100%;
+      background-color: var(--color-red-accent);
+      border-radius: inherit;
+    }
+  }
+}

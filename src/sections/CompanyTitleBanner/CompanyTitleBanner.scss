@@ -1,0 +1,52 @@
+.company-present {
+  padding-block: 80px 30px;
+
+  @include mobile {
+    padding-block: 30px;
+  }
+
+  &__banner {
+    position: relative;
+    padding: 30px;
+    min-height: 174px;
+    background-color: var(--color-grey);
+    border-radius: var(--border-radius-m);
+
+    @include mobile {
+      min-height: fluid(480, 243);
+    }
+
+    @include hover {
+      .main-title {
+        span {
+          color: var(--color-red-hover);
+        }
+      }
+    }
+
+    .main-title {
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+      position: relative;
+      line-height: 96%;
+      letter-spacing: -1.77px;
+      z-index: 5;
+
+      span {
+        color: var(--color-red-accent);
+        transition-duration: var(--transition-duration-longer);
+      }
+    }
+
+    picture {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      img {
+        border-bottom-right-radius: var(--border-radius-m);
+      }
+    }
+  }
+}

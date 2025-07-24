@@ -1,0 +1,247 @@
+.header {
+  position: sticky;
+  background-color: var(--color-grey);
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  padding-block: 20px;
+  border-bottom:  var(--border-width-s) solid transparent;
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+
+  &.is-fixed {
+    position: fixed;
+  }
+
+  @keyframes scrolling-header {
+    to {
+      padding-block: 10px;
+      box-shadow: 0px 10px 19px 12px rgba(34, 60, 80, 0.2);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__inner-top,
+  &__inner-bottom {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__inner-top {
+    @include tablet {
+      justify-content: space-between;
+    }
+  }
+
+  &__inner-bottom {
+    justify-content: space-between;
+
+    .busket-button,
+    .login-button {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__company {
+    &-info {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: fluid(20, 10);
+
+      @include tablet {
+        display: none;
+      }
+
+      &-option {
+        font-size: fluid-to-laptop(16, 14);
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-value {
+        text-decoration: none;
+        color: var(--color-red-accent);
+      }
+    }
+
+    &-phone {
+      font-size: fluid-to-laptop(20, 15);
+      text-wrap: nowrap;
+      line-height: 110%;
+      font-weight: 600;
+
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .soc1als__list {
+    flex-wrap: nowrap;
+
+    svg {
+      fill: var(--color-black-accent);
+    }
+
+    .soc1als__item:hover {
+      svg {
+        fill: var(--color-white);
+      }
+    }
+  }
+
+  &__button-call {
+    max-width: fluid-to-laptop(278, 140);
+    width: 100%;
+  }
+
+  &__overlay-menu-dialog {
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 15px;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--container-padding-x);
+    border: none;
+    transition-duration: var(--transition-duration-longer);
+    transition-behavior: allow-discrete;
+
+    @include tablet-above {
+      display: contents;
+    }
+
+    @mixin starting-styles {
+      opacity: 0;
+      translate: 50%;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--color-grey);
+
+      &[open] {
+        @starting-style {
+          @include starting-styles;
+        }
+      }
+
+      &:not([open]) {
+        right: -100%;
+
+        @include starting-styles;
+      }
+    }
+
+    address {
+      @include tablet-above {
+        display: none;
+      }
+
+      @include tablet {
+        display: flex;
+        gap: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        flex: initial;
+        max-width: 320px;
+        flex-wrap: wrap;
+
+        .header__button-call {
+          max-width: 100%;
+        }
+
+        .header__company-info-option {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          column-gap: 2px;
+        }
+
+        time {
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    border-radius: var(--border-radius-l);
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 15px;
+
+      @include tablet {
+        flex-direction: column;
+        row-gap: 15px;
+        margin-block: auto;
+      }
+    }
+
+    &-link {
+      @include hover {
+        color: var(--color-red-accent);
+      }
+
+      &.is-active {
+        color: var(--color-red-accent);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(20, 10);
+
+    @include tablet-above {
+      display: none;
+    }
+
+    .busket-button,
+    .login-button {
+      @include mobile {
+        font-size: 0;
+        gap: 0;
+        padding: 8px 10px;
+
+        @include square(fluid(44, 40));
+      }
+    }
+  }
+
+  &__burger-button {
+    position: relative;
+  }
+}

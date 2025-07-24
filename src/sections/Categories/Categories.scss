@@ -1,0 +1,25 @@
+.categories {
+  .section__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(30, 20);
+
+    .button {
+      max-width: 600px;
+      width: 100%;
+      margin-inline: auto;
+    }
+  }
+
+  .grid {
+    &--4 {
+      @include mobile-s {
+        --gridColumns: 2;
+      }
+
+      @include mobile-xs {
+        --gridColumns: 1;
+      }
+    }
+  }
+}

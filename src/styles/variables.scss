@@ -1,0 +1,40 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-black-accent : #282929;
+  --color-red-accent: #D22828;
+  --color-red-hover: #E83A3A;
+  --color-grey : #F5F5F5;
+  --color-yellow: #FFA326;
+  --color-blue: #3954AA;
+  --color-green: #39AA4A;
+
+  --border: var(--border-width-s) solid var(--color-red-accent);
+
+  --border-width-xl: 6px;
+  --border-width-l: 4px;
+  --border-width-m: 3px;
+  --border-width-s: 1px;
+
+  --border-radius-l: 37px;
+  --border-radius-m: 20px;
+  --border-radius-s: 12px;
+  --border-radius-xs: 10px;
+  --border-radius-xxs: 5px;
+
+  --font-family-face: 'Roboto', sans-serif;
+  --font-family-second-face: 'Montserrat', sans-serif;
+  --font-family-third-face: 'NotoSans', sans-serif;
+
+  --container-width: #{fluid-to-laptop(
+        $container-desktop-width,
+        $container-laptop-width
+    )};
+
+  --container-padding-x: 20px;
+
+  --section-padding-y: #{fluid(30, 30)};
+
+  --transition-duration:npm run build  0.2s;
+  --transition-duration-longer: 0.4s;
+}

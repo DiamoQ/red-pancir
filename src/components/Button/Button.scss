@@ -1,0 +1,115 @@
+.button {
+  column-gap: 10px;
+  padding: fluid-to-laptop(12, 12) 10px;
+  font-weight: 500;
+  color: var(--color-white);
+  text-wrap: nowrap;
+  background-color: var(--color-red-accent);
+  border: none;
+  border-radius: var(--border-radius-xxs);
+  user-select: none;
+  cursor: pointer;
+  transition: var(--transition-duration-longer);
+
+  @include flex-center(true);
+
+  @include laptop {
+    border-radius: var(--border-radius-xs);
+  }
+
+  @include hover {
+    color: var(--color-white);
+    background-color: var(--color-red-hover);
+  }
+
+  &:active {
+    scale: 1.05;
+  }
+
+  &:disabled {
+    color: var(--color-grey);
+    background-color: var(--color-red-hover);
+    pointer-events: none;
+  }
+
+  &:has(.button__icon) {
+    padding-block: fluid-to-laptop(8, 8);
+  }
+
+  &:has(.button__icon:only-child) {
+    padding: 8px 10px;
+
+    @include square(fluid(44, 40));
+  }
+
+  svg {
+    fill: var(--color-white);
+  }
+
+  &--transparent {
+    background-color: transparent;
+
+    &:has(.button__icon:only-child) {
+      @include square(fluid(38, 38));
+
+      .button__icon {
+        --iconSize: #{fluid-to-laptop(24, 24)};
+      }
+    }
+  }
+
+  &--grey {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+
+    &:disabled {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+
+  &--white {
+    background-color: var(--color-white);
+    padding-inline: 20px;
+    color: var(--color-black-accent);
+
+    @include hover {
+      svg {
+        fill: var(--color-white);
+      }
+    }
+
+    &:has(.button__icon:only-child) {
+      @include square(fluid(38, 38));
+
+      .button__icon {
+        --iconSize: #{fluid-to-laptop(24, 24)};
+      }
+    }
+
+    svg {
+      fill: var(--color-red-accent);
+    }
+  }
+
+  &.soc1als__link {
+    width: 38px !important;
+    height: 38px !important;
+    padding: 6px 10px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: var(--transition-duration-longer);
+
+    @include hover {
+      background-color: var(--color-red-accent);
+    }
+  }
+
+  &-page-link-to-main {
+    width: 100%;
+    max-width: 366px;
+    height: 48px;
+  }
+}
+
+//.button.slider-navigation__arrow-button:disabled {
+//  background-color: var(--color-red-accent);
+//}

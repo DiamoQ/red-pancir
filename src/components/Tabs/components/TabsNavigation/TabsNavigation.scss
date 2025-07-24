@@ -1,0 +1,39 @@
+.tabs-navigation {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 15px;
+
+  @include mobile-s {
+    flex-direction: column;
+  }
+
+  &__button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    padding: 10px fluid(20, 10);
+    min-width: 188px;
+    border-radius: var(--border-radius-s);
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    background-color: var(--color-grey);
+
+    @include hover {
+      color: var(--color-white);
+      background-color: var(--color-red-hover);
+    }
+
+    @include mobile-s {
+      min-width: 100%;
+    }
+
+    &.is-active {
+      color: var(--color-white);
+      background-color: var(--color-red-accent);
+      pointer-events: none;
+    }
+  }
+}

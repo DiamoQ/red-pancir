@@ -1,0 +1,132 @@
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-size: 16px;
+  line-height: 110%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-face);
+  color: var(--color-black-accent);
+
+  section:last-of-type {
+    padding-bottom: fluid(100, 60);
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: var(--font-family-second-face);
+  color: var(--color-black-accent);
+  line-height: 90%;
+}
+
+h1, .h1 {
+  @include fluid-text(59, 36);
+
+  font-weight: 700;
+
+  &.page-title {
+    font-size: fluid(62, 36);
+    font-weight: 600;
+  }
+}
+
+h2, .h2 {
+  @include fluid-text(36, 26);
+
+  font-weight: 600;
+}
+
+h3, .h3 {
+  @include fluid-text(20, 18);
+
+  font-weight: 600;
+}
+
+h4, .h4 {
+  @include fluid-text(16, 14);
+
+  font-weight: 600;
+}
+
+address {
+  font-style: normal;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+  transition: var(--transition-duration-longer);
+
+  @include hover {
+    color: var(--color-red-hover);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  @include focus-visible;
+}
+
+:has(.swiper) {
+  min-width: 0;
+}
+
+.breadcrumbs {
+  &__list,
+  &__item {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__item {
+
+    &--current {
+      color: var(--color-red-hover);
+    }
+  }
+
+  & + section {
+    padding-top: fluid(40, 20);
+  }
+}
+
+.text {
+  &-red {
+    color: var(--color-red-accent);
+  }
+
+  &-semibold {
+    font-weight: 600;
+  }
+}
+
+//.header,
+//.content > *:not(:nth-last-child(2)),
+//.footer {
+//    display: none !important;
+//}

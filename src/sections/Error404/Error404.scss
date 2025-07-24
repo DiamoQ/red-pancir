@@ -1,0 +1,31 @@
+.error404 {
+  .section__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: fluid(26, 20);
+
+    image {
+      max-width: 536px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 536 / 251;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(20, 30);
+    max-width: 441px;
+
+    .button {
+      margin-inline: auto;
+    }
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+}

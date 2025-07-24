@@ -1,0 +1,90 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+
+    .modal__dialog {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__dialog,
+  &__header,
+  &_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__dialog {
+    background: var(--color-grey);
+    border-radius: var(--border-radius-m);
+    max-width: 427px;
+    width: 100%;
+    padding: fluid(30, 20);
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: var(--transition-duration-longer);
+    gap: 20px;
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__description {
+    font-size: 14px;
+    max-width: 285px;
+  }
+
+  &__close-button {
+    width: 24px !important;
+    height: 24px !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include hover {
+      background: transparent;
+
+      svg {
+        scale: 1.04;
+      }
+    }
+
+    svg {
+      fill: var(--color-red-accent);
+      transition: var(--transition-duration-longer);
+    }
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 10px;
+
+    &-cell {
+      &--actions {
+        display: grid;
+        row-gap: 10px;
+      }
+
+    }
+  }
+}
+
+/* Страница не скроллится */
+.is-lock {
+  overflow: hidden;
+}
