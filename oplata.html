@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Красный панцирь | Оплата</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    <script src="/assets/main.js" type="module"></script>
+    <link rel="stylesheet" href="/assets/bundle.css">
+  </head>
+  <body>
+    <header class="header is-fixed" data-js-overlay-menu="">
+      <div class="header__inner container">
+        <div class="header__inner-top">
+          <a class="logo" href="/" title="Главная" aria-label="Главная">
+            <img srcset="/assets/images/logo-320x74.png 320w, /assets/images/logo-371x84.png 371w" src="/assets/images/logo-371x84.png" sizes="(min-width: 371px) 371px, 100vw" width="371" height="84" alt="Логотип компании Красный панцирь" decoding="async" loading="lazy" class="logo__image">
+          </a>
+          <address class="header__company-info">
+            <div class="header__company-info-option"><span class="header__company-info-name">Самовывоз:</span>
+              <a href="https://www.yandex.ru" target="_blank" rel="noopener noreferrer" class="header__company-info-value">г. Челябинск, ул Чичерина 8/3</a>
+            </div>
+            <time class="header__company-info-option"><span class="header__company-info-name">Ежедневно</span><span class="header__company-info-value">с 11:00 до 23:00</span></time>
+            <div class="soc1als">
+              <ul class="soc1als__list">
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте" href="vk.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/assets/images/icons.svg#vkLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в Telegram" title="Мы в Telegram" href="tg.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/assets/images/icons.svg#tgLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в WhatsApp" title="Мы в WhatsApp" href="whatsapp.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/assets/images/icons.svg#whatsLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+              </ul>
+            </div>
+            <a class="header__company-phone" href="tel:+7-351-777-80-90">+7-351-777-80-90</a>
+            <button class="header__button-call button" type="button" data-js-modal-notify-button="callback-window"><span class="button__label">Заказать звонок</span></button>
+          </address>
+          <div class="header__actions">
+            <a class="busket-button button button--white" href="/busket"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/assets/images/icons.svg#busket"></use>
+                </svg>
+              </span><span class="button__label">Корзина</span></a>
+            <a class="login-button button button--white" href="/login"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/assets/images/icons.svg#login"></use>
+                </svg>
+              </span><span class="button__label">Войти</span></a>
+            <button class="header__burger-button visible-tablet burger-button" type="button" aria-label="Open menu" title="Open menu" data-js-overlay-menu-burger-button="callback-window">
+              <svg class="burger-button__svg" width="30" height="30" viewBox="0 0 100 100">
+                <path class="burger-button__line burger-button__line--1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+                <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80"></path>
+                <path class="burger-button__line burger-button__line--3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="header__inner-bottom">
+          <a class="katalog-button button" href="/katalog"><span class="button__icon icon">
+              <svg fill="currentColor" stroke="none">
+                <use href="/assets/images/icons.svg#katalog"></use>
+              </svg>
+            </span><span class="button__label">Каталог</span></a>
+          <form id="navigationSearch" class="search navigation__search">
+            <label for="navigation-search">Поиск
+              <input type="text" name="search" id="navigation-search" class="navigation__input" placeholder="Поиск">
+            </label>
+            <button type="submit" class="input__btn" aria-label="Найти" title="Найти"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/assets/images/icons.svg#search"></use>
+                </svg>
+              </span></button>
+          </form>
+          <dialog class="header__overlay-menu-dialog" data-js-overlay-menu-dialog="">
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a href="/about" class="header__menu-link">О компании</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="/gotovim" class="header__menu-link">Мы готовим</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="/oplata" class="header__menu-link is-active">Оплата</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="/bonusactions" class="header__menu-link">Акции</a>
+                </li>
+              </ul>
+            </nav>
+            <address class="header__company-info">
+              <div class="soc1als">
+                <ul class="soc1als__list">
+                  <li class="soc1als__item">
+                    <a class="soc1als__link button" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте" href="vk.com" target="_blank"><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/assets/images/icons.svg#vkLogo"></use>
+                        </svg>
+                      </span></a>
+                  </li>
+                  <li class="soc1als__item">
+                    <a class="soc1als__link button" aria-label="Мы в Telegram" title="Мы в Telegram" href="tg.com" target="_blank"><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/assets/images/icons.svg#tgLogo"></use>
+                        </svg>
+                      </span></a>
+                  </li>
+                  <li class="soc1als__item">
+                    <a class="soc1als__link button" aria-label="Мы в WhatsApp" title="Мы в WhatsApp" href="whatsapp.com" target="_blank"><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/assets/images/icons.svg#whatsLogo"></use>
+                        </svg>
+                      </span></a>
+                  </li>
+                </ul>
+              </div>
+              <a class="header__company-phone" href="tel:+7-351-777-80-90">+7-351-777-80-90</a>
+              <button class="header__button-call button" type="button" data-js-modal-notify-button=""><span class="button__label">Заказать звонок</span></button>
+              <div class="header__company-info-option"><span class="header__company-info-name">Самовывоз:</span>
+                <a href="https://www.yandex.ru" target="_blank" rel="noopener noreferrer" class="header__company-info-value">г. Челябинск, ул Чичерина 8/3</a>
+              </div>
+              <time class="header__company-info-option"><span class="header__company-info-name">Ежедневно</span><span class="header__company-info-value">с 11:00 до 23:00</span></time>
+            </address>
+          </dialog>
+          <a class="busket-button button button--white" href="/busket"><span class="button__icon icon">
+              <svg fill="currentColor" stroke="none">
+                <use href="/assets/images/icons.svg#busket"></use>
+              </svg>
+            </span><span class="button__label">Корзина</span></a>
+          <a class="login-button button button--white" href="/login"><span class="button__icon icon">
+              <svg fill="currentColor" stroke="none">
+                <use href="/assets/images/icons.svg#login"></use>
+              </svg>
+            </span><span class="button__label">Войти</span></a>
+        </div>
+      </div>
+    </header>
+    <main class="content content--is-reset-padding-top">
+      <section class="breadcrumbs" aria-labelledby="breadcrumbs">
+        <div class="breadcrumbs__inner container">
+          <nav class="breadcrumbs__nav" aria-label="Хлебные крошки">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__separator">›</span>
+              </li>
+              <li class="breadcrumbs__item breadcrumbs__item--current">Оплата</li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="oplata section container" aria-labelledby="oplata-title">
+        <header class="section__header">
+          <div class="section__info">
+            <h1 class="page-title false" id="oplata-title">Оплата</h1>
+            <div class="section__description">
+              <p>Вы можете оплатить заказ наличными или банковской картой при получении.<br>Никакой предоплаты — оплата производится только после осмотра товара на месте.<br>Мы заботимся о вашем удобстве и уверенности в покупке.</p>
+              <p>Мы принимаем все основные виды карт.<br>Наличные также без проблем.</p>
+              <ul>
+                <li>Visa</li>
+                <li>MasterCard</li>
+                <li>Мир</li>
+              </ul>
+              <p><span class="text-red text-semibold"> Обратите внимание:</span><br>Самовывоз — единственный доступный способ получения заказа.<br>Адрес и график работы пункта выдачи уточняйте заранее, чтобы избежать недоразумений.</p>
+              <p>Мы стараемся сделать процесс максимально простым и прозрачным. Если у вас есть вопросы — мы всегда готовы помочь!</p>
+            </div>
+          </div>
+        </header>
+        <div class="section__body"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__inner-top">
+          <nav class="footer__menu">
+            <div class="footer__menu-column">
+              <h4 class="footer__menu-title h6">Полезное</h4>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="/katalog" class="footer__menu-link">Меню</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/about" class="footer__menu-link">О нас</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/oplata" class="footer__menu-link">Оплата</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/contacts" class="footer__menu-link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu-column">
+              <h4 class="footer__menu-title h6">Документы</h4>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="/offerta" class="footer__menu-link">Информация об офферте</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/confidential" class="footer__menu-link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/personality-info" class="footer__menu-link">Согласие на обработку персональных данных</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="footer__address">
+            <h4 class="footer__address-title h6">Наш адрес</h4>
+            <address>
+              <a href="https://www.yandex.ru" target="_blank" rel="noopener noreferrer" class="footer__address-link">г. Челябинск, ул Чичерина 8/3</a>
+            </address>
+          </div>
+          <address class="footer__company-info">
+            <a class="footer__company-phone" href="tel:+7-351-777-80-90">+7-351-777-80-90</a>
+            <a class="footer__company-mail" href="mailto:Kpraki@yandex.ru">Kpraki@yandex.ru</a>
+            <button class="footer__company-callback" data-js-modal-notify-button="callback-window">Заказать звонок</button>
+            <div class="soc1als">
+              <ul class="soc1als__list">
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте" href="vk.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/assets/images/icons.svg#vkLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в Telegram" title="Мы в Telegram" href="tg.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/assets/images/icons.svg#tgLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в WhatsApp" title="Мы в WhatsApp" href="whatsapp.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/assets/images/icons.svg#whatsLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+              </ul>
+            </div>
+            <time class="footer__company-info-option"><span class="footer__company-info-name">Ежедневно</span><span class="footer__company-info-value">с 11:00 до 23:00</span></time>
+            <a class="footer__company-app-button button" href="https://play.google.com/" target="_blank"><span class="button__label">Скачать UDS App</span></a>
+          </address>
+        </div>
+        <div class="footer__extra">
+          <p class="footer__copyright">Все права защищены@<time dateTime="2025">2025</time>
+          </p>
+          <ul class="footer__pay-services">
+            <li class="footer_pay-service"><span class="button__icon icon" aria-label="VISA">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/assets/images/icons.svg#visa"></use>
+                </svg>
+              </span></li>
+            <li class="footer_pay-service"><span class="button__icon icon" aria-label="МИР">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/assets/images/icons.svg#mir"></use>
+                </svg>
+              </span></li>
+            <li class="footer_pay-service"><span class="button__icon icon" aria-label="Union">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/assets/images/icons.svg#union"></use>
+                </svg>
+              </span></li>
+          </ul>
+          <p class="footer__name">Раковарня «Красный панцирь»</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
