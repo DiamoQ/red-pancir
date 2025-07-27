@@ -183,6 +183,41 @@
         </header>
         <div class="section__body"></div>
       </section>
+      <div data-js-modal-notify="callback-window" class="modal">
+        <div class="modal__dialog" data-js-modal-notify-dialog="callback-window">
+          <header class="modal__header">
+            <h3 class="modal__title">Заказать звонок</h3>
+            <p class="modal__description">Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время</p>
+            <button class="modal__close-button button button--transparent" aria-label="Закрыть модальное окно" title="Закрыть модальное окно" type="button" data-js-modal-notify-close="callback-window"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/red-pancir/assets/images/icons.svg#close-button"></use>
+                </svg>
+              </span></button>
+          </header>
+          <form class="modal__form" action="">
+            <div class="modal__form-cell field">
+              <label for="имя" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
+              <div class="field__body">
+                <input class="field__control" id="имя" placeholder="Имя" required="">
+              </div>
+            </div>
+            <div class="modal__form-cell field">
+              <label for="телефон" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
+              <div class="field__body">
+                <input class="field__control" id="телефон" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
+              </div>
+            </div>
+            <div class="modal__form-cell modal__form-cell--wide modal__form-cell--actions">
+              <label class="modal__form-agreement checkbox" for="callbackCheckboxId">
+                <input class="checkbox__input" type="checkbox" id="callbackCheckboxId" required="">
+                <p class="checkbox__label">Я даю согласие на <a href="/personal-date" target="_blank">обработку персональных данных</a>, а также подтверждаю, что ознакомлен с <a href="/politics" target="_blank">Политикой конфиденциальности</a>
+                </p>
+              </label>
+              <button class="modal__submit-button button" type="submit"><span class="button__label">Отправить</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__inner container">
