@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Красный панцирь | Заказ успешно оформлен</title>
+    <title>Красный панцирь | Авторизация</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/red-pancir/assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/red-pancir/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/red-pancir/assets/images/favicon-16x16.png">
@@ -159,22 +159,43 @@
               <li class="breadcrumbs__item">
                 <a href="/" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__separator">›</span>
               </li>
-              <li class="breadcrumbs__item breadcrumbs__item--current">Успешно</li>
+              <li class="breadcrumbs__item breadcrumbs__item--current">Авторизация</li>
             </ul>
           </nav>
         </div>
       </section>
-      <section class="order-success noto-font section container" aria-labelledby="order-success-title">
+      <section class="authorization section container" aria-labelledby="login-title">
         <header class="section__header">
           <div class="section__info">
-            <h1 class="page-title false" id="order-success-title">Заказ успешно оформлен</h1>
-            <div class="section__description">
-              <p>Оплата прошла успешно, наш менеджер свяжется <br>с вами. Спасибо!</p>
-            </div>
+            <h1 class="page-title  visually-hidden" id="login-title">Авторизация</h1>
           </div>
         </header>
         <div class="section__body">
-          <a class="button-page-link-to-main button" href="/red-pancir"><span class="button__label">На главную</span></a>
+          <div class="authorization__block">
+            <header class="authorization__header">
+              <h2 class="section__title">Вход</h2>
+              <a href="/red-pancir/registration" class="authorization__header-link">Регистрация</a>
+            </header>
+            <form class="authorization__form form" action="">
+              <div class="form__cell field">
+                <label for="authorizationPhone" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
+                <div class="field__body">
+                  <input class="field__control" id="authorizationPhone" name="authorizationPhone" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
+                </div>
+              </div>
+              <div class="form__cell field">
+                <label for="authorizationPassword" class="field__label">Пароль<span class="field__requared-star" aria-hidden="true">*</span></label>
+                <div class="field__body">
+                  <input class="field__control" id="authorizationPassword" name="authorizationPassword" type="password" placeholder="Пароль" required="" data-js-password-input="true">
+                  <button type="button" class="field__control-visible" data-js-toggle-password="true" aria-label="Показать пароль">👁</button>
+                </div>
+              </div>
+              <div class="form__cell form__cell--wide form__cell--actions">
+                <button class="form__submit-button button" type="submit"><span class="button__label">Войти</span></button>
+              </div>
+            </form>
+            <a href="/red-pancir/recover" class="authorization__recover-link">Восстановить пароль</a>
+          </div>
         </div>
       </section>
       <div data-js-modal-notify="callback-window" class="modal">

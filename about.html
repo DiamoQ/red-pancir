@@ -312,38 +312,38 @@
                 <p>Пришли нам своё резюме и мы обязательно свяжемся с тобой!</p>
               </div>
             </div>
-            <form class="modal__form" action="">
-              <div class="modal__form-cell field">
+            <form class="form invite-to-job-form" action="">
+              <div class="form__cell field">
                 <label for="фамилия-имя" class="field__label">Фамилия Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
                 <div class="field__body">
-                  <input class="field__control" id="фамилия-имя" placeholder="Фамилия Имя" required="">
+                  <input class="field__control" id="фамилия-имя" name="фамилия-имя" placeholder="Фамилия Имя" required="">
                 </div>
               </div>
-              <div class="modal__form-cell field">
+              <div class="form__cell field">
                 <label for="InviteToJobPhone" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
                 <div class="field__body">
-                  <input class="field__control" id="InviteToJobPhone" placeholder="Телефон" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
+                  <input class="field__control" id="InviteToJobPhone" name="InviteToJobPhone" placeholder="Телефон" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
                 </div>
               </div>
-              <div class="modal__form-cell field">
+              <div class="form__cell field">
                 <label for="e-mail" class="field__label">E-mail<span class="field__requared-star" aria-hidden="true">*</span></label>
                 <div class="field__body">
-                  <input class="field__control" id="e-mail" placeholder="E-mail" required="" inputMode="email">
+                  <input class="field__control" id="e-mail" name="e-mail" placeholder="E-mail" required="" inputMode="email">
                 </div>
               </div>
-              <div class="modal__form-cell field">
+              <div class="form__cell field">
                 <label class="field__label field__label-file" for="прикрепить-резюме">Прикрепить резюме</label>
                 <label class="field__file-label">
-                  <input class="field__control field__file-input visibility-hidden" id="прикрепить-резюме" type="file" data-js-file-input="" required=""><span class="field__control field__control-fake-input" data-js-file-name="">Прикрепить резюме</span>
+                  <input class="field__control field__file-input visibility-hidden" id="прикрепить-резюме" tabindex="-1" type="file" data-js-file-input="" required=""><span class="field__control field__control-fake-input" tabindex="0" data-js-file-name="">Прикрепить резюме</span>
                 </label>
               </div>
-              <div class="modal__form-cell modal__form-cell--wide modal__form-cell--actions">
-                <label class="modal__form-agreement checkbox" for="inviteToJobCheckboxId">
+              <div class="form__cell form__cell--wide form__cell--actions">
+                <label class="form__agreement checkbox" for="inviteToJobCheckboxId">
                   <input class="checkbox__input" type="checkbox" id="inviteToJobCheckboxId" required="">
                   <p class="checkbox__label">Я даю согласие на <a href="/personal-date" target="_blank">обработку персональных данных</a>, а также подтверждаю, что ознакомлен с <a href="/politics" target="_blank">Политикой конфиденциальности</a>
                   </p>
                 </label>
-                <button class="modal__submit-button button" type="submit"><span class="button__label">Откликнуться</span></button>
+                <button class="form__submit-button button" type="submit"><span class="button__label">Откликнуться</span></button>
               </div>
             </form>
           </div>
@@ -360,26 +360,26 @@
                 </svg>
               </span></button>
           </header>
-          <form class="modal__form" action="">
-            <div class="modal__form-cell field">
+          <form class="modal__form form" action="">
+            <div class="form__cell field">
               <label for="имя" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
               <div class="field__body">
-                <input class="field__control" id="имя" placeholder="Имя" required="">
+                <input class="field__control" id="имя" name="имя" placeholder="Имя" required="">
               </div>
             </div>
-            <div class="modal__form-cell field">
+            <div class="form__cell field">
               <label for="modalCallbackPhone" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
               <div class="field__body">
-                <input class="field__control" id="modalCallbackPhone" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
+                <input class="field__control" id="modalCallbackPhone" name="modalCallbackPhone" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
               </div>
             </div>
-            <div class="modal__form-cell modal__form-cell--wide modal__form-cell--actions">
-              <label class="modal__form-agreement checkbox" for="callbackCheckboxId">
+            <div class="form__cell form__cell--wide form__cell--actions">
+              <label class="form__agreement checkbox" for="callbackCheckboxId">
                 <input class="checkbox__input" type="checkbox" id="callbackCheckboxId" required="">
                 <p class="checkbox__label">Я даю согласие на <a href="/personal-date" target="_blank">обработку персональных данных</a>, а также подтверждаю, что ознакомлен с <a href="/politics" target="_blank">Политикой конфиденциальности</a>
                 </p>
               </label>
-              <button class="modal__submit-button button" type="submit"><span class="button__label">Отправить</span></button>
+              <button class="form__submit-button button" type="submit"><span class="button__label">Отправить</span></button>
             </div>
           </form>
         </div>
