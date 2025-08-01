@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Красный панцирь | Авторизация</title>
+    <title>Красный панцирь | Личные данные</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/red-pancir/assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/red-pancir/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/red-pancir/assets/images/favicon-16x16.png">
@@ -159,42 +159,80 @@
               <li class="breadcrumbs__item">
                 <a href="/" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__separator">›</span>
               </li>
-              <li class="breadcrumbs__item breadcrumbs__item--current">Авторизация</li>
+              <li class="breadcrumbs__item breadcrumbs__item--current">Личные данные</li>
             </ul>
           </nav>
         </div>
       </section>
-      <section class="authorization section container" aria-labelledby="login-title">
-        <header class="section__header">
-          <div class="section__info">
-            <h1 class="page-title  visually-hidden" id="login-title">Авторизация</h1>
-          </div>
-        </header>
-        <div class="section__body">
-          <div class="authorization__block">
-            <header class="authorization__header">
-              <h2 class="section__title">Вход</h2>
-              <a href="/red-pancir/registration" class="authorization__header-link">Регистрация</a>
-            </header>
-            <form class="authorization__form form" action="">
-              <div class="form__cell field">
-                <label for="authorizationPhone" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
-                <div class="field__body field__body--tel">
-                  <input class="field__control" id="authorizationPhone" name="authorizationPhone" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
-                </div>
+      <section class="personal-date" aria-labelledby="personal-date-title">
+        <div class="personal-date__inner container">
+          <nav class="personal-date__navigation">
+            <ul class="personal-date__navigation-list">
+              <li class="personal-date__navigation-item active">
+                <a href="/personal-date" class="personal-date__navigation-link"><span class="personal-date__navigation-icon icon">
+                    <svg fill="currentColor" stroke="none">
+                      <use href="/red-pancir/assets/images/icons.svg#login"></use>
+                    </svg>
+                  </span>Личные данные</a>
+              </li>
+              <li class="personal-date__navigation-item">
+                <a href="/history" class="personal-date__navigation-link"><span class="personal-date__navigation-icon icon">
+                    <svg fill="currentColor" stroke="none">
+                      <use href="/red-pancir/assets/images/icons.svg#busket"></use>
+                    </svg>
+                  </span>История заказов</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="personal-date__body">
+            <h1 class="page-title" id="personal-date-title">Личные данные</h1>
+            <form id="profile-form" class="form profile-form">
+              <div class="profile-form__body">
+                <h2>Контактные данные</h2>
+                <fieldset id="profile-fields" class="profile-form__fields" disabled="">
+                  <div class="form__cell field">
+                    <label for="profileSurname" class="field__label">Фамилия<span class="field__requared-star" aria-hidden="true">*</span></label>
+                    <div class="field__body">
+                      <input class="field__control" id="profileSurname" name="profileSurname" placeholder="Фамилия" required="">
+                    </div>
+                  </div>
+                  <div class="form__cell field">
+                    <label for="profileName" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
+                    <div class="field__body">
+                      <input class="field__control" id="profileName" name="profileName" placeholder="Имя" required="">
+                    </div>
+                  </div>
+                  <div class="form__cell field">
+                    <label for="profileFathername" class="field__label">Отчество<span class="field__requared-star" aria-hidden="true">*</span></label>
+                    <div class="field__body">
+                      <input class="field__control" id="profileFathername" name="profileFathername" placeholder="Отчество" required="">
+                    </div>
+                  </div>
+                  <div class="form__cell field">
+                    <label for="birthdayDate" class="field__label">Дата рождения<span class="field__requared-star" aria-hidden="true">*</span></label>
+                    <div class="field__body field__body--date">
+                      <input class="field__control" id="birthdayDate" name="birthdayDate" type="date" placeholder="Дата рождения" required="" inputMode="date"><span class="field__placeholder">Дата рождения</span>
+                    </div>
+                  </div>
+                  <div class="form__cell field">
+                    <label for="profilePhone" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
+                    <div class="field__body field__body--tel">
+                      <input class="field__control" id="profilePhone" name="profilePhone" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
+                    </div>
+                  </div>
+                  <div class="form__cell field">
+                    <label for="authorizationEmail" class="field__label">E-mail<span class="field__requared-star" aria-hidden="true">*</span></label>
+                    <div class="field__body">
+                      <input class="field__control" id="authorizationEmail" name="authorizationEmail" type="email" placeholder="E-mail" required="">
+                    </div>
+                  </div>
+                </fieldset>
               </div>
-              <div class="form__cell field">
-                <label for="authorizationPassword" class="field__label">Пароль<span class="field__requared-star" aria-hidden="true">*</span></label>
-                <div class="field__body">
-                  <input class="field__control" id="authorizationPassword" name="authorizationPassword" type="password" placeholder="Пароль" required="" data-js-password-input="true">
-                  <button type="button" class="field__control-visible" data-js-toggle-password="true" aria-label="Показать пароль">👁</button>
-                </div>
-              </div>
-              <div class="form__cell form__cell--wide form__cell--actions">
-                <button class="form__submit-button button" type="submit"><span class="button__label">Войти</span></button>
+              <div class="form-actions">
+                <button class="form__submit-button hidden button" id="save-btn" type="submit"><span class="button__label">Сохранить</span></button>
+                <button class="form__submit-button button" id="edit-btn" type="button"><span class="button__label">Изменить</span></button>
               </div>
             </form>
-            <a href="/red-pancir/recover" class="authorization__recover-link">Восстановить пароль</a>
           </div>
         </div>
       </section>
