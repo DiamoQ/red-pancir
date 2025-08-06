@@ -174,15 +174,32 @@
           </div>
         </header>
         <div class="section__body">
-          <div class="price-filter" data-js-price-range="">
-            <div class="price-filter__range">
-              <input type="range" min="0" max="10000" data-js-range-min="" value="1280">
-              <input type="range" min="0" max="10000" data-js-range-max="" value="4560">
-              <div class="price-filter__track" data-js-track=""></div>
+          <div class="product-controls">
+            <div class="product-controls__left">
+              <button class="product-controls__filter" data-js-filter-open="">Фильтр</button>
+              <div class="product-controls__tags"></div>
             </div>
-            <div class="price-filter__inputs">
-              <input type="number" min="0" max="10000" data-js-input-min="" value="1280">
-              <input type="number" min="0" max="10000" data-js-input-max="" value="4560">
+            <div class="product-controls__right">
+              <label class="toggle">
+                <input type="checkbox" name="arrFilter_AVAILABLE" value="Y">В наличии<span class="toggle__box"></span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" name="arrFilter_HIT" value="Y">Хит продаж<span class="toggle__box"></span>
+              </label>
+              <div class="product-controls__sort">
+                <button type="button" class="product-sort__button" data-js-sort-toggle=""><span class="product-sort__text">Сортировать: от минимальной цены</span><span class="icon icon--arrow"></span></button>
+                <div class="product-sort__dropdown" data-js-sort-dropdown="">
+                  <label>
+                    <input type="radio" name="sort" checked="" value="minPrice"> От минимальной цены
+                  </label>
+                  <label>
+                    <input type="radio" name="sort" value="maxPrice"> От максимальной цены
+                  </label>
+                  <label>
+                    <input type="radio" name="sort" value="promo"> Сначала по акции
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
           <ul class="grid grid--4">
@@ -501,6 +518,68 @@
           </div>
         </div>
       </section>
+      <div class="filter-modal-window" data-js-filter="" aria-hidden="true">
+        <div class="filter-modal-window__overlay" data-js-filter-overlay=""></div>
+        <div class="filter-modal-window__dialog">
+          <div class="filter-modal-window__header">
+            <button class="filter-modal-window__back" data-js-filter-close="">Назад</button>
+          </div>
+          <form name="filter-form" class="filter-modal-window__form" action="">
+            <div class="filter-modal-window__group" data-group-label="Цена">
+              <div class="filter-modal-window__label">Цена</div>
+              <div class="price-filter" data-js-price-range="">
+                <div class="price-filter__range">
+                  <input type="range" min="0" max="10000" name="arrFilter_PRICE_MIN" data-js-range-min="" value="1200">
+                  <input type="range" min="0" max="10000" name="arrFilter_PRICE_MAX" data-js-range-max="" value="4560">
+                  <div class="price-filter__track" data-js-track=""></div>
+                </div>
+                <div class="price-filter__inputs">
+                  <input type="number" name="arrFilter_PRICE_MIN" data-js-input-min="" value="1200">
+                  <input type="number" name="arrFilter_PRICE_MAX" data-js-input-max="" value="4560">
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group" data-group-label="Наличие">
+              <label class="toggle">
+                <input type="checkbox" name="arrFilter_AVAILABLE" value="Y"><span class="toggle__box"></span>В наличии
+              </label>
+            </div>
+            <div class="filter-modal-window__group" data-group-label="Популярность">
+              <label class="toggle">
+                <input type="checkbox" name="arrFilter_HIT" value="Y"><span class="toggle__box"></span>Хит продаж
+              </label>
+            </div>
+            <div class="filter-modal-window__group" data-group-label="Рыба">
+              <div class="filter-modal-window__label">Рыба</div>
+              <label>
+                <input type="checkbox" name="arrFilter_FISH[]" value="Тунец"> Тунец
+              </label>
+              <label>
+                <input type="checkbox" name="arrFilter_FISH[]" value="Дорадо"> Дорадо
+              </label>
+              <label>
+                <input type="checkbox" name="arrFilter_FISH[]" value="Сибас"> Сибас
+              </label>
+              <label>
+                <input type="checkbox" name="arrFilter_FISH[]" value="Нерка"> Нерка
+              </label>
+            </div>
+            <div class="filter-modal-window__group" data-group-label="Креветки">
+              <div class="filter-modal-window__label">Креветки</div>
+              <label>
+                <input type="checkbox" name="arrFilter_SHRIMP[]" value="Лангустины"> Лангустины
+              </label>
+              <label>
+                <input type="checkbox" name="arrFilter_SHRIMP[]" value="Тигровые"> Тигровые
+              </label>
+            </div>
+            <div class="filter-modal-window__footer">
+              <button class="btn btn--red">Применить фильтр</button>
+              <button type="reset" class="btn btn--link">Сбросить фильтр</button>
+            </div>
+          </form>
+        </div>
+      </div>
       <div data-js-modal-notify="callback-window" class="modal">
         <div class="modal__dialog" data-js-modal-notify-dialog="callback-window">
           <header class="modal__header">
