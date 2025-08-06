@@ -167,336 +167,334 @@
           </nav>
         </div>
       </section>
-      <section class="product-section section container" aria-labelledby="category-title">
-        <header class="section__header">
+      <section class="section product-section" aria-labelledby="category-title">
+        <header class="section__header container">
           <div class="section__info">
-            <h1 class="page-title false" id="category-title">Морепродукты</h1>
+            <h1 class="page-title" id="category-title">Морепродукты</h1>
           </div>
         </header>
-        <div class="section__body">
-          <div class="product-controls">
-            <div class="product-controls__left">
-              <button class="product-controls__filter" data-js-filter-open="">Фильтр</button>
-              <div class="product-controls__tags"></div>
-            </div>
-            <div class="product-controls__right">
-              <label class="toggle">
-                <input type="checkbox" name="arrFilter_AVAILABLE" value="Y">В наличии<span class="toggle__box"></span>
-              </label>
-              <label class="toggle">
-                <input type="checkbox" name="arrFilter_HIT" value="Y">Хит продаж<span class="toggle__box"></span>
-              </label>
-              <div class="product-controls__sort">
-                <button type="button" class="product-sort__button" data-js-sort-toggle=""><span class="product-sort__text">Сортировать: от минимальной цены</span><span class="icon icon--arrow"></span></button>
-                <div class="product-sort__dropdown" data-js-sort-dropdown="">
-                  <label>
-                    <input type="radio" name="sort" checked="" value="minPrice"> От минимальной цены
-                  </label>
-                  <label>
-                    <input type="radio" name="sort" value="maxPrice"> От максимальной цены
-                  </label>
-                  <label>
-                    <input type="radio" name="sort" value="promo"> Сначала по акции
-                  </label>
-                </div>
+        <div class="container product-controls">
+          <div class="product-controls__left">
+            <button class="product-controls__filter" data-js-filter-open="">Фильтр</button>
+            <div class="product-controls__tags"></div>
+          </div>
+          <div class="product-controls__right">
+            <label class="toggle">
+              <input type="checkbox" name="arrFilter_AVAILABLE" value="Y">В наличии<span class="toggle__box"></span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" name="arrFilter_HIT" value="Y">Хит продаж<span class="toggle__box"></span>
+            </label>
+            <div class="product-controls__sort">
+              <button type="button" class="product-sort__button" data-js-sort-toggle=""><span class="product-sort__text">Сортировать:<span class="product-sort__value">от минимальной цены</span></span></button>
+              <div class="product-sort__dropdown" data-js-sort-dropdown="">
+                <label>
+                  <input type="radio" name="sort" checked="" value="minPrice"> От минимальной цены
+                </label>
+                <label>
+                  <input type="radio" name="sort" value="maxPrice"> От максимальной цены
+                </label>
+                <label>
+                  <input type="radio" name="sort" value="promo"> Сначала по акции
+                </label>
               </div>
             </div>
           </div>
-          <ul class="grid grid--4">
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                  <div class="product-card__labels"><span class="product-card__label 
-                                product-card__label--hit 
-                                 ">Хит продаж</span><span class="product-card__label 
-                                 
-                                product-card__label--promo ">Акция</span></div>
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__options"><span class="product-card__option 
-                                            product-card__option--boiling 
-                                             
-                                            ">Отварим</span><span class="product-card__option 
-                                             
-                                            product-card__option--frying 
-                                            ">Пожарим</span><span class="product-card__option 
-                                             
-                                             
-                                            product-card__option--alive">Отправим живыми</span></div>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__options"><span class="product-card__option 
-                                            product-card__option--boiling 
-                                             
-                                            ">Отварим</span><span class="product-card__option 
-                                             
-                                            product-card__option--frying 
-                                            ">Пожарим</span></div>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                  <div class="product-card__labels"><span class="product-card__label 
-                                product-card__label--hit 
-                                 ">Хит продаж</span></div>
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__options"><span class="product-card__option 
-                                            product-card__option--boiling 
-                                             
-                                            ">Отварим</span><span class="product-card__option 
-                                             
-                                            product-card__option--frying 
-                                            ">Пожарим</span><span class="product-card__option 
-                                             
-                                             
-                                            product-card__option--alive">Отправим живыми</span></div>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank"><span class="product-card__availability">Нет в наличии</span>
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__actions">
-                    <a class="button button--white" href="/red-pancir/kalmar"><span class="button__label">Сообщить о поступлении</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                  <div class="product-card__labels"><span class="product-card__label 
-                                 
-                                product-card__label--promo ">Акция</span></div>
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__options"><span class="product-card__option 
-                                             
-                                             
-                                            product-card__option--alive">Отправим живыми</span></div>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1999<!-- -->₽</span><span class="product-card__old-price">2400<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                  <div class="product-card__labels"><span class="product-card__label 
-                                product-card__label--hit 
-                                 ">Хит продаж</span><span class="product-card__label 
-                                 
-                                product-card__label--promo ">Акция</span></div>
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__options"><span class="product-card__option 
-                                            product-card__option--boiling 
-                                             
-                                            ">Отварим</span><span class="product-card__option 
-                                             
-                                            product-card__option--frying 
-                                            ">Пожарим</span><span class="product-card__option 
-                                             
-                                             
-                                            product-card__option--alive">Отправим живыми</span></div>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                  <div class="product-card__labels"><span class="product-card__label 
-                                product-card__label--hit 
-                                 ">Хит продаж</span><span class="product-card__label 
-                                 
-                                product-card__label--promo ">Акция</span></div>
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__options"><span class="product-card__option 
-                                            product-card__option--boiling 
-                                             
-                                            ">Отварим</span><span class="product-card__option 
-                                             
-                                            product-card__option--frying 
-                                            ">Пожарим</span><span class="product-card__option 
-                                             
-                                             
-                                            product-card__option--alive">Отправим живыми</span></div>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                  <div class="product-card__labels"><span class="product-card__label 
-                                product-card__label--hit 
-                                 ">Хит продаж</span></div>
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__options"><span class="product-card__option 
-                                            product-card__option--boiling 
-                                             
-                                            ">Отварим</span><span class="product-card__option 
-                                             
-                                             
-                                            product-card__option--alive">Отправим живыми</span></div>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                  <div class="product-card__labels"><span class="product-card__label 
-                                product-card__label--hit 
-                                 ">Хит продаж</span><span class="product-card__label 
-                                 
-                                product-card__label--promo ">Акция</span></div>
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__options"><span class="product-card__option 
-                                             
-                                             
-                                            product-card__option--alive">Отправим живыми</span><span class="product-card__option 
-                                            product-card__option--boiling 
-                                             
-                                            ">Отварим</span><span class="product-card__option 
-                                             
-                                            product-card__option--frying 
-                                            ">Пожарим</span></div>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="grid__item">
-              <article class="product-card">
-                <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
-                  <div class="product-card__labels"><span class="product-card__label 
-                                product-card__label--hit 
-                                 ">Хит продаж</span><span class="product-card__label 
-                                 
-                                product-card__label--promo ">Акция</span></div>
-                </a>
-                <div class="product-card__content">
-                  <h2 class="product-card__title">Кальмар командорский</h2>
-                  <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
-                  <div class="product-card__options"><span class="product-card__option 
-                                            product-card__option--boiling 
-                                             
-                                            ">Отварим</span><span class="product-card__option 
-                                             
-                                             
-                                            product-card__option--alive">Отправим живыми</span><span class="product-card__option 
-                                             
-                                            product-card__option--frying 
-                                            ">Пожарим</span></div>
-                  <div class="product-card__actions">
-                    <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
-                    <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
-                  </div>
-                </div>
-              </article>
-            </li>
-          </ul>
-          <button class="product-more-button button" type="button"><span class="button__label">Eщe</span></button>
         </div>
+        <ul class="grid grid--4 container">
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span></div>
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank"><span class="product-card__availability">Нет в наличии</span>
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__actions">
+                  <a class="button button--white" href="/red-pancir/kalmar"><span class="button__label">Сообщить о поступлении</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1999<!-- -->₽</span><span class="product-card__old-price">2400<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span></div>
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <h2 class="product-card__title">Кальмар командорский</h2>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <button class="product-more-button button" type="button"><span class="button__label">Eщe</span></button>
       </section>
       <section class="loyalty-programm__section" aria-labelledby="loyalty-programm-title">
         <div class="loyalty-programm__inner container">
@@ -521,11 +519,9 @@
       <div class="filter-modal-window" data-js-filter="" aria-hidden="true">
         <div class="filter-modal-window__overlay" data-js-filter-overlay=""></div>
         <div class="filter-modal-window__dialog">
-          <div class="filter-modal-window__header">
-            <button class="filter-modal-window__back" data-js-filter-close="">Назад</button>
-          </div>
+          <button class="filter-modal-window__back" data-js-filter-close="">Назад</button>
           <form name="filter-form" class="filter-modal-window__form" action="">
-            <div class="filter-modal-window__group" data-group-label="Цена">
+            <div class="filter-modal-window__group filter-modal-window__group--price" data-group-label="Цена">
               <div class="filter-modal-window__label">Цена</div>
               <div class="price-filter" data-js-price-range="">
                 <div class="price-filter__range">
