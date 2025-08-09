@@ -519,7 +519,11 @@
       <div class="filter-modal-window" data-js-filter="" aria-hidden="true">
         <div class="filter-modal-window__overlay" data-js-filter-overlay=""></div>
         <div class="filter-modal-window__dialog">
-          <button class="filter-modal-window__back" data-js-filter-close="">Назад</button>
+          <button class="filter-modal-window__back" data-js-filter-close=""><span class="icon">
+              <svg fill="none" stroke="currentColor">
+                <use href="/red-pancir/assets/images/icons.svg#modal-back-arrow"></use>
+              </svg>
+            </span>Назад</button>
           <form name="filter-form" class="filter-modal-window__form" data-demo="" action="">
             <div class="filter-modal-window__group filter-modal-window__group--price" data-group-label="Цена">
               <div class="filter-modal-window__label">Цена</div>
@@ -545,39 +549,200 @@
                 <input type="checkbox" id="хит-продаж" name="arrFilter_HIT" aria-label="Хит продаж" value="Y">Хит продаж<span class="toggle__box"></span>
               </label>
             </div>
-            <div class="filter-modal-window__group" data-group-label="Рыба">
-              <div class="filter-modal-window__label">Рыба</div>
-              <label class="filter-modal-window__checkbox checkbox" for="тунец">
-                <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="тунец" value="Тунец">
-                <p class="checkbox__label">Тунец</p>
-              </label>
-              <label class="filter-modal-window__checkbox checkbox" for="дорадо">
-                <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="дорадо" value="Дорадо">
-                <p class="checkbox__label">Дорадо</p>
-              </label>
-              <label class="filter-modal-window__checkbox checkbox" for="сибас">
-                <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="сибас" value="Сибас">
-                <p class="checkbox__label">Сибас</p>
-              </label>
-              <label class="filter-modal-window__checkbox checkbox" for="нерка">
-                <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="нерка" value="Нерка">
-                <p class="checkbox__label">Нерка</p>
-              </label>
+            <div class="filter-modal-window__group accordeon" data-group-label="Рыба">
+              <details class="filter-modal-window__details accordeon__details" name="Рыба">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Рыба</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="тунец">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="тунец" value="Тунец">
+                    <p class="checkbox__label">Тунец</p>
+                  </label>
+                  <label class="filter-modal-window__checkbox checkbox" for="дорадо">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="дорадо" value="Дорадо">
+                    <p class="checkbox__label">Дорадо</p>
+                  </label>
+                  <label class="filter-modal-window__checkbox checkbox" for="сибас">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="сибас" value="Сибас">
+                    <p class="checkbox__label">Сибас</p>
+                  </label>
+                  <label class="filter-modal-window__checkbox checkbox" for="нерка">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="нерка" value="Нерка">
+                    <p class="checkbox__label">Нерка</p>
+                  </label>
+                </div>
+              </div>
             </div>
-            <div class="filter-modal-window__group" data-group-label="Креветки">
-              <div class="filter-modal-window__label">Креветки</div>
-              <label class="filter-modal-window__checkbox checkbox" for="лангустины">
-                <input class="checkbox__input" type="checkbox" name="arrFilter_SHRIMP[]" id="лангустины" value="Лангустины">
-                <p class="checkbox__label">Лангустины</p>
-              </label>
-              <label class="filter-modal-window__checkbox checkbox" for="тигровые">
-                <input class="checkbox__input" type="checkbox" name="arrFilter_SHRIMP[]" id="тигровые" value="Тигровые">
-                <p class="checkbox__label">Тигровые</p>
-              </label>
+            <div class="filter-modal-window__group accordeon" data-group-label="Креветки">
+              <details class="filter-modal-window__details accordeon__details" name="Креветки">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Креветки</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="лангустины">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_SHRIMP[]" id="лангустины" value="Лангустины">
+                    <p class="checkbox__label">Лангустины</p>
+                  </label>
+                  <label class="filter-modal-window__checkbox checkbox" for="тигровые">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_SHRIMP[]" id="тигровые" value="Тигровые">
+                    <p class="checkbox__label">Тигровые</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Раки">
+              <details class="filter-modal-window__details accordeon__details" name="Раки">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Раки</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="раки">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_CANCERS[]" id="раки" value="Раки">
+                    <p class="checkbox__label">Раки</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Икра">
+              <details class="filter-modal-window__details accordeon__details" name="Икра">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Икра</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="икра">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_CAVIAR[]" id="икра" value="Икра">
+                    <p class="checkbox__label">Икра</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Крабы">
+              <details class="filter-modal-window__details accordeon__details" name="Крабы">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Крабы</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="краб">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_CRABS[]" id="краб" value="Краб">
+                    <p class="checkbox__label">Краб</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Морепродукты">
+              <details class="filter-modal-window__details accordeon__details" name="Морепродукты">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Морепродукты</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="морепродукт">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_SEAFOOD[]" id="морепродукт" value="Морепродукт">
+                    <p class="checkbox__label">Морепродукт</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Деликатесы">
+              <details class="filter-modal-window__details accordeon__details" name="Деликатесы">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Деликатесы</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="деликатес">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_DELICACIES[]" id="деликатес" value="Деликатес">
+                    <p class="checkbox__label">Деликатес</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Соусы">
+              <details class="filter-modal-window__details accordeon__details" name="Соусы">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Соусы</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="соус">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_SAUCES[]" id="соус" value="Соус">
+                    <p class="checkbox__label">Соус</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Консервы">
+              <details class="filter-modal-window__details accordeon__details" name="Консервы">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Консервы</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="консервы">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_CANNED[]" id="консервы" value="Консервы">
+                    <p class="checkbox__label">Консервы</p>
+                  </label>
+                </div>
+              </div>
             </div>
             <div class="filter-modal-window__footer">
-              <button class="btn btn--red">Применить фильтр</button>
-              <button type="reset" class="btn btn--link">Сбросить фильтр</button>
+              <button class="button button-submit button" type="submit"><span class="button__label">Применить фильтр</span></button>
+              <button class="button button-reset button button--text" type="reset"><span class="button__icon icon">
+                  <svg fill="none" stroke="currentColor">
+                    <use href="/red-pancir/assets/images/icons.svg#reset-form"></use>
+                  </svg>
+                </span><span class="button__label">Сбросить фильтр</span></button>
             </div>
           </form>
         </div>
