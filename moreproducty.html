@@ -179,11 +179,11 @@
             <div class="product-controls__tags"></div>
           </div>
           <div class="product-controls__right">
-            <label class="toggle">
-              <input type="checkbox" name="arrFilter_AVAILABLE" value="Y">В наличии<span class="toggle__box"></span>
+            <label for="в-наличии" class="toggle">
+              <input type="checkbox" id="в-наличии" name="arrFilter_AVAILABLE" aria-label="В наличии" value="Y">В наличии<span class="toggle__box"></span>
             </label>
-            <label class="toggle">
-              <input type="checkbox" name="arrFilter_HIT" value="Y">Хит продаж<span class="toggle__box"></span>
+            <label for="хит-продаж" class="toggle">
+              <input type="checkbox" id="хит-продаж" name="arrFilter_HIT" aria-label="Хит продаж" value="Y">Хит продаж<span class="toggle__box"></span>
             </label>
             <div class="product-controls__sort">
               <button type="button" class="product-sort__button" data-js-sort-toggle=""><span class="product-sort__text">Сортировать:<span class="product-sort__value">от минимальной цены</span></span></button>
@@ -520,7 +520,7 @@
         <div class="filter-modal-window__overlay" data-js-filter-overlay=""></div>
         <div class="filter-modal-window__dialog">
           <button class="filter-modal-window__back" data-js-filter-close="">Назад</button>
-          <form name="filter-form" class="filter-modal-window__form" action="">
+          <form name="filter-form" class="filter-modal-window__form" data-demo="" action="">
             <div class="filter-modal-window__group filter-modal-window__group--price" data-group-label="Цена">
               <div class="filter-modal-window__label">Цена</div>
               <div class="price-filter" data-js-price-range="">
@@ -536,37 +536,43 @@
               </div>
             </div>
             <div class="filter-modal-window__group" data-group-label="Наличие">
-              <label class="toggle">
-                <input type="checkbox" name="arrFilter_AVAILABLE" value="Y"><span class="toggle__box"></span>В наличии
+              <label for="в-наличии" class="toggle">
+                <input type="checkbox" id="в-наличии" name="arrFilter_AVAILABLE" aria-label="В наличии" value="Y">В наличии<span class="toggle__box"></span>
               </label>
             </div>
             <div class="filter-modal-window__group" data-group-label="Популярность">
-              <label class="toggle">
-                <input type="checkbox" name="arrFilter_HIT" value="Y"><span class="toggle__box"></span>Хит продаж
+              <label for="хит-продаж" class="toggle">
+                <input type="checkbox" id="хит-продаж" name="arrFilter_HIT" aria-label="Хит продаж" value="Y">Хит продаж<span class="toggle__box"></span>
               </label>
             </div>
             <div class="filter-modal-window__group" data-group-label="Рыба">
               <div class="filter-modal-window__label">Рыба</div>
-              <label>
-                <input type="checkbox" name="arrFilter_FISH[]" value="Тунец"> Тунец
+              <label class="filter-modal-window__checkbox checkbox" for="тунец">
+                <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="тунец" value="Тунец">
+                <p class="checkbox__label">Тунец</p>
               </label>
-              <label>
-                <input type="checkbox" name="arrFilter_FISH[]" value="Дорадо"> Дорадо
+              <label class="filter-modal-window__checkbox checkbox" for="дорадо">
+                <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="дорадо" value="Дорадо">
+                <p class="checkbox__label">Дорадо</p>
               </label>
-              <label>
-                <input type="checkbox" name="arrFilter_FISH[]" value="Сибас"> Сибас
+              <label class="filter-modal-window__checkbox checkbox" for="сибас">
+                <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="сибас" value="Сибас">
+                <p class="checkbox__label">Сибас</p>
               </label>
-              <label>
-                <input type="checkbox" name="arrFilter_FISH[]" value="Нерка"> Нерка
+              <label class="filter-modal-window__checkbox checkbox" for="нерка">
+                <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="нерка" value="Нерка">
+                <p class="checkbox__label">Нерка</p>
               </label>
             </div>
             <div class="filter-modal-window__group" data-group-label="Креветки">
               <div class="filter-modal-window__label">Креветки</div>
-              <label>
-                <input type="checkbox" name="arrFilter_SHRIMP[]" value="Лангустины"> Лангустины
+              <label class="filter-modal-window__checkbox checkbox" for="лангустины">
+                <input class="checkbox__input" type="checkbox" name="arrFilter_SHRIMP[]" id="лангустины" value="Лангустины">
+                <p class="checkbox__label">Лангустины</p>
               </label>
-              <label>
-                <input type="checkbox" name="arrFilter_SHRIMP[]" value="Тигровые"> Тигровые
+              <label class="filter-modal-window__checkbox checkbox" for="тигровые">
+                <input class="checkbox__input" type="checkbox" name="arrFilter_SHRIMP[]" id="тигровые" value="Тигровые">
+                <p class="checkbox__label">Тигровые</p>
               </label>
             </div>
             <div class="filter-modal-window__footer">
@@ -602,7 +608,7 @@
             </div>
             <div class="form__cell form__cell--wide form__cell--actions">
               <label class="form__agreement checkbox" for="callbackCheckboxId">
-                <input class="checkbox__input" type="checkbox" id="callbackCheckboxId" required="">
+                <input class="checkbox__input" type="checkbox" name="[object Object]" id="callbackCheckboxId" required="" value="[object Object]">
                 <p class="checkbox__label">Я даю согласие на <a href="/personal-date" target="_blank">обработку персональных данных</a>, а также подтверждаю, что ознакомлен с <a href="/politics" target="_blank">Политикой конфиденциальности</a>
                 </p>
               </label>
