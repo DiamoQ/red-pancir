@@ -168,11 +168,9 @@
         </div>
       </section>
       <section class="section product-section" aria-labelledby="category-title">
-        <header class="section__header container">
-          <div class="section__info">
-            <h1 class="page-title" id="category-title">Морепродукты</h1>
-          </div>
-        </header>
+        <div class="container page-title-container">
+          <h1 class="page-title" id="category-title">Морепродукты</h1>
+        </div>
         <div class="container product-controls">
           <div class="product-controls__left">
             <button class="product-controls__filter" data-js-filter-open="">Фильтр</button>
@@ -188,20 +186,20 @@
             <div class="product-controls__sort">
               <button type="button" class="product-sort__button" data-js-sort-toggle=""><span class="product-sort__text">Сортировать:<span class="product-sort__value">от минимальной цены</span></span></button>
               <div class="product-sort__dropdown" data-js-sort-dropdown="">
-                <label>
-                  <input type="radio" name="sort" checked="" value="minPrice"> От минимальной цены
+                <label class="radio-input">
+                  <input type="radio" name="sort" checked="" value="minPrice"><span class="radio-input__dot" aria-hidden="true"></span>От минимальной цены
                 </label>
-                <label>
-                  <input type="radio" name="sort" value="maxPrice"> От максимальной цены
+                <label class="radio-input">
+                  <input type="radio" name="sort" value="maxPrice"><span class="radio-input__dot" aria-hidden="true"></span>От максимальной цены
                 </label>
-                <label>
-                  <input type="radio" name="sort" value="promo"> Сначала по акции
+                <label class="radio-input">
+                  <input type="radio" name="sort" value="promo"><span class="radio-input__dot" aria-hidden="true"></span>Сначала по акции
                 </label>
               </div>
             </div>
           </div>
         </div>
-        <ul class="grid grid--4 container">
+        <ul class="grid grid--4 container products-container">
           <li class="grid__item">
             <article class="product-card">
               <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
@@ -494,7 +492,9 @@
             </article>
           </li>
         </ul>
-        <button class="product-more-button button" type="button"><span class="button__label">Eщe</span></button>
+        <div class="container">
+          <button class="product-more-button button" type="button"><span class="button__label">Eщe</span></button>
+        </div>
       </section>
       <section class="loyalty-programm__section" aria-labelledby="loyalty-programm-title">
         <div class="loyalty-programm__inner container">
