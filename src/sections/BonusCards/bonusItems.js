@@ -1,7 +1,11 @@
-const shashlik1 = '/src/assets/images/bonus/shashlik1.png';
-const shashlik1Mobile = '/src/assets/images/bonus/shashlik1Mobile.png';
-const shashlik2 = '/src/assets/images/bonus/shashlik2.png';
-const shashlik2Mobile = '/src/assets/images/bonus/shashlik2Mobile.png';
+const basePath = import.meta.env.MODE === 'production'
+    ? `${import.meta.env.VITE_PUBLIC_PATH}/images/bonus`
+    : '/images/bonus'
+
+const shashlik1 = `${basePath}/shashlik1.png`;
+const shashlik1Mobile = `${basePath}/shashlik1Mobile.png`;
+const shashlik2 = `${basePath}/shashlik2.png`;
+const shashlik2Mobile = `${basePath}/shashlik2Mobile.png`;
 
 const categoryItems = [
     {

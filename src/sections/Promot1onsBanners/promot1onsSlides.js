@@ -1,7 +1,11 @@
-const mobilePromot1onsSlideBanner1 = '/src/assets/images/promot1onsSlides/promot1onsSlide-mobile-1.png';
-const desktopPromot1onsSlideBanner1 = '/src/assets/images/promot1onsSlides/promot1onsSlide-desctop-1.png';
-const mobilePromot1onsSlideBanner2 = '/src/assets/images/promot1onsSlides/promot1onsSlide-mobile-2.png';
-const desktopPromot1onsSlideBanner2 = '/src/assets/images/promot1onsSlides/promot1onsSlide-desctop-2.png';
+const basePath = import.meta.env.MODE === 'production'
+    ? `${import.meta.env.VITE_PUBLIC_PATH}/images/promot1onsSlides`
+    : '/images/promot1onsSlides'
+
+const mobilePromot1onsSlideBanner1 = `${basePath}/promot1onsSlide-mobile-1.png`;
+const desktopPromot1onsSlideBanner1 = `${basePath}/promot1onsSlide-desctop-1.png`;
+const mobilePromot1onsSlideBanner2 = `${basePath}/promot1onsSlide-mobile-2.png`;
+const desktopPromot1onsSlideBanner2 = `${basePath}/promot1onsSlide-desctop-2.png`;
 
 const promot1onsSlides = [
     {

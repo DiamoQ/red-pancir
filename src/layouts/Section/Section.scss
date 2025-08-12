@@ -32,6 +32,10 @@
 
   &__description {
     max-width: 680px;
+
+    p:only-of-type {
+      margin: 0;
+    }
   }
 
   &-page-link {

@@ -69,6 +69,10 @@
         display: none;
       }
 
+      &-name {
+        opacity: .8;
+      }
+
       &-option {
         font-size: fluid-to-laptop(16, 14);
         display: flex;
@@ -86,6 +90,7 @@
       text-wrap: nowrap;
       line-height: 110%;
       font-weight: 600;
+      opacity: 0.8;
 
       @include tablet {
         font-size: 18px;
@@ -136,7 +141,9 @@
 
     @include tablet {
       display: flex;
-      justify-content: center;
+      //justify-content: center;
+      justify-content: flex-start;
+      padding-top: 80px;
       align-items: center;
       background-color: var(--color-grey);
 

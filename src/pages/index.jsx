@@ -19,8 +19,8 @@ export default () => {
             <CompanyTitleBanner />
             <Promot1onsBanners/>
             <OrderSteps />
+            <Categories title='Наш ассортимент' mainSectionInPage={false}/>
             <FoodCookingVariables />
-            <Categories title='Наш ассортимент' categoriePageLinkIsVisible/>
             <AboutCompany/>
             <LoyaltyProgrammBanner />
             <ModalCallbackWindow />

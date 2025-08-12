@@ -4,33 +4,33 @@ import SliderNavigation from "./components/SliderNavigation";
 import classNames from "classnames";
 
 const defaultSliderParams = {
-    slidesPerView: 2,
+    slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 20,
     allowTouchMove: true,
     breakpoints: {
         481: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
+            slidesPerView: 2,
+            slidesPerGroup: 1,
             spaceBetween: 20,
             allowTouchMove: true,
         },
         768: {
-            slidesPerView: 4,
-            slidesPerGroup: 4,
+            slidesPerView: 3,
+            slidesPerGroup: 1,
             spaceBetween: 20,
             allowTouchMove: true,
         },
         1024: {
-            slidesPerView: 5,
-            slidesPerGroup: 5,
+            slidesPerView: 4,
+            slidesPerGroup: 1,
             spaceBetween: 20,
             allowTouchMove: false,
         },
         1441: {
-            slidesPerView: 5,
-            slidesPerGroup: 5,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
             allowTouchMove: false,
         },
     }
@@ -51,7 +51,7 @@ const Slider = (props) => {
         navigationButtonMode,
         isNavigationHiddenMobile= true,
         hasPagination,
-
+        ulPhotoSwipeAttrs,
     } = props
 
     return (
@@ -68,7 +68,12 @@ const Slider = (props) => {
                 className="slider__swiper swiper"
                 data-js-slider-swiper=''
             >
-                <ul className="slider__list swiper-wrapper">
+                <ul className="slider__list swiper-wrapper"
+                    {...(ulPhotoSwipeAttrs
+                        ? { 'data-js-photoswipe': JSON.stringify(ulPhotoSwipeAttrs) }
+                        : {})
+                    }
+                >
                     {children.map((slide, index) => (
                         <li className='slider__item swiper-slide' key={index}>
                             {slide}

@@ -1,0 +1,25 @@
+.advantages__card {
+  background-color: var(--color-grey);
+  border-radius: var(--border-radius-m);
+  padding: fluid(30, 20);
+  height: 100%;
+
+  &,
+  &-header {
+    display: grid;
+    align-items: start;
+    row-gap: 10px;
+  }
+
+  &-image {
+    @include square(51px);
+
+    svg {
+      fill: var(--color-red-accent);
+    }
+  }
+
+  &-description {
+    opacity: .8;
+  }
+}

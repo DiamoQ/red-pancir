@@ -1,0 +1,92 @@
+.order-history {
+    &__card {
+      width: 100%;
+      padding: fluid(30, 20);
+      border-radius: var(--border-radius-m);
+      background-color: var(--color-grey);
+    }
+
+    &__summary {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr) 36px;
+      justify-content: space-between;
+      column-gap: 20px;
+      color: var(--color-black-accent);
+      list-style: none;
+      cursor: pointer;
+      transition-duration: var(--transition-duration-longer);
+      max-width: 100%;
+
+      @include tablet {
+        position: relative;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+      }
+
+      &-info {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        @include tablet {
+
+          &:first-of-type {
+            min-height: 36px;
+          }
+        }
+      }
+
+      &-title {
+        font-weight: 600;
+      }
+
+      &-value {
+        &--status {
+          padding: 9px 10px;
+          background-color: var(--color-white);
+          border-radius: var(--border-radius-xs);
+          border: 1px solid var(--color-green);
+
+          &-doing {
+            border-color: var(--color-yellow);
+          }
+
+          &-cancelled {
+            border-color: var(--color-red-accent);
+          }
+        }
+      }
+
+      &-arrow {
+        @include square(36px);
+
+        svg {
+          fill: none;
+          width: 14px;
+          height: 8px;
+        }
+      }
+    }
+
+    &__content {
+      &-header {
+        font-weight: 500;
+        margin-top: 15px;
+      }
+
+      &-header,
+      &-row {
+        display: grid;
+        grid-template-columns: minmax(100px, 195px) minmax(45px, 60px) minmax(45px, 60px);
+        column-gap: 10px;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      &__row div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+}

@@ -1,0 +1,51 @@
+.gallery {
+  @include mobile-s {
+    padding-inline: 0;
+  }
+
+  header {
+    @include mobile-s {
+      padding-inline: 20px;
+    }
+  }
+
+  ul {
+    @include mobile-s {
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+
+  li {
+    max-height: 303px;
+    height: 100%;
+    aspect-ratio: 290 / 303;
+    overflow: hidden;
+    border-radius: var(--border-radius-m);
+
+    @include mobile-s {
+      min-height: 303px;
+      width: auto !important;
+
+      &:first-of-type {
+        margin-left: 20px;
+      }
+    }
+
+    @include hover {
+      img {
+        scale: 1.03;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-duration-longer);
+    }
+  }
+}

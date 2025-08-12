@@ -1,3 +1,5 @@
+import LockScrollManager from '@/utils/LockScrollManager'
+
 class OverlayMenu {
     selectors = {
         root: '[data-js-overlay-menu]',
@@ -18,9 +20,17 @@ class OverlayMenu {
     }
 
     onBurgerButtonClick = () => {
+        const isOpening = !this.dialogElement.open;
+
         this.burgerButtonElement.classList.toggle(this.stateClasses.isActive);
         this.dialogElement.open = !this.dialogElement.open;
-        document.documentElement.classList.toggle(this.stateClasses.isLock);
+        // document.documentElement.classList.toggle(this.stateClasses.isLock);
+
+        if (isOpening) {
+            LockScrollManager.lock();
+        } else {
+            LockScrollManager.unlock();
+        }
     }
 
     bindEvents() {

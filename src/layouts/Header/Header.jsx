@@ -28,7 +28,7 @@ const Header = (props) => {
   ]
 
   const companyInfo = {
-    addressUrl: 'https://www.yandex.ru',
+    addressUrl: 'https://yandex.ru/profile/239792091110?lang=ru',
     addressName: 'г. Челябинск, ул Чичерина 8/3',
     workTime: 'с 11:00 до 23:00',
     workDay: 'Ежедневно',
@@ -56,6 +56,9 @@ const Header = (props) => {
     },
   ]
 
+  const basePath = import.meta.env.MODE === 'production'
+      ? import.meta.env.VITE_PUBLIC_PATH
+      : ''
 
   return (
       <header className={classNames('header', {
@@ -74,12 +77,12 @@ const Header = (props) => {
                 </a>
               </div>
               <time className='header__company-info-option'>
-                            <span className='header__company-info-name'>
-                                {companyInfo.workDay}
-                            </span>
+                <span className='header__company-info-name'>
+                    {companyInfo.workDay}
+                </span>
                 <span className='header__company-info-value'>
-                                {companyInfo.workTime}
-                            </span>
+                    {companyInfo.workTime}
+                </span>
               </time>
               <Socials links={socials} />
               <a className="header__company-phone" href={`tel:${companyInfo.phone}`}>{companyInfo.phone}</a>
@@ -95,7 +98,7 @@ const Header = (props) => {
               <Button
                   className='busket-button'
                   iconName='busket'
-                  href='/busket'
+                  href={`${basePath}/busket`}
                   label='Корзина'
                   mode='white'
                   hasFillIcon
@@ -103,7 +106,7 @@ const Header = (props) => {
               <Button
                   className='login-button'
                   iconName='login'
-                  href='/login'
+                  href={`${basePath}/login`}
                   label='Войти'
                   mode='white'
                   hasFillIcon
@@ -120,7 +123,7 @@ const Header = (props) => {
             <Button
                 className='katalog-button'
                 iconName='katalog'
-                href='/katalog'
+                href={`${basePath}/katalog`}
                 label='Каталог'
                 hasFillIcon
             />
@@ -134,7 +137,7 @@ const Header = (props) => {
                   {menuItems.map((item, index) => (
                       <li key={index} className='header__menu-item'>
                         <a
-                            href={item.href}
+                            href={`${basePath}${item.href}`}
                             className={classNames('header__menu-link', {
                               'is-active': item.href === url
                             })}
@@ -155,27 +158,27 @@ const Header = (props) => {
                       'data-js-modal-notify-button': ''
                     }}/>
                 <div className='header__company-info-option'>
-                                <span className='header__company-info-name'>
-                                    Самовывоз:
-                                </span>
+                  <span className='header__company-info-name'>
+                      Самовывоз:
+                  </span>
                   <a href={companyInfo.addressUrl} target='_blank' rel='noopener noreferrer' className='header__company-info-value'>
                     {companyInfo.addressName}
                   </a>
                 </div>
                 <time className='header__company-info-option'>
-                                <span className='header__company-info-name'>
-                                    {companyInfo.workDay}
-                                </span>
+                  <span className='header__company-info-name'>
+                      {companyInfo.workDay}
+                  </span>
                   <span className='header__company-info-value'>
-                                    {companyInfo.workTime}
-                                </span>
+                      {companyInfo.workTime}
+                  </span>
                 </time>
               </address>
             </dialog>
             <Button
                 className='busket-button'
                 iconName='busket'
-                href='/busket'
+                href={`${basePath}/busket`}
                 label='Корзина'
                 mode='white'
                 hasFillIcon
@@ -183,7 +186,7 @@ const Header = (props) => {
             <Button
                 className='login-button'
                 iconName='login'
-                href='/login'
+                href={`${basePath}/login`}
                 label='Войти'
                 mode='white'
                 hasFillIcon

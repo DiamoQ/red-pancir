@@ -7,6 +7,8 @@ const Checkbox = (props) => {
         className,
         id = getIdFromTitle(props.label),
         label,
+        name = {id},
+        value = {id},
         isRequired,
     } = props
 
@@ -24,6 +26,8 @@ const Checkbox = (props) => {
             <input
                 className='checkbox__input'
                 type='checkbox'
+                name={name}
+                value={value}
                 id={id}
                 required={isRequired}
             />

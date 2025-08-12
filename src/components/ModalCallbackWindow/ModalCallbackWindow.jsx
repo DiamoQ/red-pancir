@@ -28,29 +28,30 @@ const ModalCallbackWindow = (props) => {
                 }}
             />
           </header>
-          <form className="modal__form" action=''>
+          <form className="modal__form form" action=''>
             <Field
-                className="modal__form-cell"
+                className="form__cell"
                 label='Имя'
                 placeholder='Имя'
                 isRequired
             />
             <Field
-                className="modal__form-cell"
+                className="form__cell"
                 label='Телефон'
+                id='modalCallbackPhone'
                 placeholder='+7 ( )'
                 inputMode='tel'
                 mask='+7 (000) 000-00-00'
                 isRequired
             />
-            <div className="modal__form-cell modal__form-cell--wide modal__form-cell--actions">
+            <div className="form__cell form__cell--wide form__cell--actions">
               <Checkbox
-                  className="modal__form-agreement"
+                  className="form__agreement"
                   id="callbackCheckboxId"
                   isRequired
               />
               <Button
-                  className="modal__submit-button"
+                  className="form__submit-button"
                   label='Отправить'
                   type='submit'
               />

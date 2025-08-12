@@ -1,7 +1,11 @@
 import './CompanyTitleBanner.scss'
-import {Image} from "minista";
-const mobileImage = '/src/assets/images/ban-section/companyMobileBannerImage.png';
-const desktopImage = '/src/assets/images/ban-section/companyBannerImage.png';
+
+const basePath = import.meta.env.MODE === 'production'
+    ? `${import.meta.env.VITE_PUBLIC_PATH}/images/ban-section`
+    : '/images/ban-section'
+
+const mobileImage = `${basePath}/companyMobileBannerImage.png`;
+const desktopImage = `${basePath}/companyBannerImage.png`;
 
 const CompanyTitleBanner = () => {
 
@@ -16,10 +20,11 @@ const CompanyTitleBanner = () => {
             <picture>
               <source srcSet={mobileImage} media="(max-width: 768.97px)"/>
 
-              <Image
+              <img
                   className='company-title-banner__image'
                   src={desktopImage}
                   alt='Изображение блока баннера Раковарня Красный панцирь'
+                  loading='lazy'
               />
             </picture>
           </div>

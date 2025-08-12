@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import Section from "@/layouts/Section";
+import ModalCallbackWindow from "@/components/ModalCallbackWindow";
 
 export const metadata = {
     title: 'Заказ успешно оформлен',
@@ -7,6 +8,11 @@ export const metadata = {
 }
 
 export default () => {
+
+    const basePath = import.meta.env.MODE === 'production'
+        ? import.meta.env.VITE_PUBLIC_PATH
+        : '/'
+
     return (
         <>
             <section
@@ -34,7 +40,7 @@ export default () => {
                 description={(
                     <>
                         <p>
-                            Оплата прошла успешно, наш менеджер свяжется <br/>
+                            Оплата прошла успешно, наш менеджер свяжется <br className="desktop-br"/>
                             с вами. Спасибо!
                         </p>
                     </>
@@ -43,10 +49,11 @@ export default () => {
             >
                 <Button
                     className='button-page-link-to-main'
-                    href='/'
+                    href={basePath}
                     label='На главную'
                 />
             </Section>
+            <ModalCallbackWindow />
         </>
     )
 }

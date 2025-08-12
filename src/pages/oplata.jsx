@@ -1,4 +1,5 @@
 import Section from "@/layouts/Section";
+import ModalCallbackWindow from "@/components/ModalCallbackWindow";
 
 export const metadata = {
     title: 'Оплата',
@@ -58,6 +59,7 @@ export default () => {
                 className='oplata'
             >
             </Section>
+            <ModalCallbackWindow />
         </>
     )
 }

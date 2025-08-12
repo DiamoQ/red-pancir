@@ -23,6 +23,10 @@ const Promot1onsBanners = () => {
                 sliderParams={{
                   slidesPerView: 1,
                   spaceBetween: 10,
+                    autoplay: {
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    },
                   breakpoints: {
                     1024: {
                       allowTouchMove: false,
@@ -41,7 +45,7 @@ const Promot1onsBanners = () => {
                     <picture>
                       <source srcSet={slide.mobileBanner} media="(max-width: 768.97px)"/>
 
-                      <Image
+                      <img
                           className="promot1ons__slide"
                           src={slide.desktopBanner}
                           alt={slide.title}
@@ -64,7 +68,7 @@ const Promot1onsBanners = () => {
                   <picture>
                     <source srcSet={card.mobileBanner} media="(max-width: 768.97px)"/>
 
-                    <Image
+                    <img
                       className="promot1ons__link-card"
                       src={card.desktopBanner}
                       alt={card.title}

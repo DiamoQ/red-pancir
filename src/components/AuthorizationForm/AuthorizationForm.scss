@@ -1,0 +1,55 @@
+.authorization {
+  gap: 0;
+
+  @include mobile-s {
+    padding-inline: 0;
+  }
+
+  &__block {
+    max-width: 426px;
+    width: 100%;
+    padding: fluid(30, 20);
+    background-color: var(--color-grey);
+    border-radius: var(--border-radius-m);
+    margin-inline: auto;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    &-link {
+      color: var(--color-red-accent);
+      text-decoration: underline !important;
+      font-size: 14px;
+      transition: var(--transition-duration-longer);
+    }
+  }
+
+  &__form {
+    gap: 20px;
+
+    .form__submit-button {
+      margin-top: 5px;
+      height: 48px;
+    }
+  }
+
+  .form__cell--actions {
+    gap: 20px;
+  }
+
+  &__recover-link {
+    display: block;
+    width: max-content;
+    margin-inline: auto;
+    color: var(--color-red-accent);
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}

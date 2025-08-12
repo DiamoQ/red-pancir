@@ -45,7 +45,7 @@ const Footer = (props) => {
   ]
 
   const companyInfo = {
-    addressUrl: 'https://www.yandex.ru',
+    addressUrl: 'https://yandex.ru/profile/239792091110?lang=ru',
     addressName: 'г. Челябинск, ул Чичерина 8/3',
     workTime: 'с 11:00 до 23:00',
     workDay: 'Ежедневно',
@@ -74,20 +74,24 @@ const Footer = (props) => {
     },
   ]
 
-  const payServices = [
-    {
+  const payServices = {
+    visa : {
       label: 'VISA',
       iconName: 'visa',
     },
-    {
+    mir : {
       label: 'МИР',
       iconName: 'mir',
     },
-    {
+    union : {
       label: 'Union',
       iconName: 'union',
     },
-  ]
+}
+
+  const basePath = import.meta.env.MODE === 'production'
+      ? import.meta.env.VITE_PUBLIC_PATH
+      : ''
 
   return (
       <footer className='footer'>
@@ -101,7 +105,7 @@ const Footer = (props) => {
                         <ul className='footer__menu-list'>
                           {links.map(({title, link}, index) => (
                               <li className='footer__menu-item' key={index}>
-                                <a href={link} className='footer__menu-link'>{title}</a>
+                                <a href={`${basePath}${link}`} className='footer__menu-link'>{title}</a>
                               </li>
                           ))}
                         </ul>
@@ -126,12 +130,12 @@ const Footer = (props) => {
               <button className="footer__company-callback" data-js-modal-notify-button='callback-window'>Заказать звонок</button>
               <Socials links={socials}/>
               <time className='footer__company-info-option'>
-                            <span className='footer__company-info-name'>
-                                {companyInfo.workDay}
-                            </span>
+                <span className='footer__company-info-name'>
+                    {companyInfo.workDay}
+                </span>
                 <span className='footer__company-info-value'>
-                                {companyInfo.workTime}
-                            </span>
+                    {companyInfo.workTime}
+                </span>
               </time>
               <Button href='https://play.google.com/' target='_blank' label='Скачать UDS App'
                       className='footer__company-app-button'/>
@@ -141,22 +145,37 @@ const Footer = (props) => {
             <p className='footer__copyright'>
               Все права защищены@<time dateTime='2025'>2025</time>
             </p>
-            <ul className="footer__pay-services">
-              {payServices.map(({iconName, hasFillIcon, label}, index) => (
-                      <li className="footer_pay-service" key={index}>
-                        <Icon
-                            className="button__icon"
-                            name={iconName}
-                            hasFill
-                            areaLabel={label}
-                            // FallbackSVG={SVGSearch}
-                        />
-                      </li>
-                  )
-              )}
-            </ul>
+            <div className="footer__pay-services">
+                <Icon
+                    className="button__icon"
+                    name={payServices.visa.iconName}
+                    hasFill
+                    areaLabel={payServices.visa.label}
+                    extraStyleAttrs={{
+                      'aspectRatio': '45 / 15'
+                    }}
+                />
+              <Icon
+                    className="button__icon"
+                    name={payServices.mir.iconName}
+                    hasFill
+                    areaLabel={payServices.mir.label}
+                    extraStyleAttrs={{
+                      'aspectRatio': '55 / 15'
+                    }}
+                />
+              <Icon
+                    className="button__icon"
+                    name={payServices.union.iconName}
+                    hasFill
+                    areaLabel={payServices.union.label}
+                    extraStyleAttrs={{
+                      'aspectRatio' : '25 / 15'
+                    }}
+                />
+            </div>
             <p className="footer__name">
-              Раковарня «Красный панцирь»
+              Раковарня «Красный&nbsp;панцирь»
             </p>
           </div>
         </div>

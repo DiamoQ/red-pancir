@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Красный панцирь | Морепродукты</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/red-pancir/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/red-pancir/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/red-pancir/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/red-pancir/assets/site.webmanifest">
+    <script src="/red-pancir/assets/main.js" type="module"></script>
+    <link rel="stylesheet" href="/red-pancir/assets/bundle.css">
+  </head>
+  <body>
+    <header class="header is-fixed" data-js-overlay-menu="">
+      <div class="header__inner container">
+        <div class="header__inner-top">
+          <a class="logo" href="/red-pancir" title="Главная" aria-label="Главная">
+            <img srcset="/red-pancir/assets/images/logo-320x74.png 320w, /red-pancir/assets/images/logo-371x84.png 371w" src="/red-pancir/assets/images/logo-371x84.png" sizes="(min-width: 371px) 371px, 100vw" width="371" height="84" alt="Логотип компании Красный панцирь" decoding="async" loading="lazy" class="logo__image">
+          </a>
+          <address class="header__company-info">
+            <div class="header__company-info-option"><span class="header__company-info-name">Самовывоз:</span>
+              <a href="https://yandex.ru/profile/239792091110?lang=ru" target="_blank" rel="noopener noreferrer" class="header__company-info-value">г. Челябинск, ул Чичерина 8/3</a>
+            </div>
+            <time class="header__company-info-option"><span class="header__company-info-name">Ежедневно</span><span class="header__company-info-value">с 11:00 до 23:00</span></time>
+            <div class="soc1als">
+              <ul class="soc1als__list">
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте" href="vk.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#vkLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в Telegram" title="Мы в Telegram" href="tg.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#tgLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в WhatsApp" title="Мы в WhatsApp" href="whatsapp.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#whatsLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+              </ul>
+            </div>
+            <a class="header__company-phone" href="tel:+7-351-777-80-90">+7-351-777-80-90</a>
+            <button class="header__button-call button" type="button" data-js-modal-notify-button="callback-window"><span class="button__label">Заказать звонок</span></button>
+          </address>
+          <div class="header__actions">
+            <a class="busket-button button button--white" href="/red-pancir/busket"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/red-pancir/assets/images/icons.svg#busket"></use>
+                </svg>
+              </span><span class="button__label">Корзина</span></a>
+            <a class="login-button button button--white" href="/red-pancir/login"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/red-pancir/assets/images/icons.svg#login"></use>
+                </svg>
+              </span><span class="button__label">Войти</span></a>
+            <button class="header__burger-button visible-tablet burger-button" type="button" aria-label="Open menu" title="Open menu" data-js-overlay-menu-burger-button="callback-window">
+              <svg class="burger-button__svg" width="30" height="30" viewBox="0 0 100 100">
+                <path class="burger-button__line burger-button__line--1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+                <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80"></path>
+                <path class="burger-button__line burger-button__line--3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="header__inner-bottom">
+          <a class="katalog-button button" href="/red-pancir/katalog"><span class="button__icon icon">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#katalog"></use>
+              </svg>
+            </span><span class="button__label">Каталог</span></a>
+          <form id="navigationSearch" class="search navigation__search">
+            <label for="navigation-search">Поиск
+              <input type="text" name="search" id="navigation-search" class="navigation__input" placeholder="Поиск">
+            </label>
+            <button type="submit" class="input__btn" aria-label="Найти" title="Найти"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/red-pancir/assets/images/icons.svg#search"></use>
+                </svg>
+              </span></button>
+          </form>
+          <dialog class="header__overlay-menu-dialog" data-js-overlay-menu-dialog="">
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a href="/red-pancir/about" class="header__menu-link">О компании</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="/red-pancir/gotovim" class="header__menu-link">Мы готовим</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="/red-pancir/oplata" class="header__menu-link">Оплата</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="/red-pancir/bonusactions" class="header__menu-link">Акции</a>
+                </li>
+              </ul>
+            </nav>
+            <address class="header__company-info">
+              <div class="soc1als">
+                <ul class="soc1als__list">
+                  <li class="soc1als__item">
+                    <a class="soc1als__link button" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте" href="vk.com" target="_blank"><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/red-pancir/assets/images/icons.svg#vkLogo"></use>
+                        </svg>
+                      </span></a>
+                  </li>
+                  <li class="soc1als__item">
+                    <a class="soc1als__link button" aria-label="Мы в Telegram" title="Мы в Telegram" href="tg.com" target="_blank"><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/red-pancir/assets/images/icons.svg#tgLogo"></use>
+                        </svg>
+                      </span></a>
+                  </li>
+                  <li class="soc1als__item">
+                    <a class="soc1als__link button" aria-label="Мы в WhatsApp" title="Мы в WhatsApp" href="whatsapp.com" target="_blank"><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/red-pancir/assets/images/icons.svg#whatsLogo"></use>
+                        </svg>
+                      </span></a>
+                  </li>
+                </ul>
+              </div>
+              <a class="header__company-phone" href="tel:+7-351-777-80-90">+7-351-777-80-90</a>
+              <button class="header__button-call button" type="button" data-js-modal-notify-button=""><span class="button__label">Заказать звонок</span></button>
+              <div class="header__company-info-option"><span class="header__company-info-name">Самовывоз:</span>
+                <a href="https://yandex.ru/profile/239792091110?lang=ru" target="_blank" rel="noopener noreferrer" class="header__company-info-value">г. Челябинск, ул Чичерина 8/3</a>
+              </div>
+              <time class="header__company-info-option"><span class="header__company-info-name">Ежедневно</span><span class="header__company-info-value">с 11:00 до 23:00</span></time>
+            </address>
+          </dialog>
+          <a class="busket-button button button--white" href="/red-pancir/busket"><span class="button__icon icon">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#busket"></use>
+              </svg>
+            </span><span class="button__label">Корзина</span></a>
+          <a class="login-button button button--white" href="/red-pancir/login"><span class="button__icon icon">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#login"></use>
+              </svg>
+            </span><span class="button__label">Войти</span></a>
+        </div>
+      </div>
+    </header>
+    <main class="content content--is-reset-padding-top">
+      <section class="breadcrumbs" aria-labelledby="breadcrumbs">
+        <div class="breadcrumbs__inner container">
+          <nav class="breadcrumbs__nav" aria-label="Хлебные крошки">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__separator">›</span>
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="/red-pancir/katalog" class="breadcrumbs__link">Каталог</a><span class="breadcrumbs__separator">›</span>
+              </li>
+              <li class="breadcrumbs__item breadcrumbs__item--current">Морепродукты</li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="section product-section" aria-labelledby="category-title">
+        <div class="container page-title-container">
+          <h1 class="page-title" id="category-title">Морепродукты</h1>
+        </div>
+        <div class="container product-controls">
+          <div class="product-controls__left">
+            <button class="product-controls__filter" data-js-filter-open="">Фильтр</button>
+            <div class="product-controls__tags"></div>
+          </div>
+          <div class="product-controls__right">
+            <label for="в-наличии" class="toggle">
+              <input type="checkbox" id="в-наличии" name="arrFilter_AVAILABLE" aria-label="В наличии" value="Y">В наличии<span class="toggle__box"></span>
+            </label>
+            <label for="хит-продаж" class="toggle">
+              <input type="checkbox" id="хит-продаж" name="arrFilter_HIT" aria-label="Хит продаж" value="Y">Хит продаж<span class="toggle__box"></span>
+            </label>
+            <div class="product-controls__sort">
+              <button type="button" class="product-sort__button" data-js-sort-toggle=""><span class="product-sort__text">Сортировать:<span class="product-sort__value">от минимальной цены</span></span></button>
+              <div class="product-sort__dropdown" data-js-sort-dropdown="">
+                <label class="radio-input">
+                  <input type="radio" name="sort" checked="" value="minPrice"><span class="radio-input__dot" aria-hidden="true"></span>От минимальной цены
+                </label>
+                <label class="radio-input">
+                  <input type="radio" name="sort" value="maxPrice"><span class="radio-input__dot" aria-hidden="true"></span>От максимальной цены
+                </label>
+                <label class="radio-input">
+                  <input type="radio" name="sort" value="promo"><span class="radio-input__dot" aria-hidden="true"></span>Сначала по акции
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="grid grid--4 container products-container">
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span></div>
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank"><span class="product-card__availability">Нет в наличии</span>
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__actions">
+                  <a class="button button--white" href="/red-pancir/kalmar"><span class="button__label">Сообщить о поступлении</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1999<!-- -->₽</span><span class="product-card__old-price">2400<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span></div>
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="grid__item">
+            <article class="product-card">
+              <a class="product-card__image-block" href="/red-pancir/kalmar" target="_blank">
+                <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар командорский" decoding="async" loading="lazy">
+                <div class="product-card__labels"><span class="product-card__label 
+                                product-card__label--hit 
+                                 ">Хит продаж</span><span class="product-card__label 
+                                 
+                                product-card__label--promo ">Акция</span></div>
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title-link" href="/red-pancir/kalmar" target="_blank">
+                  <h2 class="product-card__title">Кальмар командорский</h2>
+                </a>
+                <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
+                <div class="product-card__options"><span class="product-card__option 
+                                            product-card__option--boiling 
+                                             
+                                            ">Отварим</span><span class="product-card__option 
+                                             
+                                             
+                                            product-card__option--alive">Отправим живыми</span><span class="product-card__option 
+                                             
+                                            product-card__option--frying 
+                                            ">Пожарим</span></div>
+                <div class="product-card__actions">
+                  <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
+                  <a class="button" href="/red-pancir/kalmar"><span class="button__label">В корзину</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="container">
+          <button class="product-more-button button" type="button"><span class="button__label">Eщe</span></button>
+        </div>
+      </section>
+      <section class="loyalty-programm__section" aria-labelledby="loyalty-programm-title">
+        <div class="loyalty-programm__inner container">
+          <div class="loyalty-programm__banner">
+            <div class="loyalty-programm__qr">
+              <img srcset="/red-pancir/assets/images/qr-320x320.png 320w, /red-pancir/assets/images/qr-356x356.png 356w" src="/red-pancir/assets/images/qr-356x356.png" sizes="(min-width: 356px) 356px, 100vw" width="356" height="356" alt="QR-код для скачивания приложения" decoding="async" loading="lazy" class="loyalty-programm__image">
+            </div>
+            <div class="loyalty-programm__content">
+              <h2 class="loyalty-programm__title">Присоединяйтесь к нашей бонусной программе</h2>
+              <p class="loyalty-programm__description">Сканируйте QR-код, чтобы присоединиться к бонусной программе и получить 200₽ на баланс уже сегодня.<br class="mobile-br"> <br class="mobile-br"> Вы получаете 300 бонусных рублей на день рождения и кэшбэк с каждой покупки!</p>
+              <a href="https://play.google.com/" target="_blank" aria-label="Ссылка на наше приложение" title="Скачать наше приложение" class="loyalty-programm__app-link">
+                <img srcset="/red-pancir/assets/images/appLogo-24x24.png 24w" src="/red-pancir/assets/images/appLogo-24x24.png" sizes="(min-width: 24px) 24px, 100vw" width="24" height="24" alt="Логотип нашего приложения" decoding="async" loading="lazy" class="loyalty-programm__app-logo">UDC App
+              </a>
+            </div>
+            <picture>
+              <source srcset="/red-pancir/images/loyaltyProgramm/loyaltyProgrammMobileBannerImage.png" media="(max-width: 1023.97px)">
+              <img class="loyalty-programm__app-screen" src="/red-pancir/images/loyaltyProgramm/loyaltyProgrammBannerImage.png" loading="lazy" alt="Изображение блока баннера приглашения на работу">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <div class="filter-modal-window" data-js-filter="" aria-hidden="true">
+        <div class="filter-modal-window__overlay" data-js-filter-overlay=""></div>
+        <div class="filter-modal-window__dialog">
+          <button class="filter-modal-window__back" data-js-filter-close=""><span class="icon">
+              <svg fill="none" stroke="currentColor">
+                <use href="/red-pancir/assets/images/icons.svg#modal-back-arrow"></use>
+              </svg>
+            </span>Назад</button>
+          <form name="filter-form" class="filter-modal-window__form" data-demo="" action="">
+            <div class="filter-modal-window__group filter-modal-window__group--price" data-group-label="Цена">
+              <div class="filter-modal-window__label">Цена</div>
+              <div class="price-filter" data-js-price-range="">
+                <div class="price-filter__range">
+                  <input type="range" min="0" max="10000" name="arrFilter_PRICE_MIN" data-js-range-min="" value="1200">
+                  <input type="range" min="0" max="10000" name="arrFilter_PRICE_MAX" data-js-range-max="" value="4560">
+                  <div class="price-filter__track" data-js-track=""></div>
+                </div>
+                <div class="price-filter__inputs">
+                  <input type="number" name="arrFilter_PRICE_MIN" data-js-input-min="" value="1200">
+                  <input type="number" name="arrFilter_PRICE_MAX" data-js-input-max="" value="4560">
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group" data-group-label="Наличие">
+              <label for="в-наличии" class="toggle">
+                <input type="checkbox" id="в-наличии" name="arrFilter_AVAILABLE" aria-label="В наличии" value="Y">В наличии<span class="toggle__box"></span>
+              </label>
+            </div>
+            <div class="filter-modal-window__group" data-group-label="Популярность">
+              <label for="хит-продаж" class="toggle">
+                <input type="checkbox" id="хит-продаж" name="arrFilter_HIT" aria-label="Хит продаж" value="Y">Хит продаж<span class="toggle__box"></span>
+              </label>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Рыба">
+              <details class="filter-modal-window__details accordeon__details" name="Рыба">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Рыба</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="тунец">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="тунец" value="Тунец">
+                    <p class="checkbox__label">Тунец</p>
+                  </label>
+                  <label class="filter-modal-window__checkbox checkbox" for="дорадо">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="дорадо" value="Дорадо">
+                    <p class="checkbox__label">Дорадо</p>
+                  </label>
+                  <label class="filter-modal-window__checkbox checkbox" for="сибас">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="сибас" value="Сибас">
+                    <p class="checkbox__label">Сибас</p>
+                  </label>
+                  <label class="filter-modal-window__checkbox checkbox" for="нерка">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_FISH[]" id="нерка" value="Нерка">
+                    <p class="checkbox__label">Нерка</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Креветки">
+              <details class="filter-modal-window__details accordeon__details" name="Креветки">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Креветки</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="лангустины">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_SHRIMP[]" id="лангустины" value="Лангустины">
+                    <p class="checkbox__label">Лангустины</p>
+                  </label>
+                  <label class="filter-modal-window__checkbox checkbox" for="тигровые">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_SHRIMP[]" id="тигровые" value="Тигровые">
+                    <p class="checkbox__label">Тигровые</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Раки">
+              <details class="filter-modal-window__details accordeon__details" name="Раки">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Раки</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="раки">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_CANCERS[]" id="раки" value="Раки">
+                    <p class="checkbox__label">Раки</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Икра">
+              <details class="filter-modal-window__details accordeon__details" name="Икра">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Икра</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="икра">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_CAVIAR[]" id="икра" value="Икра">
+                    <p class="checkbox__label">Икра</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Крабы">
+              <details class="filter-modal-window__details accordeon__details" name="Крабы">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Крабы</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="краб">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_CRABS[]" id="краб" value="Краб">
+                    <p class="checkbox__label">Краб</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Морепродукты">
+              <details class="filter-modal-window__details accordeon__details" name="Морепродукты">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Морепродукты</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="морепродукт">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_SEAFOOD[]" id="морепродукт" value="Морепродукт">
+                    <p class="checkbox__label">Морепродукт</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Деликатесы">
+              <details class="filter-modal-window__details accordeon__details" name="Деликатесы">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Деликатесы</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="деликатес">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_DELICACIES[]" id="деликатес" value="Деликатес">
+                    <p class="checkbox__label">Деликатес</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Соусы">
+              <details class="filter-modal-window__details accordeon__details" name="Соусы">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Соусы</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="соус">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_SAUCES[]" id="соус" value="Соус">
+                    <p class="checkbox__label">Соус</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__group accordeon" data-group-label="Консервы">
+              <details class="filter-modal-window__details accordeon__details" name="Консервы">
+                <summary class="filter-modal-window__summary accordeon__summary">
+                  <div class="filter-modal-window__label">Консервы</div><span class="filter-modal-window__summary-arrow accordeon__summary-arrow button icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-down"></use>
+                    </svg>
+                  </span>
+                </summary>
+              </details>
+              <div class="filter-modal-window__content accordeon__content">
+                <div class="filter-modal-window__content-inner accordeon__content-inner">
+                  <label class="filter-modal-window__checkbox checkbox" for="консервы">
+                    <input class="checkbox__input" type="checkbox" name="arrFilter_CANNED[]" id="консервы" value="Консервы">
+                    <p class="checkbox__label">Консервы</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-modal-window__footer">
+              <button class="button button-submit button" type="submit"><span class="button__label">Применить фильтр</span></button>
+              <button class="button button-reset button button--text" type="reset"><span class="button__icon icon">
+                  <svg fill="none" stroke="currentColor">
+                    <use href="/red-pancir/assets/images/icons.svg#reset-form"></use>
+                  </svg>
+                </span><span class="button__label">Сбросить фильтр</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div data-js-modal-notify="callback-window" class="modal">
+        <div class="modal__dialog" data-js-modal-notify-dialog="callback-window">
+          <header class="modal__header">
+            <h3 class="modal__title">Заказать звонок</h3>
+            <p class="modal__description">Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время</p>
+            <button class="modal__close-button button button--transparent" aria-label="Закрыть модальное окно" title="Закрыть модальное окно" type="button" data-js-modal-notify-close="callback-window"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/red-pancir/assets/images/icons.svg#close-button"></use>
+                </svg>
+              </span></button>
+          </header>
+          <form class="modal__form form" action="">
+            <div class="form__cell field">
+              <label for="имя" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
+              <div class="field__body">
+                <input class="field__control" id="имя" name="имя" placeholder="Имя" required="">
+              </div>
+            </div>
+            <div class="form__cell field">
+              <label for="modalCallbackPhone" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
+              <div class="field__body field__body--tel">
+                <input class="field__control" id="modalCallbackPhone" name="modalCallbackPhone" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
+              </div>
+            </div>
+            <div class="form__cell form__cell--wide form__cell--actions">
+              <label class="form__agreement checkbox" for="callbackCheckboxId">
+                <input class="checkbox__input" type="checkbox" name="[object Object]" id="callbackCheckboxId" required="" value="[object Object]">
+                <p class="checkbox__label">Я даю согласие на <a href="/personal-date" target="_blank">обработку персональных данных</a>, а также подтверждаю, что ознакомлен с <a href="/politics" target="_blank">Политикой конфиденциальности</a>
+                </p>
+              </label>
+              <button class="form__submit-button button" type="submit"><span class="button__label">Отправить</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__inner-top">
+          <nav class="footer__menu">
+            <div class="footer__menu-column">
+              <h4 class="footer__menu-title h6">Полезное</h4>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/katalog" class="footer__menu-link">Меню</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/about" class="footer__menu-link">О нас</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/oplata" class="footer__menu-link">Оплата</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/contacts" class="footer__menu-link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu-column">
+              <h4 class="footer__menu-title h6">Документы</h4>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/offerta" class="footer__menu-link">Информация об офферте</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/confidential" class="footer__menu-link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/personality-info" class="footer__menu-link">Согласие на обработку персональных данных</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="footer__address">
+            <h4 class="footer__address-title h6">Наш адрес</h4>
+            <address>
+              <a href="https://yandex.ru/profile/239792091110?lang=ru" target="_blank" rel="noopener noreferrer" class="footer__address-link">г. Челябинск, ул Чичерина 8/3</a>
+            </address>
+          </div>
+          <address class="footer__company-info">
+            <a class="footer__company-phone" href="tel:+7-351-777-80-90">+7-351-777-80-90</a>
+            <a class="footer__company-mail" href="mailto:Kpraki@yandex.ru">Kpraki@yandex.ru</a>
+            <button class="footer__company-callback" data-js-modal-notify-button="callback-window">Заказать звонок</button>
+            <div class="soc1als">
+              <ul class="soc1als__list">
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте" href="vk.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#vkLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в Telegram" title="Мы в Telegram" href="tg.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#tgLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в WhatsApp" title="Мы в WhatsApp" href="whatsapp.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#whatsLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+              </ul>
+            </div>
+            <time class="footer__company-info-option"><span class="footer__company-info-name">Ежедневно</span><span class="footer__company-info-value">с 11:00 до 23:00</span></time>
+            <a class="footer__company-app-button button" href="https://play.google.com/" target="_blank"><span class="button__label">Скачать UDS App</span></a>
+          </address>
+        </div>
+        <div class="footer__extra">
+          <p class="footer__copyright">Все права защищены@<time dateTime="2025">2025</time>
+          </p>
+          <div class="footer__pay-services"><span class="button__icon icon" aria-label="VISA" style="aspect-ratio:45 / 15">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#visa"></use>
+              </svg>
+            </span><span class="button__icon icon" aria-label="МИР" style="aspect-ratio:55 / 15">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#mir"></use>
+              </svg>
+            </span><span class="button__icon icon" aria-label="Union" style="aspect-ratio:25 / 15">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#union"></use>
+              </svg>
+            </span></div>
+          <p class="footer__name">Раковарня «Красный панцирь»</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

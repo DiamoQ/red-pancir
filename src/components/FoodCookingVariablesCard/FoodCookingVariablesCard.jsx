@@ -18,17 +18,8 @@ const FoodCookingVariablesCard = (props) => {
         <div className='food-cooking-variables-card__image-block'>
           <Image
               src={imgSrc}
-
               alt={title}
           />
-          {/*(<img*/}
-          {/*     src={image}*/}
-          {/*     width="395"*/}
-          {/*     height="251"*/}
-          {/*     alt={title}*/}
-          {/*     decoding="async"*/}
-          {/*     loading="lazy"*/}
-          {/*/>)*/}
         </div>
         <div className='food-cooking-variables-card__content'>
           <h3 className="food-cooking-variables-card__title">

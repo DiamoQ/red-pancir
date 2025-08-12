@@ -7,11 +7,13 @@ const Button = (props) => {
     className,
     href,
     target,
-    // '' (default) | 'transparent' | 'white' | 'grey'
+    // '' (default) | 'transparent' | 'white' | 'grey' | 'text'
     mode = '',
     label,
+    id,
     isLabelHidden = false,
     type = 'button',
+
     iconName,
     // 'before' | 'after'
     iconPosition = 'before',
@@ -39,6 +41,7 @@ const Button = (props) => {
             [`button--${mode}`]: mode
           })}
           aria-label={title}
+          id={id}
           title={title}
           {...specificProps}
           {...extraAttrs}

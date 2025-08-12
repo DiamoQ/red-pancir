@@ -18,6 +18,7 @@ const OrderStepsCard = (props) => {
                 className='order-step-card__image'
                 name={imgSrc}
                 areaLabel={title}
+                hasFill
             />
           </div>
           <span className='order-step-card__description'>{title}</span>

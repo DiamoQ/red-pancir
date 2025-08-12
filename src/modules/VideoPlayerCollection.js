@@ -1,47 +1,43 @@
+import Plyr from 'plyr';
+
 const rootSelector = '[data-js-video]';
 
 class VideoPlayer {
-    selectors = {
-        root: rootSelector,
-        video: '[data-js-video-video]',
-        button: '[data-js-video-play-button]',
+    constructor(root) {
+        this.root = root;
+        this.video = root.querySelector('video.js-player');
+        this.playButton = root.querySelector('[data-js-video-play-button]');
+        this.player = null;
+
+        this.init();
     }
 
-    stateClasses = {
-        isActive: 'is-active',
-    }
+    init() {
+        this.player = new Plyr(this.video, {
+            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+            hideControls: false,
+            autoplay: false,
+        });
 
-    constructor(rootElement) {
-        this.rootElement = rootElement;
-        this.videoElement = this.rootElement.querySelector(this.selectors.video);
-        this.playButtonElement =  this.rootElement.querySelector(this.selectors.button);
-        this.bindEvents();
-    }
+        // Изначальное состояние: остановлен
+        this.root.classList.add('is-stopped');
 
-    onPlayButtonClick = () => {
-        this.videoElement.play();
-        this.videoElement.requestFullscreen();
-        this.videoElement.controls(true);
-        this.playButtonElement.classList.remove(this.stateClasses.isActive);
-    }
+        this.playButton.addEventListener('click', () => {
+            this.root.classList.remove('is-stopped');
+            this.root.classList.add('is-started');
+            this.playButton.blur();
+            this.player.play();
+        });
 
-    onVideoPause = () => {
-        this.videoElement.controls(false);
-        this.playButtonElement.classList.add(this.stateClasses.isActive);
-    }
+        this.player.on('play', () => {
+            this.root.classList.remove('is-stopped');
+            this.root.classList.add('is-started');
+        });
 
-    onVideoFullScreenChange = () => {
-        const isFullScreenEnable = document.fullscreenElement === this.videoElement;
-
-        if (!isFullScreenEnable) {
-            this.videoElement.pause()
-        }
-    }
-
-    bindEvents() {
-        this.playButtonElement.addEventListener('click', this.onPlayButtonClick)
-        this.videoElement.addEventListener('pause', this.onVideoPause)
-        this.videoElement.addEventListener('fullscreenchange', this.onVideoFullScreenChange)
+        // если хочешь скрывать контролы на паузе — раскомментируй:
+        // this.player.on('pause', () => {
+        //   this.root.classList.add('is-stopped');
+        // });
     }
 }
 
@@ -49,11 +45,8 @@ class VideoPlayerCollection {
     constructor() {
         this.init();
     }
-
     init() {
-        document.querySelectorAll(rootSelector).forEach((el) => {
-            new VideoPlayer(el);
-        })
+        document.querySelectorAll(rootSelector).forEach(el => new VideoPlayer(el));
     }
 }
 

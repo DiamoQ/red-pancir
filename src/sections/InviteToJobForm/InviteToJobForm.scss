@@ -1,0 +1,75 @@
+.invite-to-job-form {
+  position: relative;
+  padding-top: fluid(55, 30);
+
+  &__inner {
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  &__block {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: fluid(100, 0);
+    overflow: hidden;
+    gap: 20px 10px;
+    background-color: var(--color-grey);
+    border-radius: var(--border-radius-m);
+
+    @include mobile {
+      flex-direction: column;
+      padding: 50px 20px 60px;
+    }
+
+    &:after {
+      @include mobile-above {
+        content: "";
+        position: absolute;
+        background-image: url('/src/assets/icons/invite-to-job-lobster.svg');
+        background-repeat: no-repeat;
+        max-width: 395px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 299 / 329;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__info {
+    max-width: fluid(395, 210);
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(25, 30);
+    z-index: 5;
+
+    @include mobile {
+      max-width: initial;
+    }
+  }
+
+  &__description {
+    display: grid;
+    row-gap: 10px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  form {
+    max-width: fluid(496, 260);
+
+    @include mobile {
+      max-width: initial;
+    }
+
+    button {
+      height: 48px;
+    }
+  }
+}

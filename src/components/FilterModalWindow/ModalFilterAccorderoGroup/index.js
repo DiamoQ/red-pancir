@@ -1,0 +1,3 @@
+import ModalFilterAccorderoGroup from './ModalFilterAccorderoGroup'
+
+export default ModalFilterAccorderoGroup

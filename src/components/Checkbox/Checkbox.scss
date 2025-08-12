@@ -1,6 +1,6 @@
 .checkbox {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 10px;
 
   @include hover {
@@ -10,6 +10,8 @@
   }
 
   &__input {
+    --color-white: #fff;
+
     appearance: none;
     aspect-ratio: 1 / 1;
     margin: 0;
@@ -35,16 +37,9 @@
       }
     }
 
-    &:required {
-      & + .checkbox__label:after {
-        content: ' *'/'';
-        color: var(--color-red-accent);
-      }
-    }
-
     &:after {
       content: '✔';
-      color: var(--color-white);
+      color: var(--color-white) !important;
       transition-duration: inherit;
     }
 

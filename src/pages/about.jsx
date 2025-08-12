@@ -1,4 +1,9 @@
 import ModalCallbackWindow from "@/components/ModalCallbackWindow";
+import Advantages from "@/sections/Advantages";
+import Gallery from "@/sections/Gallery";
+import InviteToJobForm from "@/sections/InviteToJobForm";
+import AboutPresent from "@/sections/AboutPresent";
+import AboutPresentSlider from "@/sections/AboutPresentSlider";
 
 
 export const metadata = {
@@ -27,6 +32,11 @@ export default () => {
                     </nav>
                 </div>
             </section>
+            <AboutPresent />
+            <AboutPresentSlider />
+            <Advantages />
+            <Gallery />
+            <InviteToJobForm />
             <ModalCallbackWindow />
         </>
     )

@@ -1,0 +1,124 @@
+.about-present {
+  padding-bottom: fluid(55, 30);
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(40, 20);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    width: 100%;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    h1 {
+      max-width: 700px;
+      width: 100%;
+    }
+
+  }
+
+  &__description {
+    max-width: 393px;
+    width: 100%;
+    opacity: .8;
+
+    @include mobile {
+      max-width: initial;
+    }
+  }
+
+  &__video-block {
+    overflow: hidden;
+    width: 100%;
+    height: fluid(383, 213);
+    border-radius: var(--border-radius-m);
+
+    video {
+      width: 100%;
+      height: fluid(383, 213);
+    }
+
+    .plyr__poster {
+      background-size: cover;
+    }
+
+    .plyr__volume input[type=range],
+    .plyr--full-ui input[type=range] {
+      color: var(--color-red-accent);
+    }
+
+    button.plyr__control:hover {
+      background-color: var(--color-red-accent);
+    }
+
+    .plyr--paused {
+      .plyr__controls {
+        opacity: 0;
+      }
+    }
+
+    .plyr__control.plyr__control--overlaid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba( 255, 255, 255, 0.8 );
+      border: 0;
+      border-radius: 100%;
+      color: var(--color-red-accent);
+      left: 50%;
+      padding: 15px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: var(--transition-duration-longer);
+      z-index: 2;
+      opacity: 1;
+      max-width: fluid(88, 56);
+      width: 100%;
+      max-height: fluid(88, 56);
+      height: 100%;
+
+      @include hover {
+        &:after {
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+        svg {
+          scale: 1.3;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: max-width var(--transition-duration-longer), max-height var(--transition-duration-longer);
+        max-width: fluid(78, 49);
+        width: 100%;
+        max-height: fluid(78, 49);
+        height: 100%;
+        border-radius: 100%;
+        background-color: var(--color-white);
+        opacity: 1;
+        z-index: 3;
+      }
+
+      svg {
+        @include square(fluid(24, 15));
+        transition: scale var(--transition-duration-longer);
+        z-index: 4;
+      }
+    }
+  }
+}

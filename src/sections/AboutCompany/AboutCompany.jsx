@@ -7,13 +7,17 @@ const lobster = "/src/assets/icons/company_lobster.png";
 
 const AboutCompany = () => {
 
+    const basePath = import.meta.env.MODE === 'production'
+        ? import.meta.env.VITE_PUBLIC_PATH
+        : ''
+
     return (
         <Section
             className='about-company'
             title='О компании'
             titleId='about-company-title'
             actions={(
-                <a href='/company' className='about-company__page-link section-page-link' target='_blank'>Подробнее</a>
+                <a href={`${basePath}/about`} className='about-company__page-link section-page-link' target='_blank'>Подробнее</a>
             )}
         >
             <div className="about-company__information">

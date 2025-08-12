@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Красный панцирь | Регистрация</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/red-pancir/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/red-pancir/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/red-pancir/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/red-pancir/assets/site.webmanifest">
+    <script src="/red-pancir/assets/main.js" type="module"></script>
+    <link rel="stylesheet" href="/red-pancir/assets/bundle.css">
+  </head>
+  <body>
+    <header class="header is-fixed" data-js-overlay-menu="">
+      <div class="header__inner container">
+        <div class="header__inner-top">
+          <a class="logo" href="/red-pancir" title="Главная" aria-label="Главная">
+            <img srcset="/red-pancir/assets/images/logo-320x74.png 320w, /red-pancir/assets/images/logo-371x84.png 371w" src="/red-pancir/assets/images/logo-371x84.png" sizes="(min-width: 371px) 371px, 100vw" width="371" height="84" alt="Логотип компании Красный панцирь" decoding="async" loading="lazy" class="logo__image">
+          </a>
+          <address class="header__company-info">
+            <div class="header__company-info-option"><span class="header__company-info-name">Самовывоз:</span>
+              <a href="https://yandex.ru/profile/239792091110?lang=ru" target="_blank" rel="noopener noreferrer" class="header__company-info-value">г. Челябинск, ул Чичерина 8/3</a>
+            </div>
+            <time class="header__company-info-option"><span class="header__company-info-name">Ежедневно</span><span class="header__company-info-value">с 11:00 до 23:00</span></time>
+            <div class="soc1als">
+              <ul class="soc1als__list">
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте" href="vk.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#vkLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в Telegram" title="Мы в Telegram" href="tg.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#tgLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в WhatsApp" title="Мы в WhatsApp" href="whatsapp.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#whatsLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+              </ul>
+            </div>
+            <a class="header__company-phone" href="tel:+7-351-777-80-90">+7-351-777-80-90</a>
+            <button class="header__button-call button" type="button" data-js-modal-notify-button="callback-window"><span class="button__label">Заказать звонок</span></button>
+          </address>
+          <div class="header__actions">
+            <a class="busket-button button button--white" href="/red-pancir/busket"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/red-pancir/assets/images/icons.svg#busket"></use>
+                </svg>
+              </span><span class="button__label">Корзина</span></a>
+            <a class="login-button button button--white" href="/red-pancir/login"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/red-pancir/assets/images/icons.svg#login"></use>
+                </svg>
+              </span><span class="button__label">Войти</span></a>
+            <button class="header__burger-button visible-tablet burger-button" type="button" aria-label="Open menu" title="Open menu" data-js-overlay-menu-burger-button="callback-window">
+              <svg class="burger-button__svg" width="30" height="30" viewBox="0 0 100 100">
+                <path class="burger-button__line burger-button__line--1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+                <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80"></path>
+                <path class="burger-button__line burger-button__line--3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="header__inner-bottom">
+          <a class="katalog-button button" href="/red-pancir/katalog"><span class="button__icon icon">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#katalog"></use>
+              </svg>
+            </span><span class="button__label">Каталог</span></a>
+          <form id="navigationSearch" class="search navigation__search">
+            <label for="navigation-search">Поиск
+              <input type="text" name="search" id="navigation-search" class="navigation__input" placeholder="Поиск">
+            </label>
+            <button type="submit" class="input__btn" aria-label="Найти" title="Найти"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/red-pancir/assets/images/icons.svg#search"></use>
+                </svg>
+              </span></button>
+          </form>
+          <dialog class="header__overlay-menu-dialog" data-js-overlay-menu-dialog="">
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a href="/red-pancir/about" class="header__menu-link">О компании</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="/red-pancir/gotovim" class="header__menu-link">Мы готовим</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="/red-pancir/oplata" class="header__menu-link">Оплата</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="/red-pancir/bonusactions" class="header__menu-link">Акции</a>
+                </li>
+              </ul>
+            </nav>
+            <address class="header__company-info">
+              <div class="soc1als">
+                <ul class="soc1als__list">
+                  <li class="soc1als__item">
+                    <a class="soc1als__link button" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте" href="vk.com" target="_blank"><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/red-pancir/assets/images/icons.svg#vkLogo"></use>
+                        </svg>
+                      </span></a>
+                  </li>
+                  <li class="soc1als__item">
+                    <a class="soc1als__link button" aria-label="Мы в Telegram" title="Мы в Telegram" href="tg.com" target="_blank"><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/red-pancir/assets/images/icons.svg#tgLogo"></use>
+                        </svg>
+                      </span></a>
+                  </li>
+                  <li class="soc1als__item">
+                    <a class="soc1als__link button" aria-label="Мы в WhatsApp" title="Мы в WhatsApp" href="whatsapp.com" target="_blank"><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/red-pancir/assets/images/icons.svg#whatsLogo"></use>
+                        </svg>
+                      </span></a>
+                  </li>
+                </ul>
+              </div>
+              <a class="header__company-phone" href="tel:+7-351-777-80-90">+7-351-777-80-90</a>
+              <button class="header__button-call button" type="button" data-js-modal-notify-button=""><span class="button__label">Заказать звонок</span></button>
+              <div class="header__company-info-option"><span class="header__company-info-name">Самовывоз:</span>
+                <a href="https://yandex.ru/profile/239792091110?lang=ru" target="_blank" rel="noopener noreferrer" class="header__company-info-value">г. Челябинск, ул Чичерина 8/3</a>
+              </div>
+              <time class="header__company-info-option"><span class="header__company-info-name">Ежедневно</span><span class="header__company-info-value">с 11:00 до 23:00</span></time>
+            </address>
+          </dialog>
+          <a class="busket-button button button--white" href="/red-pancir/busket"><span class="button__icon icon">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#busket"></use>
+              </svg>
+            </span><span class="button__label">Корзина</span></a>
+          <a class="login-button button button--white" href="/red-pancir/login"><span class="button__icon icon">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#login"></use>
+              </svg>
+            </span><span class="button__label">Войти</span></a>
+        </div>
+      </div>
+    </header>
+    <main class="content content--is-reset-padding-top">
+      <section class="breadcrumbs" aria-labelledby="breadcrumbs">
+        <div class="breadcrumbs__inner container">
+          <nav class="breadcrumbs__nav" aria-label="Хлебные крошки">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__separator">›</span>
+              </li>
+              <li class="breadcrumbs__item breadcrumbs__item--current">Регистрация</li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="authorization registration section container" aria-labelledby="registration-title">
+        <header class="section__header">
+          <div class="section__info">
+            <h1 class="page-title  visually-hidden" id="registration-title">Регистрация</h1>
+          </div>
+        </header>
+        <div class="section__body">
+          <div class="authorization__block">
+            <header class="authorization__header">
+              <h2 class="section__title">Регистрация</h2>
+              <a href="/red-pancir/login" class="authorization__header-link">Вход</a>
+            </header>
+            <form class="authorization__form form" action="">
+              <div class="form__cell field">
+                <label for="surname" class="field__label">Фамилия<span class="field__requared-star" aria-hidden="true">*</span></label>
+                <div class="field__body">
+                  <input class="field__control" id="surname" name="surname" placeholder="Фамилия" required="">
+                </div>
+              </div>
+              <div class="form__cell field">
+                <label for="name" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
+                <div class="field__body">
+                  <input class="field__control" id="name" name="name" placeholder="Имя" required="">
+                </div>
+              </div>
+              <div class="form__cell field">
+                <label for="authorizationPhone" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
+                <div class="field__body field__body--tel">
+                  <input class="field__control" id="authorizationPhone" name="authorizationPhone" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
+                </div>
+              </div>
+              <div class="form__cell field">
+                <label for="authorizationEmail" class="field__label">E-mail<span class="field__requared-star" aria-hidden="true">*</span></label>
+                <div class="field__body">
+                  <input class="field__control" id="authorizationEmail" name="authorizationEmail" type="email" placeholder="E-mail" required="">
+                </div>
+              </div>
+              <div class="form__cell field">
+                <label for="authorizationPassword" class="field__label">Пароль<span class="field__requared-star" aria-hidden="true">*</span></label>
+                <div class="field__body">
+                  <input class="field__control" id="authorizationPassword" name="authorizationPassword" type="password" placeholder="Пароль" required="" data-js-password-input="true">
+                  <button type="button" class="field__control-visible" data-js-toggle-password="true" aria-label="Показать пароль">👁</button>
+                </div>
+              </div>
+              <div class="form__cell form__cell--wide form__cell--actions">
+                <label class="form__agreement checkbox" for="callbackCheckboxId">
+                  <input class="checkbox__input" type="checkbox" name="[object Object]" id="callbackCheckboxId" required="" value="[object Object]">
+                  <p class="checkbox__label">Я даю согласие на <a href="/personal-date" target="_blank">обработку персональных данных</a>, а также подтверждаю, что ознакомлен с <a href="/politics" target="_blank">Политикой конфиденциальности</a>
+                  </p>
+                </label>
+                <button class="form__submit-button button" type="submit"><span class="button__label">Зарегистрироваться</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <div data-js-modal-notify="callback-window" class="modal">
+        <div class="modal__dialog" data-js-modal-notify-dialog="callback-window">
+          <header class="modal__header">
+            <h3 class="modal__title">Заказать звонок</h3>
+            <p class="modal__description">Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время</p>
+            <button class="modal__close-button button button--transparent" aria-label="Закрыть модальное окно" title="Закрыть модальное окно" type="button" data-js-modal-notify-close="callback-window"><span class="button__icon icon">
+                <svg fill="currentColor" stroke="none">
+                  <use href="/red-pancir/assets/images/icons.svg#close-button"></use>
+                </svg>
+              </span></button>
+          </header>
+          <form class="modal__form form" action="">
+            <div class="form__cell field">
+              <label for="имя" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
+              <div class="field__body">
+                <input class="field__control" id="имя" name="имя" placeholder="Имя" required="">
+              </div>
+            </div>
+            <div class="form__cell field">
+              <label for="modalCallbackPhone" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
+              <div class="field__body field__body--tel">
+                <input class="field__control" id="modalCallbackPhone" name="modalCallbackPhone" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
+              </div>
+            </div>
+            <div class="form__cell form__cell--wide form__cell--actions">
+              <label class="form__agreement checkbox" for="callbackCheckboxId">
+                <input class="checkbox__input" type="checkbox" name="[object Object]" id="callbackCheckboxId" required="" value="[object Object]">
+                <p class="checkbox__label">Я даю согласие на <a href="/personal-date" target="_blank">обработку персональных данных</a>, а также подтверждаю, что ознакомлен с <a href="/politics" target="_blank">Политикой конфиденциальности</a>
+                </p>
+              </label>
+              <button class="form__submit-button button" type="submit"><span class="button__label">Отправить</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__inner-top">
+          <nav class="footer__menu">
+            <div class="footer__menu-column">
+              <h4 class="footer__menu-title h6">Полезное</h4>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/katalog" class="footer__menu-link">Меню</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/about" class="footer__menu-link">О нас</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/oplata" class="footer__menu-link">Оплата</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/contacts" class="footer__menu-link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu-column">
+              <h4 class="footer__menu-title h6">Документы</h4>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/offerta" class="footer__menu-link">Информация об офферте</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/confidential" class="footer__menu-link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="/red-pancir/personality-info" class="footer__menu-link">Согласие на обработку персональных данных</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="footer__address">
+            <h4 class="footer__address-title h6">Наш адрес</h4>
+            <address>
+              <a href="https://yandex.ru/profile/239792091110?lang=ru" target="_blank" rel="noopener noreferrer" class="footer__address-link">г. Челябинск, ул Чичерина 8/3</a>
+            </address>
+          </div>
+          <address class="footer__company-info">
+            <a class="footer__company-phone" href="tel:+7-351-777-80-90">+7-351-777-80-90</a>
+            <a class="footer__company-mail" href="mailto:Kpraki@yandex.ru">Kpraki@yandex.ru</a>
+            <button class="footer__company-callback" data-js-modal-notify-button="callback-window">Заказать звонок</button>
+            <div class="soc1als">
+              <ul class="soc1als__list">
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте" href="vk.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#vkLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в Telegram" title="Мы в Telegram" href="tg.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#tgLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+                <li class="soc1als__item">
+                  <a class="soc1als__link button" aria-label="Мы в WhatsApp" title="Мы в WhatsApp" href="whatsapp.com" target="_blank"><span class="button__icon icon">
+                      <svg fill="currentColor" stroke="none">
+                        <use href="/red-pancir/assets/images/icons.svg#whatsLogo"></use>
+                      </svg>
+                    </span></a>
+                </li>
+              </ul>
+            </div>
+            <time class="footer__company-info-option"><span class="footer__company-info-name">Ежедневно</span><span class="footer__company-info-value">с 11:00 до 23:00</span></time>
+            <a class="footer__company-app-button button" href="https://play.google.com/" target="_blank"><span class="button__label">Скачать UDS App</span></a>
+          </address>
+        </div>
+        <div class="footer__extra">
+          <p class="footer__copyright">Все права защищены@<time dateTime="2025">2025</time>
+          </p>
+          <div class="footer__pay-services"><span class="button__icon icon" aria-label="VISA" style="aspect-ratio:45 / 15">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#visa"></use>
+              </svg>
+            </span><span class="button__icon icon" aria-label="МИР" style="aspect-ratio:55 / 15">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#mir"></use>
+              </svg>
+            </span><span class="button__icon icon" aria-label="Union" style="aspect-ratio:25 / 15">
+              <svg fill="currentColor" stroke="none">
+                <use href="/red-pancir/assets/images/icons.svg#union"></use>
+              </svg>
+            </span></div>
+          <p class="footer__name">Раковарня «Красный панцирь»</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

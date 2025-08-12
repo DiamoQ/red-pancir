@@ -1,9 +1,14 @@
 import './LoyaltyProgrammBanner.scss'
 import {Image} from "minista";
+
+const basePath = import.meta.env.MODE === 'production'
+    ? `${import.meta.env.VITE_PUBLIC_PATH}/images/loyaltyProgramm`
+    : '/images/loyaltyProgramm'
+
 const QR = "/src/assets/images/loyaltyProgramm/qr.png";
 const appLogo = "/src/assets/images/loyaltyProgramm/appLogo.png";
-const mobileImage = "/src/assets/images/loyaltyProgramm/loyaltyProgrammMobileBannerImage.png";
-const desktopImage = "/src/assets/images/loyaltyProgramm/loyaltyProgrammBannerImage.png";
+const mobileImage =  `${basePath}/loyaltyProgrammMobileBannerImage.png`;
+const desktopImage = `${basePath}/loyaltyProgrammBannerImage.png`;
 
 const LoyaltyProgrammBanner = () => {
   const appLink = 'https://play.google.com/'
@@ -26,13 +31,11 @@ const LoyaltyProgrammBanner = () => {
             </div>
             <div className="loyalty-programm__content">
               <h2 className="loyalty-programm__title">Присоединяйтесь к нашей бонусной программе</h2>
-              <p className="loyalty-programm__description">Сканируйте QR-код, чтобы присоединиться к бонусной программе и получить 200₽ на баланс уже сегодня. Вы получаете 300 бонусных рублей на день рождения и кэшбэк с каждой покупки!</p>
+              <p className="loyalty-programm__description">Сканируйте QR-код, чтобы присоединиться к бонусной программе и получить 200₽ на баланс уже сегодня.<br className='mobile-br'/> <br className='mobile-br'/> Вы получаете 300 бонусных рублей на день рождения и кэшбэк с каждой покупки!</p>
               <a href={appLink} target='_blank' aria-label='Ссылка на наше приложение' title='Скачать наше приложение' className='loyalty-programm__app-link'>
                 <Image
                     className='loyalty-programm__app-logo'
                     src={appLogo}
-
-                    loading='lazy'
                     alt='Логотип нашего приложения'
                 />
                 UDC App
@@ -41,10 +44,10 @@ const LoyaltyProgrammBanner = () => {
             <picture>
               <source srcSet={mobileImage} media="(max-width: 1023.97px)"/>
 
-              <Image
+              <img
                   className='loyalty-programm__app-screen'
                   src={desktopImage}
-
+                  loading='lazy'
                   alt='Изображение блока баннера приглашения на работу'
               />
             </picture>

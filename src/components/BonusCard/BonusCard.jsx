@@ -17,7 +17,7 @@ const BonusCard = (props) => {
             <picture>
                 <source
                     srcSet={imageMobile}
-                    media="(min-width: 768.97px)"
+                    media="(max-width: 768.97px)"
                     type="image/png"
                 />
                 <img src={imageDesctop} alt={title} className='bonus-card__image' loading='lazy'/>

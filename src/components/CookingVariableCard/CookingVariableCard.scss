@@ -6,6 +6,8 @@
   background-color: var(--color-grey);
 
   @include hover {
+    color: var(--color-black-accent);
+
     p,
     span {
       color: var(--color-black-accent);

@@ -1,0 +1,51 @@
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  &__body {
+    background-color: var(--color-grey);
+    border-radius: var(--border-radius-m);
+    padding: fluid(30, 20);
+    display: flex;flex-direction: column;
+    row-gap: fluid(24, 20);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+
+    &[disabled] {
+      input {
+        pointer-events: none;
+      }
+    }
+
+    .field__control:disabled {
+      opacity: 1;
+      cursor: text;
+    }
+  }
+
+  .form__submit-button {
+    padding: 16px 54px;
+
+    @include mobile-s {
+      width: 100%;
+    }
+  }
+}

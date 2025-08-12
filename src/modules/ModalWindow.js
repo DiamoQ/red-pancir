@@ -1,3 +1,5 @@
+import LockScrollManager from '@/utils/LockScrollManager'
+
 class ModalNotify {
     selectors = {
         root: '[data-js-modal-notify]',
@@ -22,12 +24,16 @@ class ModalNotify {
 
     openModal = () => {
         this.rootElement.classList.add(this.stateClasses.isVisible);
-        document.documentElement.classList.add(this.stateClasses.isLock);
+        // document.documentElement.classList.add(this.stateClasses.isLock);
+
+        LockScrollManager.lock();
     }
 
     closeModal = () => {
         this.rootElement.classList.remove(this.stateClasses.isVisible);
-        document.documentElement.classList.remove(this.stateClasses.isLock);
+        // document.documentElement.classList.remove(this.stateClasses.isLock);
+
+        LockScrollManager.unlock();
     }
 
     bindEvents() {

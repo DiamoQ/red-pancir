@@ -12,11 +12,15 @@ const Categories = (props) => {
     categoriePageLinkIsVisible = false,
   } = props
 
+  const basePath = import.meta.env.MODE === 'production'
+      ? import.meta.env.VITE_PUBLIC_PATH
+      : ''
+
   return (
       <Section
           title={title}
           titleId='categories-title'
-          mainSectionInPage
+          mainSectionInPage={mainSectionInPage}
           className='categories'
       >
         <Grid
@@ -36,7 +40,7 @@ const Categories = (props) => {
         { categoriePageLinkIsVisible &&
             (
                 <Button
-                    href='/categoiries'
+                    href={`${basePath}/categoiries`}
                     label='Перейти в каталог'
                 />
             )

@@ -10,6 +10,10 @@ const Error404 = (props) => {
     title = 'Ошибка 404',
   } = props
 
+  const basePath = import.meta.env.MODE === 'production'
+    ? import.meta.env.VITE_PUBLIC_PATH
+    : '/'
+
   return (
       <Section
           title={title}
@@ -23,7 +27,7 @@ const Error404 = (props) => {
               <p className='error404__description'>Такой страницы нет. Если не нашли что искали, позвоните нам или воспользуйтесь каталогом сайта.</p>
               <Button
                   className='button-page-link-to-main'
-                  href='/'
+                  href={basePath}
                   label='На главную'
               />
           </div>

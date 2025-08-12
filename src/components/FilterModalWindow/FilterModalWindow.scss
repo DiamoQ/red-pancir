@@ -1,0 +1,237 @@
+.filter-modal-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+
+  &.is-open {
+    pointer-events: auto;
+    opacity: 1;
+
+    .filter-modal-window__overlay {
+      opacity: 1;
+    }
+
+    .filter-modal-window__dialog {
+      transform: translateX(0);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 7, 7, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: fluid(30, 20);
+    border-radius: var(--border-radius-xs);
+    border-top-left-radius: 0;
+    background: var(--color-grey);
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: var(--transition-duration-longer);
+    scrollbar-gutter: stable;
+
+    @include mobile-above {
+      max-width: 344px;
+    }
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    background: none;
+    border: none;
+    user-select: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    cursor: pointer;
+    transition: var(--transition-duration-longer);
+
+    @include hover {
+      color: var(--color-red-hover)
+    }
+
+    .icon {
+      justify-content: center;
+      align-items: center;
+      width: 17px;
+    }
+
+    svg {
+      width: 16px;
+      height: 10px;
+      transition: var(--transition-duration-longer);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &--price {
+      gap: 10px;
+    }
+
+    & > .filter-modal-window__label {
+      font-weight: 600;
+    }
+  }
+
+  .price-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__range {
+      position: relative;
+      height: 3px;
+      background: rgba(40, 41, 41, .1);
+      margin-bottom: 5px;
+      cursor: pointer;
+
+      input[type="range"] {
+        position: absolute;
+        top: -6.5px;
+        left: 0;
+        width: 100%;
+        background: none;
+        pointer-events: none;
+        appearance: none;
+        -webkit-appearance: none;
+        background: transparent;
+        z-index: 2;
+
+        &::-webkit-slider-runnable-track{
+          background: transparent;
+          border:0;
+        }
+
+        &::-webkit-slider-thumb {
+          pointer-events: auto;
+          appearance: none;
+          background: var(--color-red-accent);
+          border-radius: 50%;
+          border: 1px solid var(--color-white);
+          cursor: pointer;
+          transition: var(--transition-duration-longer);
+
+          @include square(11px);
+
+          @include hover {
+            background: var(--color-red-hover);
+          }
+        }
+
+        &::-moz-range-track   {
+          background: transparent;
+          border:0;
+        }
+
+        &::-moz-range-progress{
+          background: transparent !important;
+        }
+
+        &::-moz-range-thumb {
+          background: var(--color-red-accent);
+          border-radius: 50%;
+          border: 1px solid var(--color-white);
+          cursor: pointer;
+
+          @include square(11px);
+        }
+      }
+    }
+
+    &__track {
+      position: absolute;
+      height: 3px;
+      top: 0;
+      left: 0;
+      width: 0;
+      background: var(--color-red-accent);
+    }
+
+    &__inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+
+      input {
+        min-width: 0;
+        padding: 4.5px;
+        font-size: 14px;
+        border: 1px solid var(--color-red-accent);
+        border-radius: var(--border-radius-xxs);
+        text-align: center;
+      }
+    }
+  }
+
+  &__group {
+    .toggle {
+      display: grid;
+      grid-template-columns: minmax(90px, max-content) auto;
+      align-items: center;
+      column-gap: 12px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .button-submit {
+      padding-block: 10px;
+    }
+
+    .button-reset {
+      column-gap: 5px;
+      align-items: center;
+
+      @include hover {
+        svg {
+          fill: var(--color-red-hover);
+          color: var(--color-red-hover);
+        }
+      }
+
+      .icon {
+        @include square(12px);
+      }
+
+      svg {
+        fill: var(--color-black-accent);
+        color: var(--color-black-accent);
+        transition: var(--transition-duration-longer);
+      }
+    }
+  }
+}

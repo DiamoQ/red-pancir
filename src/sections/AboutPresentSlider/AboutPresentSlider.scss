@@ -1,0 +1,102 @@
+// Базовая ширина контейнера сайта
+$container-max-width: 1220px;
+$container-padding: 20px;
+
+.about-present-slider {
+  padding-right: 0;
+  padding-block: fluid(55, 30);
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    padding-right: 0;
+    gap: 20px;
+
+    @include tablet-above {
+      max-width: 100%;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      padding-left: 0;
+    }
+
+    // На больших экранах выравниваем контент по левому краю контейнера
+
+    @include tablet-above {
+      @media (min-width: $container-max-width + $container-padding * 2) {
+        padding-left: calc((100vw - #{$container-max-width}) / 2);
+      }
+    }
+  }
+
+  &__header {
+    max-width: 392px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include tablet {
+      max-width: initial;
+      padding-right: 20px;
+    }
+
+    @include mobile {
+      padding-left: 20px;
+    }
+
+    .slider-navigation {
+      margin-top: 5px;
+    }
+  }
+
+  &__description {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .slider {
+    .slider__list {
+        @include mobile-s {
+          overflow-x: scroll;
+
+          &::-webkit-scrollbar {
+            width: 0;
+          }
+        }
+    }
+
+    li {
+      max-height: fluid(317, 245);
+      max-width: fluid(394, 300);
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 394 / 317;
+      overflow: hidden;
+      border-radius: var(--border-radius-m);
+
+      &:first-of-type {
+        @include mobile {
+          margin-left: 20px;
+        }
+      }
+
+      @include hover {
+        img {
+          scale: 1.03;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition-duration-longer);
+      }
+    }
+  }
+}

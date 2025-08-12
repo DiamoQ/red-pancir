@@ -7,6 +7,7 @@ import Section from "@/layouts/Section";
 const FoodCookingVariables = (props) => {
   return (
       <Section
+          className="food-cooking-variables-block"
           title='Выбирайте способы обработки продукта'
           titleId='food-cooking-variables-title'
       >

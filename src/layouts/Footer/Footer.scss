@@ -59,6 +59,11 @@
       @include mobile {
         flex-direction: row;
         flex-wrap: wrap;
+        width: 100%;
+      }
+
+      @include mobile-s {
+        justify-content: space-between;
       }
     }
 
@@ -187,6 +192,16 @@
       justify-content: flex-start;
       flex-direction: column;
     }
+
+    @include mobile-s {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    p {
+      margin: 0;
+      font-size: fluid(16, 14);
+    }
   }
 
   &__pay-services {
@@ -194,11 +209,21 @@
     align-items: center;
     column-gap: 15px;
 
-    .icon,
-    .icon svg {
-      height: 15px;
+    @include tablet-above {
+      margin-left: -20px;
+    }
+
+    @include mobile-s {
+      order: -1;
+      grid-column: 1 / -1;
+    }
+
+    .icon {
+      flex: none;
       width: auto;
-      max-width: 55px;
+      height: 15px;
+      display: inline-block;
+      aspect-ratio: attr(data-width) / attr(data-height);
     }
 
     .icon svg {
