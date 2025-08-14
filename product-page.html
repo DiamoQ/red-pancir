@@ -172,18 +172,209 @@
       </section>
       <section class="product container" aria-labelledby="product-title">
         <div class="product__left">
-          <div class="product__main-info"><span class="product__articul">Артикул: 99352</span>
+          <div class="product__main-info"><span class="product__articul">Артикул: <!-- -->99352</span>
             <h1 class="page-title" id="Krevetka">Креветка 90/120 Гренландия</h1>
-            <div class="product__price-block"><span class="product__price">1399₽</span><span class="product__old-price">1499₽</span>
+            <div class="product__price-block"><span class="product__price">1399<!-- -->₽</span><span class="product__old-price">1499<!-- -->₽</span>
               <div class="product__available">В наличии</div>
             </div>
             <div class="product__description">
-              <p>Креветки северные варено-мороженые. В одном килограмме 90 - 120 креветок. Полностью готовы к употреблению после разморозки. Сварены и заморожены на борту рыболовного траулера</p>
+              <p>Креветки северные варено-мороженые. В одном килограмме 90 -120 креветок. Полностью готовы к употреблению после разморозки. Сварены и заморожены на борту рыболовного траулера.</p>
             </div>
           </div>
+          <form class="product-form" data-product-id="99352">
+            <fieldset class="product-form__block quantity-block">
+              <legend class="visually-hidden">Укажите количество</legend>
+              <h3>Укажите количество</h3>
+              <div class="quantity-block__control" data-js-quantity="">
+                <button type="button" class="quantity-btn" data-js-quantity-decrement="">−</button>
+                <input type="number" name="quantity" class="quantity-input" min="1" data-js-quantity-input="" value="1">
+                <button type="button" class="quantity-btn quantity-btn--plus" data-js-quantity-increment="increment">+</button>
+              </div>
+            </fieldset>
+            <fieldset class="product-form__block">
+              <legend class="visually-hidden">Выберите способ приготовления</legend>
+              <h3>Укажите количество</h3>
+              <div class="tabs-navigation" id="cooking-variables-form-navigation" role="tablist" aria-labelledby="способы-приготовления блюда-title" data-js-tabs-navigation="">
+                <h3 class="visually-hidden" id="способы-приготовления блюда-title">Способы приготовления блюда</h3>
+                <div class="tabs-navigation__button is-active" id="пожарить-tab" aria-controls="пожарить-tabpanel" role="tab" aria-selected="true" tabindex="0" data-js-tabs-button="">Пожарить</div>
+                <div class="tabs-navigation__button" id="отварить-tab" aria-controls="отварить-tabpanel" role="tab" tabindex="-1" data-js-tabs-button="">Отварить</div>
+              </div>
+              <div class="tabs" data-js-tabs="{&quot;navigationTargetElementId&quot;:&quot;cooking-variables-form-navigation&quot;}">
+                <div class="tabs__body">
+                  <div class="tabs__content is-active" id="пожарить-tabpanel" aria-labelledby="пожарить-tab" tabindex="0" data-js-tabs-content="">
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" checked="" value="not"><span class="radio-input__dot" aria-hidden="true"></span>Нет
+                    </label>
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="classic"><span class="radio-input__dot" aria-hidden="true"></span>Классическая
+                    </label>
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="tomato"><span class="radio-input__dot" aria-hidden="true"></span>В томатном маринаде
+                    </label>
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="sredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
+                    </label>
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="mexico"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
+                    </label>
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="asia"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
+                    </label>
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="thai"><span class="radio-input__dot" aria-hidden="true"></span>По-Тайски
+                    </label>
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="slivChesn"><span class="radio-input__dot" aria-hidden="true"></span>Сливочно-чесночная
+                    </label>
+                  </div>
+                  <div class="tabs__content" id="отварить-tabpanel" aria-labelledby="отварить-tab" tabindex="0" data-js-tabs-content="">
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="poSredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
+                    </label>
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="mexicoVar"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
+                    </label>
+                    <label class="radio-input">
+                      <input type="radio" name="cooking" value="asiatskVarka"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="product-form__block">
+              <legend class="visually-hidden">Выберите маринад</legend>
+              <h3>Укажите количество</h3>
+              <label class="radio-input">
+                <input type="radio" name="marinade" checked="" value="notmarinade"><span class="radio-input__dot" aria-hidden="true"></span>Нет
+              </label>
+              <label class="radio-input">
+                <input type="radio" name="marinade" value="citrus"><span class="radio-input__dot" aria-hidden="true"></span>Цитрусовый
+              </label>
+              <label class="radio-input">
+                <input type="radio" name="marinade" value="soeimbir"><span class="radio-input__dot" aria-hidden="true"></span>Соево-имбирный
+              </label>
+            </fieldset>
+            <button class="form__submit-button button" type="submit"><span class="button__label">В корзину</span></button>
+          </form>
         </div>
         <div class="product__right">
-          <div class="product__photos"></div>
+          <div class="product__photos">
+            <div class="slider product__slider-thumbs" data-js-thumbs-slider="" data-slider-params="{
+                  &quot;spaceBetween&quot;: 10,
+                  &quot;watchSlidesProgress&quot;: true,
+                  &quot;centeredSlides&quot;: false,
+                  &quot;slideToClickedSlide&quot;: true,
+                  &quot;breakpoints&quot;: {
+                    &quot;0&quot;: { &quot;slidesPerView&quot;: 5 },
+                    &quot;359.9&quot;: { &quot;slidesPerView&quot;: 6 },
+                    &quot;455&quot;: { &quot;slidesPerView&quot;: 8 }
+                  }
+                }">
+              <div class="swiper" data-thumbs-swiper="">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/1.jpg" alt="Миниатюра Наша команда" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/2.jpg" alt="Миниатюра Фотография внутри заведения" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/3.jpg" alt="Миниатюра Касса" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/4.jpg" alt="Миниатюра Ассортимент" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/2.jpg" alt="Миниатюра Фотография внутри заведения 2" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/2.jpg" alt="Миниатюра Фотография внутри заведения" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/3.jpg" alt="Миниатюра Касса" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/4.jpg" alt="Миниатюра Ассортимент" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/2.jpg" alt="Миниатюра Фотография внутри заведения" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/3.jpg" alt="Миниатюра Касса" loading="lazy">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="/red-pancir/images/gallery/4.jpg" alt="Миниатюра Ассортимент" loading="lazy">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider product__slider-main" data-js-main-slider="" data-slider-params="{
+                  &quot;slidesPerView&quot;: 1,
+                  &quot;spaceBetween&quot;: 10
+                }" data-thumbs-target=".product__slider-thumbs">
+              <div class="product__slider-main__labels"><span class="product__slider-label product__slider-label--hold">Сухая заморозка (без льда)</span><span class="product__slider-label product__slider-label--new">Новинка</span></div>
+              <div class="product__slider-second__labels"><span class="product__slider-label product__slider-label--promo">Акция</span></div>
+              <div class="swiper" data-main-swiper="">
+                <ul class="slider__list swiper-wrapper" data-js-photoswipe="&quot;children: \&quot;a\&quot;, zoom: true, wheelToZoom: true&quot;">
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/1.jpg" title="Наша команда">
+                      <img src="/red-pancir/images/gallery/1.jpg" alt="Фотография Наша команда" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/2.jpg" title="Фотография внутри заведения">
+                      <img src="/red-pancir/images/gallery/2.jpg" alt="Фотография Фотография внутри заведения" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/3.jpg" title="Касса">
+                      <img src="/red-pancir/images/gallery/3.jpg" alt="Фотография Касса" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/4.jpg" title="Ассортимент">
+                      <img src="/red-pancir/images/gallery/4.jpg" alt="Фотография Ассортимент" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/2.jpg" title="Фотография внутри заведения 2">
+                      <img src="/red-pancir/images/gallery/2.jpg" alt="Фотография Фотография внутри заведения 2" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/2.jpg" title="Фотография внутри заведения">
+                      <img src="/red-pancir/images/gallery/2.jpg" alt="Фотография Фотография внутри заведения" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/3.jpg" title="Касса">
+                      <img src="/red-pancir/images/gallery/3.jpg" alt="Фотография Касса" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/4.jpg" title="Ассортимент">
+                      <img src="/red-pancir/images/gallery/4.jpg" alt="Фотография Ассортимент" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/2.jpg" title="Фотография внутри заведения">
+                      <img src="/red-pancir/images/gallery/2.jpg" alt="Фотография Фотография внутри заведения" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/3.jpg" title="Касса">
+                      <img src="/red-pancir/images/gallery/3.jpg" alt="Фотография Касса" loading="lazy">
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="/red-pancir/images/gallery/4.jpg" title="Ассортимент">
+                      <img src="/red-pancir/images/gallery/4.jpg" alt="Фотография Ассортимент" loading="lazy">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div class="product__about-portion">
             <div class="product__about-portion__info"><span class="product__about-portion__value">1кг</span><span class="product__about-portion__title">Вес порции</span></div>
             <div class="product__about-portion__info"><span class="product__about-portion__value">0.5кг</span><span class="product__about-portion__title">На человека</span></div>
@@ -208,7 +399,6 @@
               <div class="product__content-inner accordeon__content-inner">
                 <div class="product__content-text">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum et repellendus sed suscipit vero? Ad, architecto aspernatur corporis enim error eveniet fugit maxime nihil, omnis quidem sit soluta totam, vel?</p>
-                  <p>Время доставки составляет приблизительно 1 час с момента поступления заказа. В выходные и праздничные дни время доставки может быть увеличено до 2,5 часов. Стоимость доставки, независимо от суммы заказа, от 300 рублей в зависимости от района. Точную стоимость доставки вам сообщит оператор.</p>
                 </div>
               </div>
             </div>
@@ -226,7 +416,7 @@
             <div class="product__content accordeon__content">
               <div class="product__content-inner accordeon__content-inner">
                 <div class="product__content-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum et repellendus sed suscipit vero? Ad, architecto aspernatur corporis enim error eveniet fugit maxime nihil, omnis quidem sit soluta totam, vel?</p>
+                  <p>Время доставки составляет приблизительно 1 час с момента поступления заказа.</p>
                 </div>
               </div>
             </div>
