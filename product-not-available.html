@@ -175,24 +175,43 @@
           <div class="product__main-info"><span class="product__articul">Артикул: <!-- -->99352</span>
             <h1 class="page-title" id="Krevetka">Креветка 90/120 Гренландия</h1>
             <div class="product__price-block"><span class="product__price">1399<!-- -->₽</span><span class="product__old-price">1499<!-- -->₽</span>
-              <div class="product__available">В наличии</div>
+              <div class="product__not-available">Под заказ</div>
             </div>
             <div class="product__description">
               <p>Креветки северные варено-мороженые. В одном килограмме 90 -120 креветок. Полностью готовы к употреблению после разморозки. Сварены и заморожены на борту рыболовного траулера.</p>
             </div>
           </div>
-          <form class="product-form" data-product-id="99352">
-            <fieldset class="product-form__block quantity-block">
-              <legend class="visually-hidden">Укажите количество</legend>
-              <h3>Укажите количество</h3>
-              <div class="quantity-block__control" data-js-quantity="">
-                <button type="button" class="quantity-btn" data-js-quantity-decrement="">−</button>
-                <input type="number" name="quantity" class="quantity-input" min="1" data-js-quantity-input="" value="1">
-                <button type="button" class="quantity-btn quantity-btn--plus" data-js-quantity-increment="increment">+</button>
-              </div>
-            </fieldset>
-            <button class="form__submit-button button" type="submit"><span class="button__label">В корзину</span></button>
-          </form>
+          <div class="product__not-available-form-wrapper">
+            <div class="product__not-available-form">
+              <header class="product__not-available-form__header">
+                <h3 class="product__not-available-form__title">Сообщить о поступлении</h3>
+                <p class="product__not-available-form__description">К сожалению, товара нет в наличии, но мы сообщим о поступлении!</p>
+              </header>
+              <form class="product__not-available-form__form form" id="notAvailableForm" action="" method="POST">
+                <div class="form__cell field">
+                  <label for="имя" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
+                  <div class="field__body">
+                    <input class="field__control" id="имя" name="имя" placeholder="Имя" required="">
+                  </div>
+                </div>
+                <div class="form__cell field">
+                  <label for="modalCallbackPhone" class="field__label">Телефон<span class="field__requared-star" aria-hidden="true">*</span></label>
+                  <div class="field__body field__body--tel">
+                    <input class="field__control" id="modalCallbackPhone" name="modalCallbackPhone" placeholder="+7 ( )" required="" inputMode="tel" data-js-input-mask="+7 (000) 000-00-00">
+                  </div>
+                </div>
+                <input type="hidden" name="Креветка 90/120 Гренландия" id="productNotAvailableNameInput">
+                <div class="form__cell form__cell--wide form__cell--actions">
+                  <label class="form__agreement checkbox" for="checkboxNotAvailableNameInput">
+                    <input class="checkbox__input" type="checkbox" name="checkboxNotAvailableNameInput" id="checkboxNotAvailableNameInput" required="" value="checkboxNotAvailableNameInput">
+                    <p class="checkbox__label">Я даю согласие на <a href="/personal-date" target="_blank">обработку персональных данных</a>, а также подтверждаю, что ознакомлен с <a href="/politics" target="_blank">Политикой конфиденциальности</a>
+                    </p>
+                  </label>
+                </div>
+              </form>
+            </div>
+            <button class="form__submit-button button" type="submit" form="notAvailableForm"><span class="button__label">Отправить</span></button>
+          </div>
         </div>
         <div class="product__right">
           <div class="product__photos">

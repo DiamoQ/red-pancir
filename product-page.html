@@ -345,7 +345,7 @@
                 <label class="radio-input">
                   <input type="radio" name="marinade" value="citrus"><span class="radio-input__dot" aria-hidden="true"></span>Цитрусовый
                 </label>
-                <div class="radio-input__tooltip"><span class="icon">
+                <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                     <svg fill="currentColor" stroke="none">
                       <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
                     </svg>
@@ -357,7 +357,7 @@
                 <label class="radio-input">
                   <input type="radio" name="marinade" value="soeimbir"><span class="radio-input__dot" aria-hidden="true"></span>Соево-имбирный
                 </label>
-                <div class="radio-input__tooltip"><span class="icon">
+                <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                     <svg fill="currentColor" stroke="none">
                       <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
                     </svg>
@@ -377,9 +377,10 @@
                   &quot;centeredSlides&quot;: false,
                   &quot;slideToClickedSlide&quot;: true,
                   &quot;breakpoints&quot;: {
-                    &quot;0&quot;: { &quot;slidesPerView&quot;: 5 },
-                    &quot;359.9&quot;: { &quot;slidesPerView&quot;: 6 },
-                    &quot;455&quot;: { &quot;slidesPerView&quot;: 8 }
+                    &quot;0&quot;: {&quot;slidesPerView&quot;: 5},
+                    &quot;359.9&quot;: {&quot;slidesPerView&quot;: 6},
+                    &quot;455&quot;: {&quot;slidesPerView&quot;: 8},
+                    &quot;1024&quot;: {&quot;slidesPerView&quot;: 9}
                   }
                 }">
               <div class="swiper" data-thumbs-swiper="">
@@ -422,11 +423,17 @@
             </div>
             <div class="slider product__slider-main" data-js-main-slider="" data-slider-params="{
                   &quot;slidesPerView&quot;: 1,
-                  &quot;spaceBetween&quot;: 10
+                  &quot;spaceBetween&quot;: 10,
+                  &quot;navigation&quot;: true
                 }" data-thumbs-target=".product__slider-thumbs">
               <div class="product__slider-main__labels"><span class="product__slider-label product__slider-label--hold">Сухая заморозка (без льда)</span><span class="product__slider-label product__slider-label--new">Новинка</span></div>
               <div class="product__slider-second__labels"><span class="product__slider-label product__slider-label--promo">Акция</span></div>
               <div class="swiper" data-main-swiper="">
+                <button class="product__slider-button  product__slider-button--prev button" aria-label="Предыдущий слайд" title="Предыдущий слайд" type="button" data-js-main-slider-prev=""><span class="button__icon icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-left"></use>
+                    </svg>
+                  </span></button>
                 <ul class="slider__list swiper-wrapper" data-js-photoswipe="&quot;children: \&quot;a\&quot;, zoom: true, wheelToZoom: true&quot;">
                   <li class="swiper-slide">
                     <a href="/red-pancir/images/gallery/1.jpg" title="Наша команда">
@@ -484,6 +491,11 @@
                     </a>
                   </li>
                 </ul>
+                <button class="product__slider-button product__slider-button--next button" aria-label="Следующий слайд" title="Следующий слайд" type="button" data-js-main-slider-next=""><span class="button__icon icon">
+                    <svg fill="none" stroke="currentColor">
+                      <use href="/red-pancir/assets/images/icons.svg#arrow-right"></use>
+                    </svg>
+                  </span></button>
               </div>
             </div>
           </div>
