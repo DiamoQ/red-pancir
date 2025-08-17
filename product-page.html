@@ -193,7 +193,7 @@
             </fieldset>
             <fieldset class="product-form__block">
               <legend class="visually-hidden">Выберите способ приготовления</legend>
-              <h3>Укажите количество</h3>
+              <h3>Выберите способ приготовления</h3>
               <div class="tabs-navigation" id="cooking-variables-form-navigation" role="tablist" aria-labelledby="способы-приготовления блюда-title" data-js-tabs-navigation="">
                 <h3 class="visually-hidden" id="способы-приготовления блюда-title">Способы приготовления блюда</h3>
                 <div class="tabs-navigation__button is-active" id="пожарить-tab" aria-controls="пожарить-tabpanel" role="tab" aria-selected="true" tabindex="0" data-js-tabs-button="">Пожарить</div>
@@ -202,57 +202,169 @@
               <div class="tabs" data-js-tabs="{&quot;navigationTargetElementId&quot;:&quot;cooking-variables-form-navigation&quot;}">
                 <div class="tabs__body">
                   <div class="tabs__content is-active" id="пожарить-tabpanel" aria-labelledby="пожарить-tab" tabindex="0" data-js-tabs-content="">
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" checked="" value="not"><span class="radio-input__dot" aria-hidden="true"></span>Нет
-                    </label>
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="classic"><span class="radio-input__dot" aria-hidden="true"></span>Классическая
-                    </label>
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="tomato"><span class="radio-input__dot" aria-hidden="true"></span>В томатном маринаде
-                    </label>
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="sredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
-                    </label>
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="mexico"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
-                    </label>
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="asia"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
-                    </label>
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="thai"><span class="radio-input__dot" aria-hidden="true"></span>По-Тайски
-                    </label>
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="slivChesn"><span class="radio-input__dot" aria-hidden="true"></span>Сливочно-чесночная
-                    </label>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" checked="" value="not"><span class="radio-input__dot" aria-hidden="true"></span>Нет
+                      </label>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="classic"><span class="radio-input__dot" aria-hidden="true"></span>Классическая
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Тонкий аромат размарина, белого вина, чеснока и свежей петрушки с лимоном. Идеально для лангустинов и креветок.</div>
+                      </div><span class="radio-input__price">199<!-- -->₽</span>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="tomato"><span class="radio-input__dot" aria-hidden="true"></span>В томатном маринаде
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Креветки северные варено-мороженые. В одном килограмме 90</div>
+                      </div><span class="radio-input__price">299<!-- -->₽</span>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="sredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Креветки северные варено-мороженые. В одном килограмме 90</div>
+                      </div><span class="radio-input__price">299<!-- -->₽</span>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="mexico"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Креветки</div>
+                      </div><span class="radio-input__price">299<!-- -->₽</span>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="asia"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Дополнительная информация</div>
+                      </div><span class="radio-input__price">299<!-- -->₽</span>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="thai"><span class="radio-input__dot" aria-hidden="true"></span>По-Тайски
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Креветки северные варено-мороженые.</div>
+                      </div><span class="radio-input__price">299<!-- -->₽</span>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="slivChesn"><span class="radio-input__dot" aria-hidden="true"></span>Сливочно-чесночная
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Дополнительная информация</div>
+                      </div><span class="radio-input__price">299<!-- -->₽</span>
+                    </div>
                   </div>
                   <div class="tabs__content" id="отварить-tabpanel" aria-labelledby="отварить-tab" tabindex="0" data-js-tabs-content="">
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="poSredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
-                    </label>
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="mexicoVar"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
-                    </label>
-                    <label class="radio-input">
-                      <input type="radio" name="cooking" value="asiatskVarka"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
-                    </label>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="poSredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Креветки северные варено-мороженые. В одном килограмме 90</div>
+                      </div><span class="radio-input__price">299<!-- -->₽</span>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="mexicoVar"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Креветки</div>
+                      </div><span class="radio-input__price">299<!-- -->₽</span>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking" value="asiatskVarka"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
+                      </label>
+                      <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
+                          <svg fill="currentColor" stroke="none">
+                            <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                          </svg>
+                        </span>
+                        <div class="radio-input__tooltip-content">Дополнительная информация</div>
+                      </div><span class="radio-input__price">299<!-- -->₽</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </fieldset>
             <fieldset class="product-form__block">
               <legend class="visually-hidden">Выберите маринад</legend>
-              <h3>Укажите количество</h3>
-              <label class="radio-input">
-                <input type="radio" name="marinade" checked="" value="notmarinade"><span class="radio-input__dot" aria-hidden="true"></span>Нет
-              </label>
-              <label class="radio-input">
-                <input type="radio" name="marinade" value="citrus"><span class="radio-input__dot" aria-hidden="true"></span>Цитрусовый
-              </label>
-              <label class="radio-input">
-                <input type="radio" name="marinade" value="soeimbir"><span class="radio-input__dot" aria-hidden="true"></span>Соево-имбирный
-              </label>
+              <h3>Выберите маринад</h3>
+              <div class="radio-input__wrapper">
+                <label class="radio-input">
+                  <input type="radio" name="marinade" checked="" value="notmarinade"><span class="radio-input__dot" aria-hidden="true"></span>Нет
+                </label>
+              </div>
+              <div class="radio-input__wrapper">
+                <label class="radio-input">
+                  <input type="radio" name="marinade" value="citrus"><span class="radio-input__dot" aria-hidden="true"></span>Цитрусовый
+                </label>
+                <div class="radio-input__tooltip"><span class="icon">
+                    <svg fill="currentColor" stroke="none">
+                      <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                    </svg>
+                  </span>
+                  <div class="radio-input__tooltip-content">Дополнительная информация</div>
+                </div><span class="radio-input__price">199<!-- -->₽</span>
+              </div>
+              <div class="radio-input__wrapper">
+                <label class="radio-input">
+                  <input type="radio" name="marinade" value="soeimbir"><span class="radio-input__dot" aria-hidden="true"></span>Соево-имбирный
+                </label>
+                <div class="radio-input__tooltip"><span class="icon">
+                    <svg fill="currentColor" stroke="none">
+                      <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                    </svg>
+                  </span>
+                  <div class="radio-input__tooltip-content">Креветки северные варено-мороженые. В одном килограмме 90</div>
+                </div><span class="radio-input__price">299<!-- -->₽</span>
+              </div>
             </fieldset>
             <button class="form__submit-button button" type="submit"><span class="button__label">В корзину</span></button>
           </form>

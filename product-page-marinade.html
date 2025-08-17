@@ -193,16 +193,36 @@
             </fieldset>
             <fieldset class="product-form__block">
               <legend class="visually-hidden">Выберите маринад</legend>
-              <h3>Укажите количество</h3>
-              <label class="radio-input">
-                <input type="radio" name="marinade" checked="" value="notmarinade"><span class="radio-input__dot" aria-hidden="true"></span>Нет
-              </label>
-              <label class="radio-input">
-                <input type="radio" name="marinade" value="citrus"><span class="radio-input__dot" aria-hidden="true"></span>Цитрусовый
-              </label>
-              <label class="radio-input">
-                <input type="radio" name="marinade" value="soeimbir"><span class="radio-input__dot" aria-hidden="true"></span>Соево-имбирный
-              </label>
+              <h3>Выберите маринад</h3>
+              <div class="radio-input__wrapper">
+                <label class="radio-input">
+                  <input type="radio" name="marinade" checked="" value="notmarinade"><span class="radio-input__dot" aria-hidden="true"></span>Нет
+                </label>
+              </div>
+              <div class="radio-input__wrapper">
+                <label class="radio-input">
+                  <input type="radio" name="marinade" value="citrus"><span class="radio-input__dot" aria-hidden="true"></span>Цитрусовый
+                </label>
+                <div class="radio-input__tooltip"><span class="icon">
+                    <svg fill="currentColor" stroke="none">
+                      <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                    </svg>
+                  </span>
+                  <div class="radio-input__tooltip-content">Дополнительная информация</div>
+                </div><span class="radio-input__price">199<!-- -->₽</span>
+              </div>
+              <div class="radio-input__wrapper">
+                <label class="radio-input">
+                  <input type="radio" name="marinade" value="soeimbir"><span class="radio-input__dot" aria-hidden="true"></span>Соево-имбирный
+                </label>
+                <div class="radio-input__tooltip"><span class="icon">
+                    <svg fill="currentColor" stroke="none">
+                      <use href="/red-pancir/assets/images/icons.svg#tooltip"></use>
+                    </svg>
+                  </span>
+                  <div class="radio-input__tooltip-content">Креветки северные варено-мороженые. В одном килограмме 90</div>
+                </div><span class="radio-input__price">299<!-- -->₽</span>
+              </div>
             </fieldset>
             <button class="form__submit-button button" type="submit"><span class="button__label">В корзину</span></button>
           </form>
