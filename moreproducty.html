@@ -177,11 +177,11 @@
             <div class="product-controls__tags"></div>
           </div>
           <div class="product-controls__right">
-            <label for="в-наличии" class="toggle">
-              <input type="checkbox" id="в-наличии" name="arrFilter_AVAILABLE" aria-label="В наличии" value="Y">В наличии<span class="toggle__box"></span>
+            <label for="elementAvailable" class="toggle">
+              <input type="checkbox" id="elementAvailable" name="arrFilter_AVAILABLE" aria-label="В наличии" value="Y">В наличии<span class="toggle__box"></span>
             </label>
-            <label for="хит-продаж" class="toggle">
-              <input type="checkbox" id="хит-продаж" name="arrFilter_HIT" aria-label="Хит продаж" value="Y">Хит продаж<span class="toggle__box"></span>
+            <label for="elementHit" class="toggle">
+              <input type="checkbox" id="elementHit" name="arrFilter_HIT" aria-label="Хит продаж" value="Y">Хит продаж<span class="toggle__box"></span>
             </label>
             <div class="product-controls__sort">
               <button type="button" class="product-sort__button" data-js-sort-toggle=""><span class="product-sort__text">Сортировать:<span class="product-sort__value">от минимальной цены</span></span></button>
@@ -537,13 +537,13 @@
               </div>
             </div>
             <div class="filter-modal-window__group" data-group-label="Наличие">
-              <label for="в-наличии" class="toggle">
-                <input type="checkbox" id="в-наличии" name="arrFilter_AVAILABLE" aria-label="В наличии" value="Y">В наличии<span class="toggle__box"></span>
+              <label for="modalAvailable" class="toggle">
+                <input type="checkbox" id="modalAvailable" name="arrFilter_AVAILABLE" aria-label="В наличии" value="Y">В наличии<span class="toggle__box"></span>
               </label>
             </div>
             <div class="filter-modal-window__group" data-group-label="Популярность">
-              <label for="хит-продаж" class="toggle">
-                <input type="checkbox" id="хит-продаж" name="arrFilter_HIT" aria-label="Хит продаж" value="Y">Хит продаж<span class="toggle__box"></span>
+              <label for="modalHit" class="toggle">
+                <input type="checkbox" id="modalHit" name="arrFilter_HIT" aria-label="Хит продаж" value="Y">Хит продаж<span class="toggle__box"></span>
               </label>
             </div>
             <div class="filter-modal-window__group accordeon" data-group-label="Рыба">
@@ -757,9 +757,9 @@
           </header>
           <form class="modal__form form" action="" method="POST">
             <div class="form__cell field">
-              <label for="имя" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
+              <label for="modalPersonName" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
               <div class="field__body">
-                <input class="field__control" id="имя" name="имя" placeholder="Имя" required="">
+                <input class="field__control" id="modalPersonName" name="modalPersonName" placeholder="Имя" required="">
               </div>
             </div>
             <div class="form__cell field">
@@ -792,9 +792,9 @@
           </header>
           <form class="modal__form form" action="" method="POST">
             <div class="form__cell field">
-              <label for="имя" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
+              <label for="modalPersonName" class="field__label">Имя<span class="field__requared-star" aria-hidden="true">*</span></label>
               <div class="field__body">
-                <input class="field__control" id="имя" name="имя" placeholder="Имя" required="">
+                <input class="field__control" id="modalPersonName" name="modalPersonName" placeholder="Имя" required="">
               </div>
             </div>
             <div class="form__cell field">
