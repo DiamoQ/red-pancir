@@ -170,70 +170,74 @@
           <form class="basket__form form" action="" method="POST">
             <ul class="basket__form-products">
               <li class="basket__form-product">
-                <div class="basket__form-product-left">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Продукт" decoding="async" loading="lazy">
-                  <div class="basket__form-product__info"><span class="basket__form-product__name">Креветка 90/120 Гренландия</span>
-                    <ul class="basket__form-product__options">
-                      <li class="basket__form-product__option">Способ приготовления: Отварить. Классический.</li>
-                      <li class="basket__form-product__option">Маринад: Цитрус</li>
-                    </ul>
+                <div class="basket__form-product__main-info">
+                  <div class="basket__form-product-left">
+                    <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Продукт" decoding="async" loading="lazy">
+                    <div class="basket__form-product__info"><span class="basket__form-product__name">Креветка 90/120 Гренландия</span></div>
+                    <button class="basket__form-product__delete button button--transparent" aria-label="Удалить" title="Удалить" type="button" data-js-remove-product=""><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/red-pancir/assets/images/icons.svg#delete"></use>
+                        </svg>
+                      </span></button>
                   </div>
-                  <button class="basket__form-product__delete button button--transparent" aria-label="Удалить" title="Удалить" type="button" data-js-remove-product=""><span class="button__icon icon">
-                      <svg fill="currentColor" stroke="none">
-                        <use href="/red-pancir/assets/images/icons.svg#delete"></use>
-                      </svg>
-                    </span></button>
+                  <div class="basket__form-product-right">
+                    <div class="quantity-block__control" data-js-quantity="">
+                      <button type="button" class="quantity-btn" data-js-quantity-decrement="">−</button>
+                      <input type="number" name="quantity" class="quantity-input" min="1" data-js-quantity-input="" value="1">
+                      <button type="button" class="quantity-btn quantity-btn--plus" data-js-quantity-increment="increment">+</button>
+                    </div>
+                    <div class="basket__form-product__price"><span class="basket__form-product__price-total">3950₽</span><span class="basket__form-product__price-old">4950₽</span></div>
+                  </div>
                 </div>
-                <div class="basket__form-product-right">
-                  <div class="quantity-block__control" data-js-quantity="">
-                    <button type="button" class="quantity-btn" data-js-quantity-decrement="">−</button>
-                    <input type="number" name="quantity" class="quantity-input" min="1" data-js-quantity-input="" value="1">
-                    <button type="button" class="quantity-btn quantity-btn--plus" data-js-quantity-increment="increment">+</button>
+                <ul class="basket__form-product__options">
+                  <li class="basket__form-product__option">Способ приготовления: Отварить. Классический.</li>
+                  <li class="basket__form-product__option">Маринад: Цитрус</li>
+                </ul>
+              </li>
+              <li class="basket__form-product">
+                <div class="basket__form-product__main-info">
+                  <div class="basket__form-product-left">
+                    <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Продукт" decoding="async" loading="lazy">
+                    <div class="basket__form-product__info"><span class="basket__form-product__name">Креветка</span></div>
+                    <button class="basket__form-product__delete button button--transparent" aria-label="Удалить" title="Удалить" type="button" data-js-remove-product=""><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/red-pancir/assets/images/icons.svg#delete"></use>
+                        </svg>
+                      </span></button>
                   </div>
-                  <div class="basket__form-product__price"><span class="basket__form-product__price-total">3950₽</span><span class="basket__form-product__price-old">4950₽</span></div>
+                  <div class="basket__form-product-right">
+                    <div class="quantity-block__control" data-js-quantity="">
+                      <button type="button" class="quantity-btn" data-js-quantity-decrement="">−</button>
+                      <input type="number" name="quantity" class="quantity-input" min="1" data-js-quantity-input="" value="2">
+                      <button type="button" class="quantity-btn quantity-btn--plus" data-js-quantity-increment="increment">+</button>
+                    </div>
+                    <div class="basket__form-product__price"><span class="basket__form-product__price-total">950₽</span><span class="basket__form-product__price-old">12150₽</span></div>
+                  </div>
                 </div>
               </li>
               <li class="basket__form-product">
-                <div class="basket__form-product-left">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Продукт" decoding="async" loading="lazy">
-                  <div class="basket__form-product__info"><span class="basket__form-product__name">Креветка 90/120 Гренландия</span></div>
-                  <button class="basket__form-product__delete button button--transparent" aria-label="Удалить" title="Удалить" type="button" data-js-remove-product=""><span class="button__icon icon">
-                      <svg fill="currentColor" stroke="none">
-                        <use href="/red-pancir/assets/images/icons.svg#delete"></use>
-                      </svg>
-                    </span></button>
-                </div>
-                <div class="basket__form-product-right">
-                  <div class="quantity-block__control" data-js-quantity="">
-                    <button type="button" class="quantity-btn" data-js-quantity-decrement="">−</button>
-                    <input type="number" name="quantity" class="quantity-input" min="1" data-js-quantity-input="" value="1">
-                    <button type="button" class="quantity-btn quantity-btn--plus" data-js-quantity-increment="increment">+</button>
+                <div class="basket__form-product__main-info">
+                  <div class="basket__form-product-left">
+                    <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Продукт" decoding="async" loading="lazy">
+                    <div class="basket__form-product__info"><span class="basket__form-product__name">Креветка 90/120 Гренландия Гренландия Гренландия</span></div>
+                    <button class="basket__form-product__delete button button--transparent" aria-label="Удалить" title="Удалить" type="button" data-js-remove-product=""><span class="button__icon icon">
+                        <svg fill="currentColor" stroke="none">
+                          <use href="/red-pancir/assets/images/icons.svg#delete"></use>
+                        </svg>
+                      </span></button>
                   </div>
-                  <div class="basket__form-product__price"><span class="basket__form-product__price-total">3950₽</span></div>
-                </div>
-              </li>
-              <li class="basket__form-product">
-                <div class="basket__form-product-left">
-                  <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Продукт" decoding="async" loading="lazy">
-                  <div class="basket__form-product__info"><span class="basket__form-product__name">Креветка 90/120 Гренландия Гренландия</span>
-                    <ul class="basket__form-product__options">
-                      <li class="basket__form-product__option">Способ приготовления: Отварить. Классический.</li>
-                    </ul>
+                  <div class="basket__form-product-right">
+                    <div class="quantity-block__control" data-js-quantity="">
+                      <button type="button" class="quantity-btn" data-js-quantity-decrement="">−</button>
+                      <input type="number" name="quantity" class="quantity-input" min="1" data-js-quantity-input="" value="10">
+                      <button type="button" class="quantity-btn quantity-btn--plus" data-js-quantity-increment="increment">+</button>
+                    </div>
+                    <div class="basket__form-product__price"><span class="basket__form-product__price-total">3950₽</span></div>
                   </div>
-                  <button class="basket__form-product__delete button button--transparent" aria-label="Удалить" title="Удалить" type="button" data-js-remove-product=""><span class="button__icon icon">
-                      <svg fill="currentColor" stroke="none">
-                        <use href="/red-pancir/assets/images/icons.svg#delete"></use>
-                      </svg>
-                    </span></button>
                 </div>
-                <div class="basket__form-product-right">
-                  <div class="quantity-block__control" data-js-quantity="">
-                    <button type="button" class="quantity-btn" data-js-quantity-decrement="">−</button>
-                    <input type="number" name="quantity" class="quantity-input" min="1" data-js-quantity-input="" value="1">
-                    <button type="button" class="quantity-btn quantity-btn--plus" data-js-quantity-increment="increment">+</button>
-                  </div>
-                  <div class="basket__form-product__price"><span class="basket__form-product__price-total">3950₽</span><span class="basket__form-product__price-old">4950₽</span></div>
-                </div>
+                <ul class="basket__form-product__options">
+                  <li class="basket__form-product__option">Способ приготовления: Отварить. Классический.</li>
+                </ul>
               </li>
             </ul>
             <div class="basket__form-data">
