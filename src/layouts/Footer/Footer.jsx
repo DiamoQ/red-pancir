@@ -137,7 +137,8 @@ const Footer = (props) => {
                     {companyInfo.workTime}
                 </span>
               </time>
-              <Button href='https://play.google.com/' target='_blank' label='Скачать UDS App'
+              <Button href='https://rakichel.uds.app/c/join?ref=bdfb2220' target='_blank' label='Присоединиться
+к UDS'
                       className='footer__company-app-button'/>
             </address>
           </div>
