@@ -11,9 +11,14 @@ import PasswordToggle from '@/modules/PasswordToggle'
 import ProfileForm from '@/modules/ProfileForm'
 import PriceRange from "@/modules/PriceRange";
 import FilterManager from "@/modules/FilterManager";
+import QuantitySelector from "@/modules/QuantitySelector";
+import SliderWithThumbsCollection from "@/modules/SliderWithThumbs";
+import TooltipInfo from "@/modules/TooltipInfo";
+import ProductRemoveAnimation from "@/modules/ProductRemoveAnimation";
 
 new OverlayMenu()
 new SliderCollection()
+new SliderWithThumbsCollection ()
 new TabsCollection()
 new VideoPlayerCollection()
 new InputMaskCollection()
@@ -25,3 +30,6 @@ new ModalWindow()
 new ProfileForm()
 new PriceRange()
 new FilterManager()
+new QuantitySelector()
+new TooltipInfo()
+new ProductRemoveAnimation()

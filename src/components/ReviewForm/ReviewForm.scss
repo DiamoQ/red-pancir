@@ -1,0 +1,74 @@
+.product-reviews {
+  &__form {
+
+    &-block {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: fluid(30, 20);
+      padding: fluid(60, 50) 20px 50px;
+      background-color: var(--color-grey);
+      border-radius: var(--border-radius-m);
+
+      @include mobile-s {
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      &:after,
+      &:before {
+        @include mobile-above {
+          content: "";
+          position: absolute;
+          background-image: url('/src/assets/icons/reviewFormLobster.svg');
+          background-repeat: no-repeat;
+          max-width: 220px;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 200 / 240;
+          left: 0;
+          bottom: 0;
+        }
+      }
+
+      &:before {
+        @include mobile-above {
+          left: initial;
+          right: 0;
+          bottom: initial;
+          top: 0;
+          transform: rotate(180deg);
+        }
+      }
+
+      form {
+        margin-top: 20px;
+        max-width: 512px;
+        gap: fluid(16, 10);
+        z-index: 5;
+
+        .form__double-inputs {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: fluid(16, 10);
+        }
+
+        .checkbox__label {
+          text-align: left;
+        }
+      }
+    }
+
+    &-title {
+      @include mobile-s {
+        margin-inline: 0 auto;
+      }
+    }
+
+    &-description {
+      margin: 10px 0 0;
+    }
+  }
+}

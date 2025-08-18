@@ -47,7 +47,7 @@ const RecommendedProducts = () => {
 
     return (
         <Section
-            title="Рекомендуемые товары"
+            title="Рекомендуем"
             titleId="recommended-title"
             className='recommended-products'
             actions={(
@@ -63,16 +63,12 @@ const RecommendedProducts = () => {
                 navigationTargetElementId={sliderNavigationId}
                 sliderParams={recommendedSliderParams}
                 hasScrollbarOnMobile={false}
-                ulPhotoSwipeAttrs={{
-                    children: "article",
-                    zoom: true,
-                    wheelToZoom: true
-                }}
             >
                 {moreproductyitems.map((product, index) => {
                     return (
                         <ProductCard
                             key={index}
+                            variant='recommended'
                             {...product}
                         />
                     )

@@ -1,9 +1,11 @@
 import './ProductCard.scss'
 import {Image} from "minista";
 import Button from "@/components/Button";
+import classNames from "classnames";
 
 const ProductCard = (props) => {
     const {
+        className,
         title,
         description,
         image,
@@ -13,11 +15,25 @@ const ProductCard = (props) => {
         cookingOptions = [],
         labels = [],
         href,
+        // 'catalog' | 'recommended'
+        variant='catalog'
     } = props
+
+    const basePath = import.meta.env.MODE === 'production'
+        ? import.meta.env.VITE_PUBLIC_PATH
+        : ''
+
+    const shouldShowLabel = (label) => {
+        if (variant === 'catalog') return label === 'hit' || label === 'promo';
+        if (variant === 'recommended') return label === 'new';
+        return false;
+    };
 
     return (
         <article
-            className='product-card'
+            className={classNames('product-card', {
+                'product-card--recommended': variant === 'recommended',
+            })}
         >
             <a className='product-card__image-block'
                href={href}
@@ -35,15 +51,20 @@ const ProductCard = (props) => {
                 {labels.length > 0 && (
                     <div className='product-card__labels'>
                         {labels.map((label, index) => (
-                            <span
-                                key={index}
-                                className={`product-card__label 
-                                ${label === 'hit' ? 'product-card__label--hit' : ''} 
-                                ${label === 'promo' ? 'product-card__label--promo' : ''} `}
-                            >
-                                {label === 'hit' && 'Хит продаж'}
-                                {label === 'promo' && 'Акция'}
-                            </span>
+                            shouldShowLabel(label) && (
+                                <span
+                                    key={index}
+                                    className={classNames('product-card__label', {
+                                        'product-card__label--hit': label === 'hit' && variant === 'catalog',
+                                        'product-card__label--promo': label === 'promo' && variant === 'catalog',
+                                        'product-card__label--new': label === 'new' && variant === 'recommended',
+                                    })}
+                                >
+                                    {label === 'hit' &&  variant === 'catalog' && 'Хит продаж'}
+                                    {label === 'promo' &&  variant === 'catalog' && 'Акция'}
+                                    {label === 'new' &&  variant === 'recommended' && 'Новинка'}
+                                </span>
+                            )
                         ))}
                     </div>
                 )}
@@ -94,14 +115,18 @@ const ProductCard = (props) => {
                             </div>
                             <Button
                                 href={href}
+                                target='_blank'
                                 label='В корзину'
                             />
                         </>
                     ) : (
                         <Button
-                            href={href}
                             label='Сообщить о поступлении'
                             mode='white'
+                            extraAttrs={{
+                                'data-js-modal-notify-button': 'notify-availability',
+                                'data-product-name': title
+                            }}
                         />
                     )}
                 </div>

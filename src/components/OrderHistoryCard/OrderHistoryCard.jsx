@@ -59,7 +59,7 @@ const OrderHistoryCard = (props) => {
                         <span className="order-history__summary-value">{orderPrice}₽</span>
                     </span>
                     <span className="order-history__summary-info">
-                        <span className="order-history__summary-title">Статус:</span>
+                        <span className="order-history__summary-title">Статус</span>
                         <span className={classNames('order-history__summary-value order-history__summary-value--status', {
                             [`order-history__summary-value--status-${orderStatus}`]: orderStatus
                         })}>

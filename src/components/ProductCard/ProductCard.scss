@@ -17,6 +17,12 @@
     }
   }
 
+  &--recommended {
+    .product-card__options {
+      gap: 0 fluid(20, 4) !important;
+    }
+  }
+
   &__image-block {
     position: relative;
     height: fluid(222, 199);
@@ -57,7 +63,8 @@
     color: var(--color-white);
     z-index: 5;
 
-    &--hit {
+    &--hit,
+    &--new{
       background-color: var(--color-yellow);
     }
 
@@ -88,7 +95,7 @@
   &__options {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px fluid(20, 13);
+    gap: 0 fluid(20, 13);
     margin-bottom: 5px;
   }
 
@@ -141,6 +148,7 @@
     .button {
       flex: 1;
       max-width: 60%;
+      z-index: 10;
 
       @include tablet-above {
         max-width: 123px;

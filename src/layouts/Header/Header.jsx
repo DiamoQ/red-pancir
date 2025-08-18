@@ -155,7 +155,7 @@ const Header = (props) => {
                     label='Заказать звонок'
                     className='header__button-call'
                     extraAttrs={{
-                      'data-js-modal-notify-button': ''
+                      'data-js-modal-notify-button': 'callback-window'
                     }}/>
                 <div className='header__company-info-option'>
                   <span className='header__company-info-name'>
@@ -178,7 +178,7 @@ const Header = (props) => {
             <Button
                 className='busket-button'
                 iconName='busket'
-                href={`${basePath}/busket`}
+                href={`${basePath}/basket`}
                 label='Корзина'
                 mode='white'
                 hasFillIcon

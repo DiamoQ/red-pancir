@@ -7,8 +7,8 @@ const Checkbox = (props) => {
         className,
         id = getIdFromTitle(props.label),
         label,
-        name = {id},
-        value = {id},
+        name = id,
+        value = id,
         isRequired,
     } = props
 

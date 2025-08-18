@@ -1,0 +1,28 @@
+.product-reviews__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  row-gap: 15px;
+  padding: fluid(30, 20);
+  background-color: var(--color-grey);
+  border-radius: var(--border-radius-m);
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &-name {
+    font-weight: 600;
+    color: var(--color-red-accent);
+  }
+
+  &-date {
+    opacity: .8;
+  }
+
+  &-content {
+    margin-bottom: 0;
+  }
+}

@@ -24,7 +24,7 @@ export default () => {
                     <nav className="breadcrumbs__nav" aria-label="Хлебные крошки">
                         <ul className="breadcrumbs__list">
                             <li className="breadcrumbs__item">
-                                <a href="/" className="breadcrumbs__link">Главная</a>
+                                <a href={basePath} className="breadcrumbs__link">Главная</a>
                                 <span className="breadcrumbs__separator">›</span>
                             </li>
                             <li className="breadcrumbs__item">
@@ -42,6 +42,12 @@ export default () => {
             <LoyaltyProgrammBanner />
             <FilterModalWindow />
             <ModalCallbackWindow />
+            <ModalCallbackWindow
+                modalId="notify-availability"
+                title="Сообщить о поступлении"
+                description="К сожалению, товара нет в наличии, но мы сообщим о поступлении!"
+                hasProductNameField={true}
+            />
         </>
     )
 }

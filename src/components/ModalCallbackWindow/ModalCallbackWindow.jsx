@@ -5,17 +5,20 @@ import Button from "@/components/Button";
 
 const ModalCallbackWindow = (props) => {
   const {
-    className,
+    modalId = 'callback-window',
+    title = 'Заказать звонок',
+    description = 'Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время',
+    hasProductNameField = false,
   } = props
 
   return (
-      <div data-js-modal-notify='callback-window' className="modal">
-        <div className="modal__dialog" data-js-modal-notify-dialog='callback-window'>
+      <div data-js-modal-notify={modalId} className="modal">
+        <div className="modal__dialog" data-js-modal-notify-dialog={modalId}>
           <header className="modal__header">
             <h3 className="modal__title">
-              Заказать звонок
+              {title}
             </h3>
-            <p className="modal__description">Оставьте заявку и наши менеджеры свяжутся с вами в ближайшее время</p>
+            <p className="modal__description">{description}</p>
             <Button
                 className='modal__close-button'
                 iconName='close-button'
@@ -24,14 +27,15 @@ const ModalCallbackWindow = (props) => {
                 mode='transparent'
                 hasFillIcon
                 extraAttrs={{
-                  'data-js-modal-notify-close': 'callback-window'
+                  'data-js-modal-notify-close': modalId
                 }}
             />
           </header>
-          <form className="modal__form form" action=''>
+          <form className="modal__form form" action=''  method='POST'>
             <Field
                 className="form__cell"
                 label='Имя'
+                id="modalPersonName"
                 placeholder='Имя'
                 isRequired
             />
@@ -44,10 +48,17 @@ const ModalCallbackWindow = (props) => {
                 mask='+7 (000) 000-00-00'
                 isRequired
             />
+            {hasProductNameField && (
+                <input
+                    type="hidden"
+                    name="productName"
+                    id="modalProductNameInput"
+                />
+            )}
             <div className="form__cell form__cell--wide form__cell--actions">
               <Checkbox
                   className="form__agreement"
-                  id="callbackCheckboxId"
+                  id={`checkbox-${modalId}`}
                   isRequired
               />
               <Button

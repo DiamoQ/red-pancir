@@ -1,3 +1,39 @@
 .recommended-products {
 
+  &.container {
+    @include mobile-s {
+      padding-inline: 0;
+    }
+  }
+
+  header {
+    @include mobile-s {
+      padding-inline: 20px;
+    }
+  }
+
+  .slider__list {
+    display: flex;
+    align-items: stretch;
+
+    @include mobile-s {
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+
+  .slider__item {
+    height: auto;
+
+    @include mobile-s {
+      max-width: calc(100% - 60px);
+
+      &:first-of-type {
+        margin-left: 20px;
+      }
+    }
+  }
 }
