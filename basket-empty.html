@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Красный панцирь | Ошибка 404</title>
+    <title>Красный панцирь | Корзина</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/red-pancir/assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/red-pancir/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/red-pancir/assets/images/favicon-16x16.png">
@@ -159,22 +159,35 @@
               <li class="breadcrumbs__item">
                 <a href="/red-pancir" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__separator">›</span>
               </li>
-              <li class="breadcrumbs__item breadcrumbs__item--current">Ошибка</li>
+              <li class="breadcrumbs__item breadcrumbs__item--current">Корзина</li>
             </ul>
           </nav>
         </div>
       </section>
-      <section class="error404 noto-font section container" aria-labelledby="error-404-title">
-        <header class="section__header">
-          <div class="section__info">
-            <h1 class="page-title  visually-hidden" id="error-404-title">Ошибка 404</h1>
-          </div>
-        </header>
-        <div class="section__body">
-          <img srcset="/red-pancir/assets/images/error404-320x150.png 320w, /red-pancir/assets/images/error404-400x188.png 400w, /red-pancir/assets/images/error404-537x251.png 537w" src="/red-pancir/assets/images/error404-537x251.png" sizes="(min-width: 537px) 537px, 100vw" width="537" height="251" alt="Ошибка 404" decoding="async" loading="lazy">
-          <div class="error404__content">
-            <p class="error404__description">Такой страницы нет. Если не нашли что искали, позвоните нам или воспользуйтесь каталогом сайта.</p>
-            <a class="button-page-link-to-main button" href="/red-pancir"><span class="button__label">На главную</span></a>
+      <section class="basket container" aria-labelledby="basket">
+        <h1 class="page-title">Корзина</h1>
+        <div class="basket__content">
+          <p class="basket__description">В корзине пока пусто.</p>
+          <a class="button-page-link-to-main button" href="/red-pancir/katalog"><span class="button__label">В каталог</span></a>
+        </div>
+      </section>
+      <section class="loyalty-programm__section" aria-labelledby="loyalty-programm-title">
+        <div class="loyalty-programm__inner container">
+          <div class="loyalty-programm__banner">
+            <div class="loyalty-programm__qr">
+              <img srcset="/red-pancir/assets/images/qr-320x320.png 320w, /red-pancir/assets/images/qr-356x356.png 356w" src="/red-pancir/assets/images/qr-356x356.png" sizes="(min-width: 356px) 356px, 100vw" width="356" height="356" alt="QR-код для скачивания приложения" decoding="async" loading="lazy" class="loyalty-programm__image">
+            </div>
+            <div class="loyalty-programm__content">
+              <h2 class="loyalty-programm__title">Присоединяйтесь к нашей бонусной программе</h2>
+              <p class="loyalty-programm__description">Сканируйте QR-код, чтобы присоединиться к бонусной программе и получить 200₽ на баланс уже сегодня.<br class="mobile-br"> <br class="mobile-br"> Вы получаете 300 бонусных рублей на день рождения и кэшбэк с каждой покупки!</p>
+              <a href="https://play.google.com/" target="_blank" aria-label="Ссылка на наше приложение" title="Скачать наше приложение" class="loyalty-programm__app-link">
+                <img srcset="/red-pancir/assets/images/appLogo-24x24.png 24w" src="/red-pancir/assets/images/appLogo-24x24.png" sizes="(min-width: 24px) 24px, 100vw" width="24" height="24" alt="Логотип нашего приложения" decoding="async" loading="lazy" class="loyalty-programm__app-logo">UDC App
+              </a>
+            </div>
+            <picture>
+              <source srcset="/red-pancir/images/loyaltyProgramm/loyaltyProgrammMobileBannerImage.png" media="(max-width: 1023.97px)">
+              <img class="loyalty-programm__app-screen" src="/red-pancir/images/loyaltyProgramm/loyaltyProgrammBannerImage.png" loading="lazy" alt="Изображение блока баннера приглашения на работу">
+            </picture>
           </div>
         </div>
       </section>
