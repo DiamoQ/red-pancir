@@ -5,7 +5,7 @@ const AboutPresent = () => {
         ? `${import.meta.env.VITE_PUBLIC_PATH}/videos`
         : '/videos'
 
-    const videoSrc = `${basePath}/example.mp4` ;
+    const videoSrc = `${basePath}/video.mp4` ;
     const posterSrc = `${basePath}/example-poster.png`;
 
     return (

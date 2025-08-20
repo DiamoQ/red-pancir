@@ -33,7 +33,7 @@ const Product = (props) => {
               {productInfo.inStock ? (
                   <div className='product__available'>В наличии</div>
               ) : (
-                  <div className='product__not-available'>Под заказ</div>
+                  <div className='product__not-available'>Нет в наличии</div>
               )}
             </div>
             {productInfo.introtext && (

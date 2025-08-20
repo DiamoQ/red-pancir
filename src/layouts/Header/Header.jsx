@@ -98,7 +98,7 @@ const Header = (props) => {
               <Button
                   className='busket-button'
                   iconName='busket'
-                  href={`${basePath}/busket`}
+                  href={`${basePath}/basket`}
                   label='Корзина'
                   mode='white'
                   hasFillIcon

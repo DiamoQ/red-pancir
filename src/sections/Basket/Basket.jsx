@@ -55,10 +55,40 @@ const Basket = (props) => {
                       </div>
                   </div>
                 </div>
-                <ul className="basket__form-product__options">
-                  <li className='basket__form-product__option'>Способ приготовления: Отварить. Классический.</li>
-                  <li className='basket__form-product__option'>Маринад: Цитрус</li>
-                </ul>
+                <div className="basket__form-product__options">
+                  <div className="basket__form-product__original-price">
+                    <span className='basket__form-product__original-price-name'>Оригинальная цена:</span>
+                    <span className='basket__form-product__original-price-value'>2990₽</span>
+                  </div>
+                  <ul className="basket__form-product__options-list">
+                    <li className='basket__form-product__option'>
+                      <span className="basket__form-product__option-name">
+                        Способ приготовления:
+                      </span>
+                      <div className="basket__form-product__option-info">
+                        <span className="basket__form-product__option-value">
+                          Классическая варка
+                        </span>
+                        <span className="basket__form-product__option-price">
+                          +199₽
+                        </span>
+                      </div>
+                    </li>
+                    <li className='basket__form-product__option'>
+                      <span className="basket__form-product__option-name">
+                        Маринад:
+                      </span>
+                      <div className="basket__form-product__option-info">
+                        <span className="basket__form-product__option-value">
+                          Жарка по-Средиземноморски
+                        </span>
+                        <span className="basket__form-product__option-price">
+                          +299₽
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li className='basket__form-product'>
                 <div className='basket__form-product__main-info'>
@@ -136,9 +166,27 @@ const Basket = (props) => {
                     </div>
                   </div>
                 </div>
-                <ul className="basket__form-product__options">
-                  <li className='basket__form-product__option'>Способ приготовления: Отварить. Классический.</li>
-                </ul>
+                <div className="basket__form-product__options">
+                  <div className="basket__form-product__original-price">
+                    <span className='basket__form-product__original-price-name'>Оригинальная цена:</span>
+                    <span className='basket__form-product__original-price-value'>3690₽</span>
+                  </div>
+                  <ul className="basket__form-product__options-list">
+                    <li className='basket__form-product__option'>
+                      <span className="basket__form-product__option-name">
+                        Маринад:
+                      </span>
+                      <div className="basket__form-product__option-info">
+                        <span className="basket__form-product__option-value">
+                          Жарка по-Средиземноморски
+                        </span>
+                        <span className="basket__form-product__option-price">
+                          +299₽
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
             <div className='basket__form-data'>
