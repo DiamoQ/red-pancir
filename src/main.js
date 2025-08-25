@@ -15,6 +15,7 @@ import QuantitySelector from "@/modules/QuantitySelector";
 import SliderWithThumbsCollection from "@/modules/SliderWithThumbs";
 import TooltipInfo from "@/modules/TooltipInfo";
 import ProductRemoveAnimation from "@/modules/ProductRemoveAnimation";
+import CookingMarinadeManager from "@/modules/CookingOptionsManager";
 
 new OverlayMenu()
 new SliderCollection()
@@ -33,3 +34,4 @@ new FilterManager()
 new QuantitySelector()
 new TooltipInfo()
 new ProductRemoveAnimation()
+new CookingMarinadeManager()

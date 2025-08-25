@@ -15,51 +15,51 @@ const categoryItems = [
     {
         title: "Креветки",
         image: krevetki,
-        href: '/krevetki',
+        href: '/moreproducty',
     },{
         title: "Раки",
         image: raki,
-        href: '/raki',
+        href: '/moreproducty',
     },{
         title: "Крабы",
         image: krabi,
-        href: '/krabi',
+        href: '/moreproducty',
     },{
         title: "Мидии",
         image: midii,
-        href: '/midii',
+        href: '/moreproducty',
     },{
         title: "Рыба",
         image: ribi,
-        href: '/ribi',
+        href: '/moreproducty',
     },{
         title: "Морепродукты",
         image: moreptodukti,
-        href: '/moreptodukti',
+        href: '/moreproducty',
     },{
         title: "Живые морепродукты",
         image: jiviemoreprodukti,
-        href: '/jiviemoreprodukti',
+        href: '/moreproducty',
     },{
         title: "Икра",
         image: ikra,
-        href: '/ikra',
+        href: '/moreproducty',
     },{
         title: "Деликатесы",
         image: delikatesi,
-        href: '/delikatesi',
+        href: '/moreproducty',
     },{
         title: "Полуфабрикаты",
         image: polufabrikati,
-        href: '/polufabrikati',
+        href: '/moreproducty',
     },{
         title: "Соусы",
         image: sousi,
-        href: '/sousi',
+        href: '/moreproducty',
     },{
         title: "Консервы",
         image: konservi,
-        href: '/konservi',
+        href: '/moreproducty',
     },
 ];
 

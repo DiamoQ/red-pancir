@@ -204,12 +204,12 @@
                   <div class="tabs__content is-active" id="пожарить-tabpanel" aria-labelledby="пожарить-tab" tabindex="0" data-js-tabs-content="">
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" checked="" value="not"><span class="radio-input__dot" aria-hidden="true"></span>Нет
+                        <input type="radio" name="cooking_fry" data-default-option="true" checked="" value="not"><span class="radio-input__dot" aria-hidden="true"></span>Нет
                       </label>
                     </div>
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="classic"><span class="radio-input__dot" aria-hidden="true"></span>Классическая
+                        <input type="radio" name="cooking_fry" value="classic"><span class="radio-input__dot" aria-hidden="true"></span>Классическая
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -221,7 +221,7 @@
                     </div>
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="tomato"><span class="radio-input__dot" aria-hidden="true"></span>В томатном маринаде
+                        <input type="radio" name="cooking_fry" value="tomato"><span class="radio-input__dot" aria-hidden="true"></span>В томатном маринаде
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -233,7 +233,7 @@
                     </div>
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="sredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
+                        <input type="radio" name="cooking_fry" value="sredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -245,7 +245,7 @@
                     </div>
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="mexico"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
+                        <input type="radio" name="cooking_fry" value="mexico"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -257,7 +257,7 @@
                     </div>
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="asia"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
+                        <input type="radio" name="cooking_fry" value="asia"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -269,7 +269,7 @@
                     </div>
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="thai"><span class="radio-input__dot" aria-hidden="true"></span>По-Тайски
+                        <input type="radio" name="cooking_fry" value="thai"><span class="radio-input__dot" aria-hidden="true"></span>По-Тайски
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -281,7 +281,7 @@
                     </div>
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="slivChesn"><span class="radio-input__dot" aria-hidden="true"></span>Сливочно-чесночная
+                        <input type="radio" name="cooking_fry" value="slivChesn"><span class="radio-input__dot" aria-hidden="true"></span>Сливочно-чесночная
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -295,7 +295,12 @@
                   <div class="tabs__content" id="отварить-tabpanel" aria-labelledby="отварить-tab" tabindex="0" data-js-tabs-content="">
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="poSredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
+                        <input type="radio" name="cooking_boil" data-default-option="true" checked="" value="notVar"><span class="radio-input__dot" aria-hidden="true"></span>Нет
+                      </label>
+                    </div>
+                    <div class="radio-input__wrapper">
+                      <label class="radio-input">
+                        <input type="radio" name="cooking_boil" value="poSredizem"><span class="radio-input__dot" aria-hidden="true"></span>По-Средиземноморски
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -307,7 +312,7 @@
                     </div>
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="mexicoVar"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
+                        <input type="radio" name="cooking_boil" value="mexicoVar"><span class="radio-input__dot" aria-hidden="true"></span>Мексиканская
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -319,7 +324,7 @@
                     </div>
                     <div class="radio-input__wrapper">
                       <label class="radio-input">
-                        <input type="radio" name="cooking" value="asiatskVarka"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
+                        <input type="radio" name="cooking_boil" value="asiatskVarka"><span class="radio-input__dot" aria-hidden="true"></span>Азиатская
                       </label>
                       <div class="radio-input__tooltip" data-js-tooltip="" role="button" tabindex="0" aria-label="Подробнее об опции" data-state="closed"><span class="icon">
                           <svg fill="currentColor" stroke="none">
@@ -338,7 +343,7 @@
               <h3>Выберите маринад</h3>
               <div class="radio-input__wrapper">
                 <label class="radio-input">
-                  <input type="radio" name="marinade" checked="" value="notmarinade"><span class="radio-input__dot" aria-hidden="true"></span>Нет
+                  <input type="radio" name="marinade" data-default-option="true" checked="" value="notmarinade"><span class="radio-input__dot" aria-hidden="true"></span>Нет
                 </label>
               </div>
               <div class="radio-input__wrapper">
@@ -717,11 +722,11 @@
                 </li>
                 <li class="slider__item swiper-slide">
                   <article class="product-card product-card--recommended">
-                    <a class="product-card__image-block" href="/red-pancir/product-page" target="_blank">
+                    <a class="product-card__image-block" href="/red-pancir/product-page-only-basket" target="_blank">
                       <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар первый" decoding="async" loading="lazy">
                     </a>
                     <div class="product-card__content">
-                      <a class="product-card__title-link" href="/red-pancir/product-page" target="_blank">
+                      <a class="product-card__title-link" href="/red-pancir/product-page-only-basket" target="_blank">
                         <h2 class="product-card__title">Кальмар первый</h2>
                       </a>
                       <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
@@ -734,7 +739,7 @@
                                             ">Пожарим</span></div>
                       <div class="product-card__actions">
                         <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
-                        <a class="button" href="/red-pancir/product-page" target="_blank"><span class="button__label">В корзину</span></a>
+                        <a class="button" href="/red-pancir/product-page-only-basket" target="_blank"><span class="button__label">В корзину</span></a>
                       </div>
                     </div>
                   </article>
@@ -769,11 +774,11 @@
                 </li>
                 <li class="slider__item swiper-slide">
                   <article class="product-card product-card--recommended">
-                    <a class="product-card__image-block" href="/red-pancir/product-page" target="_blank"><span class="product-card__availability">Нет в наличии</span>
+                    <a class="product-card__image-block" href="/red-pancir/product-not-available" target="_blank"><span class="product-card__availability">Нет в наличии</span>
                       <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар Царский" decoding="async" loading="lazy">
                     </a>
                     <div class="product-card__content">
-                      <a class="product-card__title-link" href="/red-pancir/product-page" target="_blank">
+                      <a class="product-card__title-link" href="/red-pancir/product-not-available" target="_blank">
                         <h2 class="product-card__title">Кальмар Царский</h2>
                       </a>
                       <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
@@ -807,17 +812,17 @@
                 </li>
                 <li class="slider__item swiper-slide">
                   <article class="product-card product-card--recommended">
-                    <a class="product-card__image-block" href="/red-pancir/product-page" target="_blank">
+                    <a class="product-card__image-block" href="/red-pancir/product-page-cooking-variants" target="_blank">
                       <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар Сациви" decoding="async" loading="lazy">
                     </a>
                     <div class="product-card__content">
-                      <a class="product-card__title-link" href="/red-pancir/product-page" target="_blank">
+                      <a class="product-card__title-link" href="/red-pancir/product-page-cooking-variants" target="_blank">
                         <h2 class="product-card__title">Кальмар Сациви</h2>
                       </a>
                       <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
                       <div class="product-card__actions">
                         <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span></div>
-                        <a class="button" href="/red-pancir/product-page" target="_blank"><span class="button__label">В корзину</span></a>
+                        <a class="button" href="/red-pancir/product-page-cooking-variants" target="_blank"><span class="button__label">В корзину</span></a>
                       </div>
                     </div>
                   </article>
@@ -880,12 +885,12 @@
                 </li>
                 <li class="slider__item swiper-slide">
                   <article class="product-card product-card--recommended">
-                    <a class="product-card__image-block" href="/red-pancir/product-page" target="_blank"><span class="product-card__availability">Нет в наличии</span>
+                    <a class="product-card__image-block" href="/red-pancir/product-not-available" target="_blank"><span class="product-card__availability">Нет в наличии</span>
                       <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар Бризоль" decoding="async" loading="lazy">
                       <div class="product-card__labels"></div>
                     </a>
                     <div class="product-card__content">
-                      <a class="product-card__title-link" href="/red-pancir/product-page" target="_blank">
+                      <a class="product-card__title-link" href="/red-pancir/product-not-available" target="_blank">
                         <h2 class="product-card__title">Кальмар Бризоль</h2>
                       </a>
                       <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
@@ -949,12 +954,12 @@
                 </li>
                 <li class="slider__item swiper-slide">
                   <article class="product-card product-card--recommended">
-                    <a class="product-card__image-block" href="/red-pancir/product-page" target="_blank">
+                    <a class="product-card__image-block" href="/red-pancir/product-page-only-basket" target="_blank">
                       <img srcset="/red-pancir/assets/images/product-320x246.jpg 320w, /red-pancir/assets/images/product-400x308.jpg 400w, /red-pancir/assets/images/product-580x444.jpg 580w" src="/red-pancir/assets/images/product-580x444.jpg" sizes="(min-width: 580px) 580px, 100vw" width="580" height="444" alt="Кальмар Томатный" decoding="async" loading="lazy">
                       <div class="product-card__labels"><span class="product-card__label product-card__label--new">Новинка</span></div>
                     </a>
                     <div class="product-card__content">
-                      <a class="product-card__title-link" href="/red-pancir/product-page" target="_blank">
+                      <a class="product-card__title-link" href="/red-pancir/product-page-only-basket" target="_blank">
                         <h2 class="product-card__title">Кальмар Томатный</h2>
                       </a>
                       <p class="product-card__description">Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.</p>
@@ -970,7 +975,7 @@
                                             product-card__option--alive">Отправим живыми</span></div>
                       <div class="product-card__actions">
                         <div class="product-card__prices"><span class="product-card__price">1500<!-- -->₽</span><span class="product-card__old-price">1800<!-- -->₽</span></div>
-                        <a class="button" href="/red-pancir/product-page" target="_blank"><span class="button__label">В корзину</span></a>
+                        <a class="button" href="/red-pancir/product-page-only-basket" target="_blank"><span class="button__label">В корзину</span></a>
                       </div>
                     </div>
                   </article>

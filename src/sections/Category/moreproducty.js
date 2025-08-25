@@ -21,7 +21,7 @@ const moreproductyitems = [
         inStock: true,
         price: 1500,
         cookingOptions: ['boiling', 'frying'],
-        href: `${basePath}/product-page`,
+        href: `${basePath}/product-page-only-basket`,
     },
     {
         image: '/src/assets/images/product/product.jpg',
@@ -38,7 +38,7 @@ const moreproductyitems = [
         title: 'Кальмар Царский',
         description: 'Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.',
         inStock: false,
-        href: `${basePath}/product-page`,
+        href: `${basePath}/product-not-available`,
     },
     {
         image: '/src/assets/images/product/product.jpg',
@@ -57,7 +57,7 @@ const moreproductyitems = [
         description: 'Метод сухой заморозки продукции, что позволяет сохранить вкус и полезные свойства.',
         inStock: true,
         price: 1500,
-        href: `${basePath}/product-page`,
+        href: `${basePath}/product-page-cooking-variants`,
     },
     {
         image: '/src/assets/images/product/product.jpg',
@@ -89,7 +89,7 @@ const moreproductyitems = [
         price: 1500,
         cookingOptions: ['boiling', 'alive'],
         labels: ['hit'],
-        href: `${basePath}/product-page`,
+        href: `${basePath}/product-not-available`,
     },
     {
         image: '/src/assets/images/product/product.jpg',
@@ -119,7 +119,7 @@ const moreproductyitems = [
         oldPrice: 1800,
         cookingOptions: ['boiling', 'frying', 'alive'],
         labels: ['hit', 'promo', 'new'],
-        href: `${basePath}/product-page`,
+        href: `${basePath}/product-page-only-basket`,
     },
 ];
 

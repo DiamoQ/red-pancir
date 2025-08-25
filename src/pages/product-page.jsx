@@ -122,6 +122,10 @@ export default () => {
                 title: 'Отварить',
                 variants: [
                     {
+                        title: 'Нет',
+                        id: 'notVar',
+                    },
+                    {
                         title: 'По-Средиземноморски',
                         id: 'poSredizem',
                         memo: 'Креветки северные варено-мороженые. В одном килограмме 90',

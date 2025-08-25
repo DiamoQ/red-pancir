@@ -57,8 +57,8 @@ const Basket = (props) => {
                 </div>
                 <div className="basket__form-product__options">
                   <div className="basket__form-product__original-price">
-                    <span className='basket__form-product__original-price-name'>Оригинальная цена:</span>
-                    <span className='basket__form-product__original-price-value'>2990₽</span>
+                    <span className='basket__form-product__original-price-name'>Креветка 90/120 Гренландия:</span>
+                    <span className='basket__form-product__original-price-value'>2990 ₽</span>
                   </div>
                   <ul className="basket__form-product__options-list">
                     <li className='basket__form-product__option'>
@@ -70,7 +70,7 @@ const Basket = (props) => {
                           Классическая варка
                         </span>
                         <span className="basket__form-product__option-price">
-                          +199₽
+                          +199 ₽
                         </span>
                       </div>
                     </li>
@@ -83,7 +83,7 @@ const Basket = (props) => {
                           Жарка по-Средиземноморски
                         </span>
                         <span className="basket__form-product__option-price">
-                          +299₽
+                          +299 ₽
                         </span>
                       </div>
                     </li>
@@ -168,8 +168,8 @@ const Basket = (props) => {
                 </div>
                 <div className="basket__form-product__options">
                   <div className="basket__form-product__original-price">
-                    <span className='basket__form-product__original-price-name'>Оригинальная цена:</span>
-                    <span className='basket__form-product__original-price-value'>3690₽</span>
+                    <span className='basket__form-product__original-price-name'>Креветка 90/120 Гренландия Гренландия Гренландия:</span>
+                    <span className='basket__form-product__original-price-value'>3690 ₽</span>
                   </div>
                   <ul className="basket__form-product__options-list">
                     <li className='basket__form-product__option'>
@@ -181,7 +181,7 @@ const Basket = (props) => {
                           Жарка по-Средиземноморски
                         </span>
                         <span className="basket__form-product__option-price">
-                          +299₽
+                          +299 ₽
                         </span>
                       </div>
                     </li>

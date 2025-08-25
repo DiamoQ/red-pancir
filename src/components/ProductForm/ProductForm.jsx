@@ -57,7 +57,13 @@ const ProductForm = (props) => {
                                 cookingVariants.variants.map((cookingVariantsItem, index) => (
                                     <div className="radio-input__wrapper" key={index}>
                                         <label className='radio-input' >
-                                            <input type="radio" name="cooking"  value={cookingVariantsItem.id} defaultChecked={cookingVariantsItem.id === 'not'}/>
+                                            <input
+                                                type="radio"
+                                                name={`cooking_${cookingVariants.title.toLowerCase() === 'пожарить' ? 'fry' : 'boil'}`}
+                                                value={cookingVariantsItem.id}
+                                                defaultChecked={cookingVariantsItem.id === 'not' || cookingVariantsItem.id === 'notVar'}
+                                                {...((cookingVariantsItem.id === 'not' || cookingVariantsItem.id === 'notVar') ? { 'data-default-option': true } : {})}
+                                            />
                                             <span className="radio-input__dot" aria-hidden="true"></span>
                                             {cookingVariantsItem.title}
                                         </label>
@@ -98,7 +104,13 @@ const ProductForm = (props) => {
                     {marinadeVariants.map((marinadeVariantsItem, index) => (
                         <div className="radio-input__wrapper" key={index}>
                             <label className='radio-input'>
-                                <input type="radio" name="marinade" value={marinadeVariantsItem.id} defaultChecked={marinadeVariantsItem.id === 'notmarinade'}/>
+                                <input
+                                    type="radio"
+                                    name="marinade"
+                                    value={marinadeVariantsItem.id}
+                                    defaultChecked={marinadeVariantsItem.id === 'notmarinade'}
+                                    {...(marinadeVariantsItem.id === 'notmarinade' ? { 'data-default-option': true } : {})}
+                                />
                                 <span className="radio-input__dot" aria-hidden="true"></span>
                                 {marinadeVariantsItem.title}
                             </label>
