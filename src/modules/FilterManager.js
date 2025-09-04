@@ -61,7 +61,7 @@ class FilterManager {
             this.applyModalChanges()
             this.closeFilter()
             if (!this.demoMode && import.meta.env.MODE === 'production') {
-                // this.form.submit()
+                this.form.submit()
             }
         })
 

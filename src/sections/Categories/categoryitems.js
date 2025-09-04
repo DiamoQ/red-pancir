@@ -11,55 +11,59 @@ const polufabrikati = '/src/assets/images/categories/polufabrikati.png';
 const sousi = '/src/assets/images/categories/sousi.png';
 const konservi = '/src/assets/images/categories/konservi.png';
 
+const basePath = import.meta.env.MODE === 'production'
+    ? import.meta.env.VITE_PUBLIC_PATH
+    : ''
+
 const categoryItems = [
     {
         title: "Креветки",
         image: krevetki,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Раки",
         image: raki,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Крабы",
         image: krabi,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Мидии",
         image: midii,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Рыба",
         image: ribi,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Морепродукты",
         image: moreptodukti,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Живые морепродукты",
         image: jiviemoreprodukti,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Икра",
         image: ikra,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Деликатесы",
         image: delikatesi,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Полуфабрикаты",
         image: polufabrikati,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Соусы",
         image: sousi,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },{
         title: "Консервы",
         image: konservi,
-        href: '/moreproducty',
+        href: `${basePath}/moreproducty`,
     },
 ];
 
